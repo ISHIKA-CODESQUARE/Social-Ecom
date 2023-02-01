@@ -38,14 +38,14 @@ function addLineItem(currentBasket, product, quantity, childProducts, optionMode
     }
 
     productLineItem.setQuantityValue(quantity);
-    try {
-        if (options[1].engravingMessage != '') {
-            productLineItem.custom.engravingMessage = options[1].engravingMessage; // Setting The engravig Message
-        }
-    } catch (error) {
-        var Logger = require('dw/system/Logger');
-        Logger.debug(error);
-    }
+    // try {
+    //     if (options[1].engravingMessage != '') {
+    //         productLineItem.custom.engravingMessage = options[1].engravingMessage; // Setting The engravig Message
+    //     }
+    // } catch (error) {
+    //     var Logger = require('dw/system/Logger');
+    //     Logger.debug(error);
+    // }
     return productLineItem;
 }
 
@@ -146,25 +146,14 @@ function addProductToCart(currentBasket, productId, quantity, childProducts, opt
  */
 function getExistingProductLineItemInCart(product, productId, productLineItems, childProducts, options) {
     var tempExisting = base.getExistingProductLineItemsInCart(product, productId, productLineItems, childProducts, options);
-    // Checking for the product containing the same engraving message or not IF Message is there
-    if (options.length > 1) {
-        if (options[1].engravingMessage != '') // Comparing the engraving message
-        {
-            tempExisting = tempExisting.filter(function (tempExistings) {
-                var a =  tempExistings.custom.engravingMessage === options[1].engravingMessage;
-                return a;
-            });
-            return tempExisting[0];
-        }
-        else
-        {
-            return tempExisting[0];
-        }
-    }
+
     // handel quantity incriment based on if product is gift card and has option gift - CUSTOM
     if (options.length > 0) {
         if (options[0].optionId == "gift") {
           return false;
+        }
+        else{
+            return base.getExistingProductLineItemsInCart(product, productId, productLineItems, childProducts, options)[0];
         }
       }
     else {

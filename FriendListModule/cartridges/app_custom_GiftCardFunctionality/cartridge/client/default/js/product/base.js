@@ -515,12 +515,8 @@ function getOptions($productContainer) {
             var urlValue = $elOption.val();
             var isPersonalizable = $('#engraving-or-not').attr('value');
 
-            // Sending engraving msg if the product in personalizable
-            if ($('body').find('#engraving-div').length > 0) {
-                var selectedValueId = $('button.engrave-toggle-button[disabled]').attr('engraving-option-id');
-            }
             // update the option value if the product is gift and the gift option amount availabel there - CUSTOM
-            else if ($productContainer.find('.gift-amount-div').length > 0) {
+             if ($productContainer.find('.gift-amount-div').length > 0) {
                 selectedValueId = $('button.gift-amount[disabled]').attr('gift-option');
                 return {
                     optionId: $(this).data("option-id"),
