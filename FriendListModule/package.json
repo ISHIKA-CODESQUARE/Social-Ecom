@@ -37,7 +37,7 @@
     "base": "../storefront-reference-architecture-master/cartridges/app_storefront_base/"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.6.3"
   }
 }

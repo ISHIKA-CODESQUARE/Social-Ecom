@@ -674,6 +674,7 @@ module.exports = {
             addToCartUrl = getAddToCartUrl();
 
             // Validation for giftcard Form - CUSTOM
+            console.log("isGiftCard",$('#isGiftCard').val());
             if ($('#isGiftCard').val() == "true") {
                 document.getElementById("emailError").innerHTML = "";
                 document.getElementById("invalid-feedback-email1").innerHTML = "";

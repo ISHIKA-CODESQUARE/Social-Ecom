@@ -14,7 +14,7 @@
     <isobject object="${product.raw}" view="detail" />
     <input type="hidden" id="isGiftCard" name="" value="${product.isGiftCard}">
     <div class="container product-detail product-wrapper" data-pid="${product.id}">
-    
+   ${product.isGiftCard} 
         <div class="row">
             <div class="col-12">
                 <!--Breadcrumbs--> 
@@ -25,6 +25,7 @@
                 <!-- Product Name -->
                 <div class="row">
                     <div class="d-md-none col-sm-12">
+                    
                         <h1 class="product-name">${product.productName}</h1>
                     </div>
                 </div>
