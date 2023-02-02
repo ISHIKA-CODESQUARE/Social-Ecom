@@ -13,6 +13,9 @@
     <isset name="isProductSet" value="${pdict.product.productType === 'set'}" scope="page" />
     <isobject object="${product.raw}" view="detail" />
     <input type="hidden" id="isGiftCard" name="" value="${product.isGiftCard}">
+    <div>
+        <input type="hidden" value="${pdict.SenderID}" name="senderID" id="senderID">
+    </div>
     <div class="container product-detail product-wrapper" data-pid="${product.id}">
    ${product.isGiftCard} 
         <div class="row">
