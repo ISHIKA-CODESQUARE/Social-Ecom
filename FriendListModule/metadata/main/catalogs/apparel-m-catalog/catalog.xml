@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="apparel-m-catalog">
+    <header>
+        <image-settings>
+            <internal-location base-path="/images"/>
+            <view-types>
+                <view-type>large</view-type>
+                <view-type>medium</view-type>
+                <view-type>small</view-type>
+                <view-type>swatch</view-type>
+                <view-type>hi-res</view-type>
+            </view-types>
+            <variation-attribute-id>color</variation-attribute-id>
+            <alt-pattern>${productname}, ${variationvalue}, ${viewtype}</alt-pattern>
+            <title-pattern>${productname}, ${variationvalue}</title-pattern>
+        </image-settings>
+    </header>
+
+    <product product-id="Gift_Card-2">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <template>product/giftCard</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="gift">gift2</custom-attribute>
+            <custom-attribute attribute-id="isGiftCard">true</custom-attribute>
+            <custom-attribute site-id="RefArch-allCS" attribute-id="isWineOrNot">false</custom-attribute>
+            <custom-attribute attribute-id="lessSold">true</custom-attribute>
+        </custom-attributes>
+        <classification-category catalog-id="storefront-catalog-m-en-allCS">newariwels-gifts</classification-category>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="Gift_Card">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <display-name xml:lang="x-default">GiftCard</display-name>
+        <short-description xml:lang="x-default">This gift card contains a specific amount that you want to gift your loved ones. So, surprise your loved ones with this gift card &amp; make their day even more special.</short-description>
+        <long-description xml:lang="x-default">Gift card has great designs for every occasion, and customer can write down their personal wishes for their loved ones. Customers can choose &#13;
+any value of the given amount. The gift card can not be refunded or returned. The recipient can apply the given gift certificate code in his/her next purchase of that Amount.</long-description>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <online-from>2021-12-13T00:00:00.000Z</online-from>
+        <online-to>2023-12-13T00:00:00.000Z</online-to>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <searchable-if-unavailable-flag>true</searchable-if-unavailable-flag>
+        <images>
+            <image-group view-type="hi-res">
+                <image path="gift cards/burthday1.png"/>
+            </image-group>
+            <image-group view-type="hi-res">
+                <variation attribute-id="GIFT" value="gift2"/>
+                <image path="gift cards/anniversary.png"/>
+            </image-group>
+            <image-group view-type="hi-res">
+                <variation attribute-id="GIFT" value="gift3"/>
+                <image path="gift cards/friendship.png"/>
+            </image-group>
+            <image-group view-type="hi-res">
+                <variation attribute-id="GIFT" value="gift4"/>
+                <image path="gift cards/wedding.png"/>
+            </image-group>
+            <image-group view-type="large">
+                <image path="gift cards/burthday1.png"/>
+            </image-group>
+            <image-group view-type="large">
+                <variation attribute-id="GIFT" value="gift1"/>
+                <image path="gift cards/birthday2.png"/>
+            </image-group>
+            <image-group view-type="large">
+                <variation attribute-id="GIFT" value="gift2"/>
+                <image path="gift cards/anniversary.png"/>
+            </image-group>
+            <image-group view-type="large">
+                <variation attribute-id="GIFT" value="gift3"/>
+                <image path="gift cards/friendship.png"/>
+            </image-group>
+            <image-group view-type="large">
+                <variation attribute-id="GIFT" value="gift4"/>
+                <image path="gift cards/wedding.png"/>
+            </image-group>
+            <image-group view-type="medium">
+                <image path="gift cards/burthday1.png"/>
+            </image-group>
+            <image-group view-type="medium">
+                <variation attribute-id="GIFT" value="gift1"/>
+                <image path="gift cards/birthday2.png"/>
+            </image-group>
+            <image-group view-type="medium">
+                <variation attribute-id="GIFT" value="gift2"/>
+                <image path="gift cards/anniversary.png"/>
+            </image-group>
+            <image-group view-type="medium">
+                <variation attribute-id="GIFT" value="gift3"/>
+                <image path="gift cards/friendship.png"/>
+            </image-group>
+            <image-group view-type="medium">
+                <variation attribute-id="GIFT" value="gift4"/>
+                <image path="gift cards/wedding.png"/>
+            </image-group>
+            <image-group view-type="small">
+                <image path="swatch/burthday1.png"/>
+            </image-group>
+            <image-group view-type="small">
+                <variation attribute-id="GIFT" value="gift1"/>
+                <image path="gift cards/birthday2.png"/>
+            </image-group>
+            <image-group view-type="small">
+                <variation attribute-id="GIFT" value="gift2"/>
+                <image path="gift cards/anniversary.png"/>
+            </image-group>
+            <image-group view-type="small">
+                <variation attribute-id="GIFT" value="gift3"/>
+                <image path="gift cards/friendship.png"/>
+            </image-group>
+            <image-group view-type="small">
+                <variation attribute-id="GIFT" value="gift4"/>
+                <image path="gift cards/wedding.png"/>
+            </image-group>
+            <image-group view-type="swatch">
+                <image path="swatch/burthday1.png">
+                    <alt xml:lang="x-default"/>
+                </image>
+            </image-group>
+            <image-group view-type="swatch">
+                <variation attribute-id="GIFT" value="gift1"/>
+                <image path="swatch/birthday2.png"/>
+            </image-group>
+            <image-group view-type="swatch">
+                <variation attribute-id="GIFT" value="gift2"/>
+                <image path="swatch/anniversary.png"/>
+            </image-group>
+            <image-group view-type="swatch">
+                <variation attribute-id="GIFT" value="gift3"/>
+                <image path="swatch/friendship.png"/>
+            </image-group>
+            <image-group view-type="swatch">
+                <variation attribute-id="GIFT" value="gift4"/>
+                <image path="swatch/wedding.png"/>
+            </image-group>
+        </images>
+        <template>product/giftCard</template>
+        <tax-class-id>standard</tax-class-id>
+        <brand>BuyStyle</brand>
+        <manufacturer-name>Ambani</manufacturer-name>
+        <manufacturer-sku>001</manufacturer-sku>
+        <sitemap-included-flag>true</sitemap-included-flag>
+        <sitemap-changefrequency>daily</sitemap-changefrequency>
+        <sitemap-priority>1.0</sitemap-priority>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="ProductForAdults">false</custom-attribute>
+            <custom-attribute attribute-id="isAdult">false</custom-attribute>
+            <custom-attribute attribute-id="isAdultCustomer">false</custom-attribute>
+            <custom-attribute attribute-id="isGiftCard">true</custom-attribute>
+            <custom-attribute attribute-id="isWineOrNot">false</custom-attribute>
+            <custom-attribute site-id="RefArch-allCS" attribute-id="isWineOrNot">false</custom-attribute>
+            <custom-attribute attribute-id="lessSold">true</custom-attribute>
+        </custom-attributes>
+        <options>
+            <shared-option option-id="gift"/>
+        </options>
+        <variations>
+            <attributes>
+                <variation-attribute attribute-id="gift" variation-attribute-id="GIFT">
+                    <display-name xml:lang="x-default">GIFT</display-name>
+                    <variation-attribute-values>
+                        <variation-attribute-value value="gift1">
+                            <display-value xml:lang="x-default">Happy Birthday</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="gift2">
+                            <display-value xml:lang="x-default">Happy Anniversity</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="gift3">
+                            <display-value xml:lang="x-default">Happy Friendship</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="gift4">
+                            <display-value xml:lang="x-default">Happy Wedding</display-value>
+                        </variation-attribute-value>
+                    </variation-attribute-values>
+                </variation-attribute>
+            </attributes>
+            <variants>
+                <variant product-id="Gift_Card-1"/>
+                <variant product-id="Gift_Card-2"/>
+                <variant product-id="Gift_Card-3"/>
+                <variant product-id="Gift_Card-4"/>
+            </variants>
+        </variations>
+        <classification-category>newCat1</classification-category>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="Gift_Card-3">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <template>product/giftCard</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="gift">gift3</custom-attribute>
+            <custom-attribute attribute-id="isGiftCard">true</custom-attribute>
+            <custom-attribute site-id="RefArch-allCS" attribute-id="isWineOrNot">false</custom-attribute>
+            <custom-attribute attribute-id="lessSold">true</custom-attribute>
+        </custom-attributes>
+        <classification-category catalog-id="storefront-catalog-m-en-allCS">newariwels-gifts</classification-category>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="Gift_Card-1">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <template>product/giftCard</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="gift">gift1</custom-attribute>
+            <custom-attribute attribute-id="isGiftCard">true</custom-attribute>
+            <custom-attribute site-id="RefArch-allCS" attribute-id="isWineOrNot">false</custom-attribute>
+            <custom-attribute attribute-id="lessSold">true</custom-attribute>
+        </custom-attributes>
+        <classification-category catalog-id="storefront-catalog-m-en-allCS">newariwels-gifts</classification-category>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="Gift_Card-4">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>false</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <template>product/giftCard</template>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="gift">gift4</custom-attribute>
+            <custom-attribute attribute-id="isGiftCard">true</custom-attribute>
+            <custom-attribute site-id="RefArch-allCS" attribute-id="isWineOrNot">false</custom-attribute>
+            <custom-attribute attribute-id="lessSold">true</custom-attribute>
+        </custom-attributes>
+        <classification-category catalog-id="storefront-catalog-m-en-allCS">newariwels-gifts</classification-category>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product-option option-id="gift">
+        <display-name xml:lang="x-default">Gift Card Amount</display-name>
+        <description xml:lang="x-default">Amount for Gift Card</description>
+        <sort-mode>price</sort-mode>
+        <option-values>
+            <option-value value-id="50" default="true">
+                <display-value xml:lang="x-default">50</display-value>
+                <product-id-modifier>$50</product-id-modifier>
+                <option-value-prices>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="100" default="false">
+                <display-value xml:lang="x-default">100</display-value>
+                <product-id-modifier>$100</product-id-modifier>
+                <option-value-prices>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="500" default="false">
+                <display-value xml:lang="x-default">500</display-value>
+                <product-id-modifier>$500</product-id-modifier>
+                <option-value-prices>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="1000" default="false">
+                <display-value xml:lang="x-default">1000</display-value>
+                <product-id-modifier>$1000</product-id-modifier>
+                <option-value-prices>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="60.09" default="false">
+                <display-value xml:lang="x-default">60</display-value>
+                <product-id-modifier>$60</product-id-modifier>
+                <option-value-prices>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+        </option-values>
+    </product-option>
+
+    <category-assignment category-id="newCat1" product-id="Gift_Card-2">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="newCat1" product-id="Gift_Card">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="newCat1" product-id="Gift_Card-3">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="newCat1" product-id="Gift_Card-1">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="newCat1" product-id="Gift_Card-4">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+</catalog>
