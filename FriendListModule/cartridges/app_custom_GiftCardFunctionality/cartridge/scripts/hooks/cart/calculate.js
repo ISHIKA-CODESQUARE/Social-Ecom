@@ -118,6 +118,22 @@ function calculateProductPrices (basket) {
 
     // iterate all product line items of the basket and set prices
     var productLineItems = basket.getAllProductLineItems().iterator();
+    //code for by default shipping will be select as delivery by email if product is only gift card
+    var giftCardHelper=require('*/cartridge/scripts/helpers/giftCardHelper');
+    var isOnlyGiftCard = giftCardHelper.isOnlyGiftCard(basket.productLineItems);
+    var shippingHelpers = require('*/cartridge/scripts/checkout/shippingHelpers');
+    if (isOnlyGiftCard) {
+    shippingHelpers.selectShippingMethod(basket.shipments[0],'giftShipping')
+    }
+    else
+    {
+        if(basket.shipments[0].shippingMethod.ID == 'giftShipping' ){
+            shippingHelpers.selectShippingMethod(basket.shipments[0],"Express Super Fast")
+        }else {
+    shippingHelpers.selectShippingMethod(basket.shipments[0],basket.shipments[0].shippingMethod.ID)
+
+        }
+    }
     while (productLineItems.hasNext()) {
         var productLineItem = productLineItems.next();
 
