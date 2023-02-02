@@ -1,0 +1,10 @@
+{
+    "plugins": ["sitegenesis"],
+    "rules": {
+        "sitegenesis/no-global-require": ["error"],
+        "global-require": "on",
+        "no-var": "on",
+        "prefer-const": "on",
+        "path":"true"
+    }
+}
