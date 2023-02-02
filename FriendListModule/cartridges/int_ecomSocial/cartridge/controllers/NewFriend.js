@@ -56,9 +56,12 @@ server.get('DeclineRequest',function(req,res,next){
     var CustomerMgr = require('dw/customer/CustomerMgr');
     var id = req.querystring.id;
     var friend_request = CustomObjectMgr.getCustomObject(`Requests`,id);
-    CustomObjectMgr.remove(friend_request);
-    res.redirect(URLUtils.url('FriendListUpdated-AcceptedRequestFriends'));
+    Transaction.wrap(()=>{
+        CustomObjectMgr.remove(friend_request);
+    })
+    res.redirect(URLUtils.url('NewFriend-getRequest'));
     next();
 })
+
 
 module.exports = server.exports();
