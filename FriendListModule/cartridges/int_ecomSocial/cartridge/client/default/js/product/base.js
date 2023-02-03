@@ -516,11 +516,21 @@ function getOptions($productContainer) {
             var urlValue = $elOption.val();
             var selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
                 .data('value-id');
-            return {
-                optionId: $(this).data('option-id'),
-                selectedValueId: selectedValueId,
-                sendersID: document.getElementById('senderID').value
-            };
+                if (document.getElementById('senderID').value) {
+                    return {
+                        optionId: $(this).data('option-id'),
+                        selectedValueId: selectedValueId,
+                        sendersID: document.getElementById('senderID').value
+                    };
+                }
+                else{
+                    return {
+                        optionId: $(this).data('option-id'),
+                        selectedValueId: selectedValueId,
+                        // sendersID: document.getElementById('senderID').values
+                    };
+                }
+            
         }).toArray();
 
     return JSON.stringify(options);
@@ -662,9 +672,11 @@ module.exports = {
                 childProducts: getChildProducts(),
                 quantity: getQuantitySelected($(this))
             };
+            if (document.getElementById('senderID').value) {
 
             form.senderId = document.getElementById('senderID').value;
             console.log(form);
+            }
 
             if (!$('.bundle-item').length) {
                 form.options = getOptions($productContainer);
