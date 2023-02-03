@@ -396,20 +396,20 @@ For assistance with the regular expression configuration, please contact Clutch 
                         <mandatory-flag>false</mandatory-flag>
                         <externally-managed-flag>false</externally-managed-flag>
                     </attribute-definition>
-                    <attribute-definition attribute-id="sfraEnableOverlayGiftRegistry">
-                        <display-name xml:lang="x-default">SFRA - Enable Gift Registry</display-name>
-                        <description xml:lang="x-default">Enables the Gift Registry plugin in the SFRA Unified Feature Cartridge. Note: The cartridge plugin_giftregistry must be added to the cartridge path and uploaded to your instance.</description>
-                        <type>boolean</type>
-                        <mandatory-flag>false</mandatory-flag>
-                        <externally-managed-flag>false</externally-managed-flag>
-                        <default-value>true</default-value>
-                    </attribute-definition>
+                     <attribute-definition attribute-id="sfraEnableOverlayGiftRegistry">
+                                <display-name xml:lang="x-default">SFRA - Enable Gift Registry</display-name>
+                                <description xml:lang="x-default">Enables the Gift Registry plugin in the SFRA Unified Feature Cartridge. Note: The cartridge plugin_giftregistry must be added to the cartridge path and uploaded to your instance.</description>
+                                <type>boolean</type>
+                                <mandatory-flag>false</mandatory-flag>
+                                <externally-managed-flag>false</externally-managed-flag>
+                                <default-value>true</default-value>
+                            </attribute-definition>
 
 
                     <group-definitions>
                         <attribute-group group-id="SFRA Unified Feature Cartridge">
                             <display-name xml:lang="x-default">SFRA Unified Feature Cartridge</display-name>
-                            <attribute attribute-id="sfraEnableOverlayGiftRegistry"/>
+                             <attribute attribute-id="sfraEnableOverlayGiftRegistry"/>
 
                         </attribute-group>
                     </group-definitions>
