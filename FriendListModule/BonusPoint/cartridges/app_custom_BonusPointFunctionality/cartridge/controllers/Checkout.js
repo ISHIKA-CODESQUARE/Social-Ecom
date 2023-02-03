@@ -29,13 +29,13 @@ server.append(
         var currentBasket=BasketMgr.getCurrentBasket();
         var currentWallet = 0;
         try {
-            currentWallet = currentCustomer.profile.custom.userWallet
+            currentWallet = responseData.customer.profile.userWallet
         } catch (error) {
             currentWallet = 0
         }
   
         var userBonusPointPercent = dw.system.Site.current.preferences.custom.userBonusPointPercent
-        var canBeApplied=  Math.round((currentWallet) % (userBonusPointPercent)) ;
+        // var canBeApplied=  Math.round((currentWallet) % (userBonusPointPercent)) ;
         var showLine = false;
         var appliedBonusPoint=null;
         var promotionID = currentBasket.getPriceAdjustmentByPromotionID("bonusPointUses")
@@ -44,8 +44,11 @@ server.append(
             appliedBonusPoint = (-promotionID.price.value);
   
         }
+        var canBeApplied=  Math.round((currentWallet)*10 / (userBonusPointPercent)) ;
         responseData.currentWallet=currentWallet;
         responseData.appliedBonusPoint=appliedBonusPoint;
+        responseData.canBeApplied=canBeApplied;
+        responseData.showLine=showLine;
         res.setViewData(responseData);
         return next();
     }
