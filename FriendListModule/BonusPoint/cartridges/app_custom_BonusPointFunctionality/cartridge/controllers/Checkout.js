@@ -27,6 +27,7 @@ server.append(
         var responseData =res.getViewData()
         var BasketMgr = require('dw/order/BasketMgr');
         var currentBasket=BasketMgr.getCurrentBasket();
+        
         var currentWallet = 0;
         try {
             currentWallet = responseData.customer.profile.userWallet
@@ -44,7 +45,7 @@ server.append(
             appliedBonusPoint = (-promotionID.price.value);
   
         }
-        var canBeApplied=  Math.round((currentWallet)*10 / (userBonusPointPercent)) ;
+        var canBeApplied=  Math.round(( currentBasket.totalGrossPrice.value)*(userBonusPointPercent)/100);
         responseData.currentWallet=currentWallet;
         responseData.appliedBonusPoint=appliedBonusPoint;
         responseData.canBeApplied=canBeApplied;
@@ -75,7 +76,7 @@ server.post("UpdateBonus", function (req, res, next) {
     // bonusPercentOfTotal is a custom preference which shows how many percent customer wants to give discount on base.
     var bonusPercentOfTotal = dw.system.Site.current.preferences.custom.bonusPercentOfTotal
     var LineItemCtnr = require('dw/order/LineItemCtnr');
-    var totalNetPrice = currentBasket.totalNetPrice.value;
+    var totalNetPrice = currentBasket.totalGrossPrice.value;
     var toPercent = totalNetPrice * (bonusPercentOfTotal / 100);
 
     if (currentCustomer.profile.custom.userWallet < bPoint) {

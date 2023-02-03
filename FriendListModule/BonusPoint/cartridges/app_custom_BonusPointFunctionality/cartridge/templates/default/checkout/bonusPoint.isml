@@ -7,10 +7,16 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <h4 class="text-success">${Resource.msg('label.reedemBonus', 'account', null)}</h4>
+
 <div class="">
     <h6>${Resource.msg('label.bonusPointIs', 'account', null)} : &nbsp;<b class="text-danger" id="storedPoints">${pdict.customer.profile.userWallet}</b>
     </h6>
-   You can only use ${pdict.canBeApplied}
+
+<isif condition="${pdict.showLine == false}">
+   <h6>You can only use ${pdict.canBeApplied} bonus point of the total price</h6>
+   <iselse/>
+</isif>
+
 </div>
 
 <div class="text-center">
