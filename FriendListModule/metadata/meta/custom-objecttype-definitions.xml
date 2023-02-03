@@ -1,0 +1,10303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+
+-    <custom-type type-id="AdcontactUsData">
+
+        <display-name xml:lang="x-default">AdcontactUsData</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="message">
+
+                <display-name xml:lang="x-default">Message</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="name">
+
+                <display-name xml:lang="x-default">Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="supportEmail">
+
+                <display-name xml:lang="x-default">supportEmail</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="contactUs">
+
+                <display-name xml:lang="x-default">contactUs</display-name>
+
+                <attribute attribute-id="name"/>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="message"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="supportEmail"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Anmol_Id">
+
+        <display-name xml:lang="x-default">Anmol_keys</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="ID">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="address">
+
+                <display-name xml:lang="x-default">Address</display-name>
+
+                <type>enum-of-string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+
+-                <value-definitions>
+
+
+-                    <value-definition default="true">
+
+                        <display xml:lang="x-default">Graduate</display>
+
+                        <value>graduate</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Post_Graduate</display>
+
+                        <value>post_graduate</value>
+
+                    </value-definition>
+
+                </value-definitions>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="first_name">
+
+                <display-name xml:lang="x-default">FirstName</display-name>
+
+                <description xml:lang="x-default">enter the first name</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="last_name">
+
+                <display-name xml:lang="x-default">LastName</display-name>
+
+                <description xml:lang="x-default">enter the last name</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="password">
+
+                <display-name xml:lang="x-default">PassWord</display-name>
+
+                <description xml:lang="x-default">enter the password</description>
+
+                <type>password</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="radio">
+
+                <display-name xml:lang="x-default">Radio</display-name>
+
+                <description xml:lang="x-default">this is the radio button</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="CustomAttr">
+
+                <attribute attribute-id="password"/>
+
+                <attribute attribute-id="ID"/>
+
+                <attribute attribute-id="first_name"/>
+
+                <attribute attribute-id="last_name"/>
+
+                <attribute attribute-id="address"/>
+
+                <attribute attribute-id="radio"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="AssignmentCustomForm">
+
+        <display-name xml:lang="x-default">AssignmentCustomForm</display-name>
+
+        <description xml:lang="x-default">this is second custom form</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="Uid">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Fname">
+
+                <display-name xml:lang="x-default">FirstName</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Lname">
+
+                <display-name xml:lang="x-default">Last Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Topic">
+
+                <display-name xml:lang="x-default">Topic</display-name>
+
+                <type>enum-of-string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+
+-                <value-definitions>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Order Status</display>
+
+                        <value>OS</value>
+
+                    </value-definition>
+
+
+-                    <value-definition default="true">
+
+                        <display xml:lang="x-default">General Information</display>
+
+                        <value>GA</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">MyAccount</display>
+
+                        <value>AC</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Other</display>
+
+                        <value>OT</value>
+
+                    </value-definition>
+
+                </value-definitions>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="ContactUs">
+
+        <display-name xml:lang="x-default">Contacting</display-name>
+
+        <description xml:lang="x-default">This is use to contact Multiple People present in the company</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="Contact Us">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="RecieversAddr">
+
+                <display-name xml:lang="x-default">recievers email</display-name>
+
+                <description xml:lang="x-default">this is the email of the receivers</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Requests">
+
+                <display-name xml:lang="x-default">Friends Request</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="description">
+
+                <display-name xml:lang="x-default">Description</display-name>
+
+                <description xml:lang="x-default">contain description what the customer want to mail.</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email_info">
+
+                <display-name xml:lang="x-default">Contact To</display-name>
+
+                <description xml:lang="x-default">contain emails of Head of the company</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="first_name">
+
+                <display-name xml:lang="x-default">First Name</display-name>
+
+                <description xml:lang="x-default">contain first name of the complainer</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="last_name">
+
+                <display-name xml:lang="x-default">Last Name</display-name>
+
+                <description xml:lang="x-default">contain last name of the complainer</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="phone_number">
+
+                <display-name xml:lang="x-default">Phone number</display-name>
+
+                <description xml:lang="x-default">this is the phone number of the customer</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="ContactUs">
+
+                <display-name xml:lang="x-default">All the attribute of Contact Page</display-name>
+
+                <attribute attribute-id="creationDate" system="true"/>
+
+                <attribute attribute-id="lastModified" system="true"/>
+
+                <attribute attribute-id="email_info"/>
+
+                <attribute attribute-id="first_name"/>
+
+                <attribute attribute-id="phone_number"/>
+
+                <attribute attribute-id="last_name"/>
+
+                <attribute attribute-id="RecieversAddr"/>
+
+                <attribute attribute-id="description"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+-    <custom-type type-id="ContactUsAssignment">
+
+        <display-name xml:lang="x-default">ContactUsAssignment</display-name>
+
+        <description xml:lang="x-default">This is Contact Assignment B</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="ContactUid">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="FName">
+
+                <display-name xml:lang="x-default">FirstName</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="LName">
+
+                <display-name xml:lang="x-default">LastName</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Topic">
+
+                <display-name xml:lang="x-default">Topic</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="comment">
+
+                <display-name xml:lang="x-default">Comment</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="grp1">
+
+                <display-name xml:lang="x-default">Group1</display-name>
+
+                <attribute attribute-id="LName"/>
+
+                <attribute attribute-id="Topic"/>
+
+                <attribute attribute-id="comment"/>
+
+                <attribute attribute-id="Email"/>
+
+                <attribute attribute-id="FName"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="ContactUsDetails">
+
+        <display-name xml:lang="x-default">ContactUsDetails</display-name>
+
+        <description xml:lang="x-default">contact us data save into custom table</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="Id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="comment">
+
+                <display-name xml:lang="x-default">Comment</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="firstname">
+
+                <display-name xml:lang="x-default">First Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="lastname">
+
+                <display-name xml:lang="x-default">Last Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="topic">
+
+                <display-name xml:lang="x-default">Topic</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Group1">
+
+                <attribute attribute-id="topic"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="Id"/>
+
+                <attribute attribute-id="lastname"/>
+
+                <attribute attribute-id="comment"/>
+
+                <attribute attribute-id="firstname"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="ContactUsForm">
+
+        <display-name xml:lang="x-default">ContactUsForm</display-name>
+
+        <description xml:lang="x-default">This 1st case study aafreen</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="CaseStudy1">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="message">
+
+                <display-name xml:lang="x-default">Message</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="ContactUsGrp">
+
+                <display-name xml:lang="x-default">ContactUsGrp</display-name>
+
+                <attribute attribute-id="message"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="CaseStudy1"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="ContactUsFrench">
+
+        <display-name xml:lang="x-default">Contacting</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="Contact Us">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Contact_Us_Data">
+
+        <display-name xml:lang="x-default">Contact_Us_Data</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="DataId">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Message">
+
+                <display-name xml:lang="x-default">Message</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Group1">
+
+                <display-name xml:lang="x-default">Group1</display-name>
+
+                <attribute attribute-id="DataId"/>
+
+                <attribute attribute-id="Email"/>
+
+                <attribute attribute-id="Subject"/>
+
+                <attribute attribute-id="Message"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="ContactusEmails">
+
+        <display-name xml:lang="x-default">ContactusEmails</display-name>
+
+        <description xml:lang="x-default">ContactusEmails</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+        <retention-days>100</retention-days>
+
+
+-        <key-definition attribute-id="ContactusEmailsKey">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="EmailAssociated">
+
+                <display-name xml:lang="x-default">EmailAssociated</display-name>
+
+                <description xml:lang="x-default">EmailAssociated</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <description xml:lang="x-default">subject</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="contactUs">
+
+                <display-name xml:lang="x-default">contactUs</display-name>
+
+                <attribute attribute-id="ContactusEmailsKey"/>
+
+                <attribute attribute-id="EmailAssociated"/>
+
+                <attribute attribute-id="subject"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="CustomTableSaloni">
+
+        <display-name xml:lang="x-default">CustomTableSaloni</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Password">
+
+                <display-name xml:lang="x-default">Password</display-name>
+
+                <type>password</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="First">
+
+                <display-name xml:lang="x-default">Group_First</display-name>
+
+                <attribute attribute-id="Email"/>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="Password"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Customnewkhushbu">
+
+        <description xml:lang="x-default">hey this is the object</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="Customnewkhushbu">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Username">
+
+                <display-name xml:lang="x-default">Username</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Newuser">
+
+                <display-name xml:lang="x-default">Ankita</display-name>
+
+                <attribute attribute-id="Username"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Date_of_birth">
+
+        <display-name xml:lang="x-default">DoB</display-name>
+
+        <description xml:lang="x-default">This will take DOB of the user</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="DOB">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="DOB_String">
+
+                <display-name xml:lang="x-default">DoBS</display-name>
+
+                <description xml:lang="x-default">Taking DOB data in string.</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="DoB">
+
+                <display-name xml:lang="x-default">Date Of Birth</display-name>
+
+                <description xml:lang="x-default">Please enter the DateOfBirth</description>
+
+                <type>date</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Date_Of_Birth">
+
+                <display-name xml:lang="x-default">Enter DOB</display-name>
+
+                <attribute attribute-id="DoB"/>
+
+                <attribute attribute-id="DOB"/>
+
+                <attribute attribute-id="DOB_String"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="DetailsOfContactUs">
+
+        <display-name xml:lang="x-default">Details Of ContactUs</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="DetailsOfContactUs">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="comment">
+
+                <display-name xml:lang="x-default">Comment</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="firstname">
+
+                <display-name xml:lang="x-default">First Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="lastname">
+
+                <display-name xml:lang="x-default">Last Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="topic">
+
+                <display-name xml:lang="x-default">Topic</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Group1">
+
+                <attribute attribute-id="DetailsOfContactUs"/>
+
+                <attribute attribute-id="firstname"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="topic"/>
+
+                <attribute attribute-id="lastname"/>
+
+                <attribute attribute-id="comment"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-   
+
+
+-    <custom-type type-id="New Custom">
+
+        <display-name xml:lang="x-default">New Custom</display-name>
+
+        <description xml:lang="x-default">heelooo</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="landmark">
+
+                <display-name xml:lang="x-default">landmark</display-name>
+
+                <description xml:lang="x-default">heeeeloo</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="nickname">
+
+                <display-name xml:lang="x-default">nickname</display-name>
+
+                <description xml:lang="x-default">gelekow</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Grp3">
+
+                <display-name xml:lang="x-default">Grp3</display-name>
+
+                <attribute attribute-id="landmark"/>
+
+                <attribute attribute-id="nickname"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="NewCustomTable">
+
+        <display-name xml:lang="x-default">NewTable</display-name>
+
+        <description xml:lang="x-default">custom table created by rani</description>
+
+        <staging-mode>source-to-target</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="NewCustomTable">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="firstName">
+
+                <display-name xml:lang="x-default">firstName</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="lastName">
+
+                <display-name xml:lang="x-default">lastName</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="registration_custom">
+
+                <display-name xml:lang="x-default">register</display-name>
+
+                <attribute attribute-id="firstName"/>
+
+                <attribute attribute-id="lastName"/>
+
+                <attribute attribute-id="email"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="NewCustomTableR">
+
+        <display-name xml:lang="x-default">NewCustomTableR</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="NewCustomTableR">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="first_name">
+
+                <display-name xml:lang="x-default">first_name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="gender">
+
+                <display-name xml:lang="x-default">gender</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="last_name">
+
+                <display-name xml:lang="x-default">last_name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="state">
+
+                <display-name xml:lang="x-default">state</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="user_password">
+
+                <type>password</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="NewCustomTableR">
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="first_name"/>
+
+                <attribute attribute-id="user_password"/>
+
+                <attribute attribute-id="NewCustomTableR"/>
+
+                <attribute attribute-id="gender"/>
+
+                <attribute attribute-id="state"/>
+
+                <attribute attribute-id="last_name"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Product view">
+
+        <display-name xml:lang="x-default">Product12</display-name>
+
+        <description xml:lang="x-default">THIS IS A PRODUCT</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="Product">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+    </custom-type>
+
+
+-    <custom-type type-id="RegistrationTable">
+
+        <display-name xml:lang="x-default">Registration Table</display-name>
+
+        <staging-mode>source-to-target</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="RegistrationTable">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Name">
+
+                <display-name xml:lang="x-default">Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="New">
+
+                <attribute attribute-id="Name"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Requests">
+
+        <display-name xml:lang="x-default">Friends Request</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="FriendRequest">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="ReceiverAddress">
+
+                <display-name xml:lang="x-default">Receiver's Address</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="SenderAddress">
+
+                <display-name xml:lang="x-default">Senders Address Number</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="SenderEmail">
+
+                <display-name xml:lang="x-default">Sender's Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="SenderName">
+
+                <display-name xml:lang="x-default">Sender Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Status">
+
+                <display-name xml:lang="x-default">Request Accepted</display-name>
+
+                <type>boolean</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="friend_added">
+
+                <display-name xml:lang="x-default">Friend Added to FriendList</display-name>
+
+                <type>boolean</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="FriendsRequest">
+
+                <display-name xml:lang="x-default">Friend Requests</display-name>
+
+                <attribute attribute-id="ReceiverAddress"/>
+
+                <attribute attribute-id="Status"/>
+
+                <attribute attribute-id="SenderName"/>
+
+                <attribute attribute-id="SenderEmail"/>
+
+                <attribute attribute-id="friend_added"/>
+
+                <attribute attribute-id="SenderAddress"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="SendEmailInfo">
+
+        <display-name xml:lang="x-default">SendEmailInfo</display-name>
+
+        <description xml:lang="x-default">This is object to configure mail (aafreen)</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="CaseStudyEmail">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="EmailName">
+
+                <display-name xml:lang="x-default">EmailName</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="EmailSubject">
+
+                <display-name xml:lang="x-default">EmailSubject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="SendEmailGrp">
+
+                <display-name xml:lang="x-default">SendEmailGrp</display-name>
+
+                <attribute attribute-id="CaseStudyEmail"/>
+
+                <attribute attribute-id="EmailSubject"/>
+
+                <attribute attribute-id="EmailName"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="SendMailContactUs">
+
+        <display-name xml:lang="x-default">SendMailContactUs</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="SendId">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="SubjectEmail">
+
+                <display-name xml:lang="x-default">SubjectEmail</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="SubjectName">
+
+                <display-name xml:lang="x-default">SubjectName</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Group1">
+
+                <display-name xml:lang="x-default">Group1</display-name>
+
+                <attribute attribute-id="SendId"/>
+
+                <attribute attribute-id="SubjectEmail"/>
+
+                <attribute attribute-id="SubjectName"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="StudentForm">
+
+        <display-name xml:lang="x-default">StudentForm</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="Id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Education">
+
+                <display-name xml:lang="x-default">Education</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Gender">
+
+                <display-name xml:lang="x-default">Gender</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Name">
+
+                <display-name xml:lang="x-default">Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Password">
+
+                <display-name xml:lang="x-default">Password</display-name>
+
+                <type>password</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="PhoneNo">
+
+                <display-name xml:lang="x-default">PhoneNo</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="FormGroup">
+
+                <display-name xml:lang="x-default">FormGroup</display-name>
+
+                <attribute attribute-id="Name"/>
+
+                <attribute attribute-id="Email"/>
+
+                <attribute attribute-id="Education"/>
+
+                <attribute attribute-id="Password"/>
+
+                <attribute attribute-id="Id"/>
+
+                <attribute attribute-id="Gender"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Subjects">
+
+        <display-name xml:lang="x-default">Subjects for Options</display-name>
+
+        <description xml:lang="x-default">Subjects for Options</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+        <retention-days>30</retention-days>
+
+
+-        <key-definition attribute-id="Subjects">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="subjectMail">
+
+                <display-name xml:lang="x-default">Subject Mail</display-name>
+
+                <description xml:lang="x-default">Subject Mail</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subjectName">
+
+                <display-name xml:lang="x-default">SubjectName</display-name>
+
+                <description xml:lang="x-default">Subject Name</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="ContactUs">
+
+                <display-name xml:lang="x-default">ContactUs</display-name>
+
+                <attribute attribute-id="Subjects"/>
+
+                <attribute attribute-id="subjectName"/>
+
+                <attribute attribute-id="subjectMail"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="YD">
+
+        <display-name xml:lang="x-default">yd</display-name>
+
+        <staging-mode>source-to-target</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="yd">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Yourcomment002">
+
+        <display-name xml:lang="x-default">your comment</display-name>
+
+        <description xml:lang="x-default">please set the comment here......................</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="yourcomment">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+    </custom-type>
+
+
+-    <custom-type type-id="Yourtopic002">
+
+        <display-name xml:lang="x-default">Your Topic</display-name>
+
+        <description xml:lang="x-default">Your topic is explain here</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="yourtopic">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+    </custom-type>
+
+
+-    <custom-type type-id="ashutoshcustom">
+
+        <display-name xml:lang="x-default">ashutoshcustom</display-name>
+
+        <description xml:lang="x-default">ashutosh's custom</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>int</type>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="ddown">
+
+                <display-name xml:lang="x-default">ddown</display-name>
+
+                <description xml:lang="x-default">ddown</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">email</display-name>
+
+                <description xml:lang="x-default">email</description>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="password">
+
+                <display-name xml:lang="x-default">password</display-name>
+
+                <description xml:lang="x-default">password</description>
+
+                <type>password</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="radio">
+
+                <display-name xml:lang="x-default">radio</display-name>
+
+                <description xml:lang="x-default">radio</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="group1">
+
+                <attribute attribute-id="password"/>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="ddown"/>
+
+                <attribute attribute-id="radio"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="associatedMail">
+
+        <display-name xml:lang="x-default">Associated Mail</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="associatedMail">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="dynamicData">
+
+                <display-name xml:lang="x-default">Dynamic Data</display-name>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="associatedMail"/>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="lastModified" system="true"/>
+
+                <attribute attribute-id="creationDate" system="true"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="bhupendraContactUs">
+
+        <display-name xml:lang="x-default">Bhupendra Contact Us</display-name>
+
+        <description xml:lang="x-default">Contact us by Bhupendra</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="bhupendraContactUs">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="description">
+
+                <display-name xml:lang="x-default">Description</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="dynamicMail">
+
+                <display-name xml:lang="x-default">Dynamic Mail</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="dynamicSubject">
+
+                <display-name xml:lang="x-default">Dynamic Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="mailAssociated">
+
+                <display-name xml:lang="x-default">Mail Associated</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="dynamicData">
+
+                <display-name xml:lang="x-default">Dynamic Data</display-name>
+
+                <attribute attribute-id="dynamicSubject"/>
+
+                <attribute attribute-id="dynamicMail"/>
+
+            </attribute-group>
+
+
+-            <attribute-group group-id="formData">
+
+                <display-name xml:lang="x-default">Form Data</display-name>
+
+                <attribute attribute-id="mailAssociated"/>
+
+                <attribute attribute-id="creationDate" system="true"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="lastModified" system="true"/>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="description"/>
+
+                <attribute attribute-id="bhupendraContactUs"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="casestudycustomObject">
+
+        <display-name xml:lang="x-default">casestudycustomObject</display-name>
+
+        <description xml:lang="x-default">case studiy one object creation</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="casestudycustomObject">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Emailcasestudy">
+
+                <display-name xml:lang="x-default">Emailcasestudy</display-name>
+
+                <description xml:lang="x-default">Emailcasestudy Help text here</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Subjectcasestudy">
+
+                <display-name xml:lang="x-default">Subjectcasestudy</display-name>
+
+                <description xml:lang="x-default">Subjectcasestudy Help text here</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Casestudygroup">
+
+                <display-name xml:lang="x-default">casestudygroupName</display-name>
+
+                <attribute attribute-id="Subjectcasestudy"/>
+
+                <attribute attribute-id="casestudycustomObject"/>
+
+                <attribute attribute-id="Emailcasestudy"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="casestudycustomobjectgetData">
+
+        <display-name xml:lang="x-default">casestudycustomobjectgetData</display-name>
+
+        <description xml:lang="x-default">This is for case study one........!!!</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="casestudycustomobjectgetData">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Comment001">
+
+                <display-name xml:lang="x-default">Comment Get</display-name>
+
+                <description xml:lang="x-default">Comment Getting.........................!!!!!</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Email001">
+
+                <display-name xml:lang="x-default">Email Get</display-name>
+
+                <description xml:lang="x-default">getting email..................!!!!!!!!!!!!!</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="Topic001">
+
+                <display-name xml:lang="x-default">Topic Get</display-name>
+
+                <description xml:lang="x-default">Topic Gettiing from customer........................!!</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Getdata001">
+
+                <display-name xml:lang="x-default">Getdata</display-name>
+
+                <attribute attribute-id="casestudycustomobjectgetData"/>
+
+                <attribute attribute-id="Topic001"/>
+
+                <attribute attribute-id="Comment001"/>
+
+                <attribute attribute-id="Email001"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="catalogListForVendor">
+
+        <display-name xml:lang="x-default">Catalog List For Vendor</display-name>
+
+        <description xml:lang="x-default">static catalog list</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="catalogId">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="catalogName">
+
+                <display-name xml:lang="x-default">Catalog Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="catalogStatus">
+
+                <display-name xml:lang="x-default">Status for vendor</display-name>
+
+                <description xml:lang="x-default">availble or not</description>
+
+                <type>boolean</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="vendorCatalog">
+
+                <display-name xml:lang="x-default">Vendor Catalog</display-name>
+
+                <attribute attribute-id="catalogId"/>
+
+                <attribute attribute-id="catalogName"/>
+
+                <attribute attribute-id="catalogStatus"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="category">
+
+        <display-name xml:lang="x-default">Category List</display-name>
+
+        <description xml:lang="x-default">contain the list of the category</description>
+
+        <staging-mode>source-to-target</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="CategoryList">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="adultProducts">
+
+                <display-name xml:lang="x-default">Adult Products</display-name>
+
+                <description xml:lang="x-default">category adult products</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="availableOrNot">
+
+                <display-name xml:lang="x-default">status of category availability</display-name>
+
+                <description xml:lang="x-default">available or not</description>
+
+                <type>boolean</type>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="category">
+
+                <display-name xml:lang="x-default">Category</display-name>
+
+                <description xml:lang="x-default">enter the category</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="electronics">
+
+                <display-name xml:lang="x-default">Electronics</display-name>
+
+                <description xml:lang="x-default">category electronics</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="hairProducts">
+
+                <display-name xml:lang="x-default">Hair Products</display-name>
+
+                <description xml:lang="x-default">category Hair products</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="kid">
+
+                <display-name xml:lang="x-default">Kid's Wear</display-name>
+
+                <description xml:lang="x-default">category kids</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="men">
+
+                <display-name xml:lang="x-default">Men</display-name>
+
+                <description xml:lang="x-default">Mens Category</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="women">
+
+                <display-name xml:lang="x-default">Women</display-name>
+
+                <description xml:lang="x-default">category Women</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="categoryList">
+
+                <display-name xml:lang="x-default">Category List</display-name>
+
+                <attribute attribute-id="availableOrNot"/>
+
+                <attribute attribute-id="CategoryList"/>
+
+                <attribute attribute-id="category"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="chetancustom">
+
+        <display-name xml:lang="x-default">id</display-name>
+
+        <description xml:lang="x-default">Hiii</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="education">
+
+                <display-name xml:lang="x-default">education</display-name>
+
+                <description xml:lang="x-default">Hello</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>20</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="firstname">
+
+                <display-name xml:lang="x-default">firstname</display-name>
+
+                <description xml:lang="x-default">heloo</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>20</min-length>
+
+                <unit xml:lang="x-default">21</unit>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="gender">
+
+                <display-name xml:lang="x-default">gender</display-name>
+
+                <description xml:lang="x-default">gender</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>20</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="lastname">
+
+                <display-name xml:lang="x-default">lastname</display-name>
+
+                <description xml:lang="x-default">Hello</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>20</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="name">
+
+                <display-name xml:lang="x-default">name</display-name>
+
+                <description xml:lang="x-default">hello</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>20</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Grp2">
+
+                <display-name xml:lang="x-default">Grp2</display-name>
+
+                <attribute attribute-id="name"/>
+
+                <attribute attribute-id="firstname"/>
+
+                <attribute attribute-id="lastname"/>
+
+                <attribute attribute-id="education"/>
+
+                <attribute attribute-id="gender"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="client1">
+
+        <display-name xml:lang="x-default">subject</display-name>
+
+        <description xml:lang="x-default">custom attribute to fetch data of subject</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="subject">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <group-definitions>
+
+            <attribute-group group-id="client1"/>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="clientEmails">
+
+        <display-name xml:lang="x-default">clientEmails</display-name>
+
+        <display-name xml:lang="fr">dfdsjfsdifdj</display-name>
+
+        <display-name xml:lang="fr-CA">dfufdudfu8fsdsydfy7fdsyds7y7ytt6t6t</display-name>
+
+        <display-name xml:lang="fr-FR">chetnya</display-name>
+
+        <description xml:lang="x-default">clientEmails</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="emails">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <description xml:lang="x-default">emails</description>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <description xml:lang="x-default">subject</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="FormGroup">
+
+                <display-name xml:lang="x-default">FormGroup</display-name>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="emails"/>
+
+                <attribute attribute-id="id"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="clientEmails1">
+
+        <display-name xml:lang="x-default">clientEmails</display-name>
+
+        <description xml:lang="x-default">clientEmails</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="id1">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="emails1">
+
+                <display-name xml:lang="x-default">emails</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactForm">
+
+        <display-name xml:lang="x-default">contactForm</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="mobile">
+
+                <display-name xml:lang="x-default">mobile</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="name">
+
+                <display-name xml:lang="x-default">name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="contactCustomObject">
+
+                <display-name xml:lang="x-default">contactCustomObject</display-name>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="name"/>
+
+                <attribute attribute-id="mobile"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactId">
+
+        <display-name xml:lang="x-default">contactId</display-name>
+
+        <description xml:lang="x-default">contactId</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+        <retention-days>100</retention-days>
+
+
+-        <key-definition attribute-id="contactId">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="description">
+
+                <display-name xml:lang="x-default">description</display-name>
+
+                <description xml:lang="x-default">description</description>
+
+                <type>text</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsData">
+
+        <display-name xml:lang="x-default">contactUsData</display-name>
+
+        <description xml:lang="x-default">it is storing data from customer from contact us form</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="message">
+
+                <display-name xml:lang="x-default">Message</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="name">
+
+                <display-name xml:lang="x-default">Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="supportEmail">
+
+                <display-name xml:lang="x-default">supportEmail</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="contactUs">
+
+                <display-name xml:lang="x-default">contactUs</display-name>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="message"/>
+
+                <attribute attribute-id="supportEmail"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="name"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsData1">
+
+        <display-name xml:lang="x-default">contactUsData</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="contactId">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="description">
+
+                <display-name xml:lang="x-default">Description</display-name>
+
+                <type>text</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="queryEmail">
+
+                <display-name xml:lang="x-default">QueryEmail</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>text</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <attribute attribute-id="description"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="queryEmail"/>
+
+                <attribute attribute-id="contactId"/>
+
+                <attribute attribute-id="subject"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsData12">
+
+        <display-name xml:lang="x-default">contactUsData12</display-name>
+
+        <description xml:lang="x-default">contactUsData12</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+        <retention-days>100</retention-days>
+
+
+-        <key-definition attribute-id="contactUsData12">
+
+            <display-name xml:lang="x-default">contactUsData123</display-name>
+
+            <description xml:lang="x-default">contactUsData123</description>
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="contactId">
+
+                <display-name xml:lang="x-default">contactId</display-name>
+
+                <description xml:lang="x-default">contactId</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="description">
+
+                <display-name xml:lang="x-default">description</display-name>
+
+                <description xml:lang="x-default">description</description>
+
+                <type>text</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">email</display-name>
+
+                <description xml:lang="x-default">email</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="queryEmail">
+
+                <display-name xml:lang="x-default">queryEmail</display-name>
+
+                <description xml:lang="x-default">queryEmail</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">subject</display-name>
+
+                <description xml:lang="x-default">subject</description>
+
+                <type>text</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="contactUsData12">
+
+                <display-name xml:lang="x-default">contactUsData12</display-name>
+
+                <attribute attribute-id="contactUsData12"/>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="queryEmail"/>
+
+                <attribute attribute-id="description"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="contactId"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsResponses">
+
+        <display-name xml:lang="x-default">Contact Us Responses</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="contactUsResponsesId">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="customerEmail">
+
+                <display-name xml:lang="x-default">Customer Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="mailSubject">
+
+                <display-name xml:lang="x-default">Mail Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="messageText">
+
+                <display-name xml:lang="x-default">Message Text</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="sendToEmails">
+
+                <display-name xml:lang="x-default">Send To Emails</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="status">
+
+                <display-name xml:lang="x-default">Status</display-name>
+
+                <type>enum-of-string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+
+-                <value-definitions>
+
+
+-                    <value-definition default="true">
+
+                        <display xml:lang="x-default">Pending</display>
+
+                        <value>pending</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Failure</display>
+
+                        <value>failure</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Success</display>
+
+                        <value>success</value>
+
+                    </value-definition>
+
+                </value-definitions>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="standard">
+
+                <display-name xml:lang="x-default">Standard</display-name>
+
+                <attribute attribute-id="sendToEmails"/>
+
+                <attribute attribute-id="contactUsResponsesId"/>
+
+                <attribute attribute-id="customerEmail"/>
+
+                <attribute attribute-id="mailSubject"/>
+
+                <attribute attribute-id="messageText"/>
+
+                <attribute attribute-id="status"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsResponsesUmesh">
+
+        <display-name xml:lang="x-default">contactUsResponsesUmesh</display-name>
+
+        <description xml:lang="x-default">contactUsResponsesUmesh</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="contactUsResponsesUmesh">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="customerEmail">
+
+                <display-name xml:lang="x-default">Customer Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="mailSubject">
+
+                <display-name xml:lang="x-default">Mail Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="messageText">
+
+                <display-name xml:lang="x-default">Message Text</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="sendToEmails">
+
+                <display-name xml:lang="x-default">Send To Emails</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="status">
+
+                <display-name xml:lang="x-default">status</display-name>
+
+                <type>enum-of-string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+
+-                <value-definitions>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Pending</display>
+
+                        <value>pending</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Success</display>
+
+                        <value>success</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">failure</display>
+
+                        <value>failure</value>
+
+                    </value-definition>
+
+                </value-definitions>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="standard">
+
+                <display-name xml:lang="x-default">standard</display-name>
+
+                <attribute attribute-id="contactUsResponsesUmesh"/>
+
+                <attribute attribute-id="lastModified" system="true"/>
+
+                <attribute attribute-id="creationDate" system="true"/>
+
+                <attribute attribute-id="customerEmail"/>
+
+                <attribute attribute-id="mailSubject"/>
+
+                <attribute attribute-id="sendToEmails"/>
+
+                <attribute attribute-id="messageText"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsShubham">
+
+        <display-name xml:lang="x-default">Contact Us Shubham</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="customerMailAddress">
+
+                <display-name xml:lang="x-default">Customer Mail Address</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="message">
+
+                <display-name xml:lang="x-default">Message</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subjectType">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="contactUsShubham">
+
+                <display-name xml:lang="x-default">Contact Us Shubham</display-name>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="message"/>
+
+                <attribute attribute-id="customerMailAddress"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsSubjectShubham">
+
+        <display-name xml:lang="x-default">contactUsSubjectShubham</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="label">
+
+                <display-name xml:lang="x-default">label</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">Subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="subjectGroupShubham">
+
+                <display-name xml:lang="x-default">subjectGroupShubham</display-name>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="label"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsSubjects">
+
+        <display-name xml:lang="x-default">Contact Us - Subject</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="subjectId">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="subjectEmail">
+
+                <display-name xml:lang="x-default">Subject Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subjectName">
+
+                <display-name xml:lang="x-default">Subject Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="contactSubjects">
+
+                <display-name xml:lang="x-default">Contact Subjects</display-name>
+
+                <attribute attribute-id="subjectEmail"/>
+
+                <attribute attribute-id="subjectId"/>
+
+                <attribute attribute-id="subjectName"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contactUsdropdownData">
+
+        <display-name xml:lang="x-default">ContactUs Subject Data</display-name>
+
+        <description xml:lang="x-default">Data for contact us page Select dropdown.</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>int</type>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Name">
+
+                <display-name xml:lang="x-default">Subject name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="contactUsSelectBox">
+
+                <display-name xml:lang="x-default">contactUsSelectBox</display-name>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="Name"/>
+
+                <attribute attribute-id="email"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contact_case_study">
+
+        <display-name xml:lang="x-default">contact_case_study</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="contact_case_study">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email_cs">
+
+                <display-name xml:lang="x-default">email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="topic_cs">
+
+                <display-name xml:lang="x-default">topic_cs</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="caseStudy">
+
+                <attribute attribute-id="email_cs"/>
+
+                <attribute attribute-id="topic_cs"/>
+
+                <attribute attribute-id="contact_case_study"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="contact_us_table">
+
+        <display-name xml:lang="x-default">contact_us_table</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="contactustable">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="comment_data">
+
+                <display-name xml:lang="x-default">comment_data</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email_id">
+
+                <display-name xml:lang="x-default">email_id</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="first_Name">
+
+                <display-name xml:lang="x-default">first_Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="last_Name">
+
+                <display-name xml:lang="x-default">last_Name</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="topic_data">
+
+                <display-name xml:lang="x-default">topic_data</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Group">
+
+                <attribute attribute-id="last_Name"/>
+
+                <attribute attribute-id="email_id"/>
+
+                <attribute attribute-id="topic_data"/>
+
+                <attribute attribute-id="comment_data"/>
+
+                <attribute attribute-id="first_Name"/>
+
+                <attribute attribute-id="contactustable"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="customAamir">
+
+        <display-name xml:lang="x-default">Aamir</display-name>
+
+        <description xml:lang="x-default">fafa</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+        <retention-days>100</retention-days>
+
+
+-        <key-definition attribute-id="12345">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="newtable">
+
+                <display-name xml:lang="x-default">hello</display-name>
+
+                <description xml:lang="x-default">daf</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="12345">
+
+                <display-name xml:lang="x-default">hello</display-name>
+
+                <attribute attribute-id="newtable"/>
+
+                <attribute attribute-id="12345"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="customAttrMansi">
+
+        <display-name xml:lang="x-default">customAttrMansi</display-name>
+
+        <description xml:lang="x-default">customAttrMansi description</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <display-name xml:lang="x-default">ID</display-name>
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="gender">
+
+                <display-name xml:lang="x-default">Gender</display-name>
+
+                <type>enum-of-string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+
+-                <value-definitions>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Male</display>
+
+                        <value>male</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Female</display>
+
+                        <value>female</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Other</display>
+
+                        <value>other</value>
+
+                    </value-definition>
+
+                </value-definitions>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="password">
+
+                <display-name xml:lang="x-default">Create Password</display-name>
+
+                <type>password</type>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="qualification">
+
+                <display-name xml:lang="x-default">Qualification</display-name>
+
+                <type>enum-of-string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>true</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+
+-                <value-definitions>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">12th</display>
+
+                        <value>higherSecondary</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">10th</display>
+
+                        <value>highSchool</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Graduate</display>
+
+                        <value>graduate</value>
+
+                    </value-definition>
+
+
+-                    <value-definition>
+
+                        <display xml:lang="x-default">Post Graduate</display>
+
+                        <value>postGraduate</value>
+
+                    </value-definition>
+
+                </value-definitions>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="registerSuccess">
+
+                <display-name xml:lang="x-default">registerSuccess</display-name>
+
+                <attribute attribute-id="gender"/>
+
+                <attribute attribute-id="qualification"/>
+
+                <attribute attribute-id="password"/>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="email"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="customContactForm">
+
+        <display-name xml:lang="x-default">Custom Contact Form</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="id">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="comment">
+
+                <display-name xml:lang="x-default">comment</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="customerCareEmail">
+
+                <display-name xml:lang="x-default">customer Care Email</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="email">
+
+                <display-name xml:lang="x-default">email</display-name>
+
+                <type>email</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="subject">
+
+                <display-name xml:lang="x-default">subject</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="formInfo">
+
+                <display-name xml:lang="x-default">Form Info</display-name>
+
+                <attribute attribute-id="id"/>
+
+                <attribute attribute-id="comment"/>
+
+                <attribute attribute-id="email"/>
+
+                <attribute attribute-id="subject"/>
+
+                <attribute attribute-id="customerCareEmail"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="customContactUsForm">
+
+        <display-name xml:lang="x-default">customContactUsForm</display-name>
+
+        <description xml:lang="x-default">customContactUsForm</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="customContactUsFormKey">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="customEmail">
+
+                <display-name xml:lang="x-default">customEmail</display-name>
+
+                <description xml:lang="x-default">customEmail</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="customFirstName">
+
+                <display-name xml:lang="x-default">customFirstName</display-name>
+
+                <description xml:lang="x-default">customFirstName</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="customLastName">
+
+                <display-name xml:lang="x-default">customLastName</display-name>
+
+                <description xml:lang="x-default">customLastName</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="customMassage">
+
+                <display-name xml:lang="x-default">customMassage</display-name>
+
+                <description xml:lang="x-default">customMassage</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="customYourTopic">
+
+                <display-name xml:lang="x-default">customYourTopic</display-name>
+
+                <description xml:lang="x-default">customYourTopic</description>
+
+                <type>string</type>
+
+                <localizable-flag>true</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="assignmentObject">
+
+                <display-name xml:lang="x-default">assignmentObject</display-name>
+
+                <attribute attribute-id="customMassage"/>
+
+                <attribute attribute-id="customYourTopic"/>
+
+                <attribute attribute-id="customEmail"/>
+
+                <attribute attribute-id="customLastName"/>
+
+                <attribute attribute-id="customFirstName"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="customID">
+
+        <display-name xml:lang="x-default">form</display-name>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="form">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+    </custom-type>
+
+
+-    <custom-type type-id="customID_salo">
+
+        <display-name xml:lang="x-default">customID_salo</display-name>
+
+        <description xml:lang="x-default">customID_salo</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>site</storage-scope>
+
+
+-        <key-definition attribute-id="review">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="customID_salo_at">
+
+                <display-name xml:lang="x-default">customID_salo_at</display-name>
+
+                <description xml:lang="x-default">customID_salo_at</description>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+            <attribute-group group-id="customID_salo_at"/>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="customMR">
+
+        <display-name xml:lang="x-default">middlename</display-name>
+
+        <description xml:lang="x-default">aaa</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+        <storage-scope>organization</storage-scope>
+
+
+-        <key-definition attribute-id="ID">
+
+            <type>string</type>
+
+            <min-length>0</min-length>
+
+        </key-definition>
+
+
+-        <attribute-definitions>
+
+
+-            <attribute-definition attribute-id="Lastname">
+
+                <display-name xml:lang="x-default">Lastname</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="fizulname">
+
+                <display-name xml:lang="x-default">fizulname</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+
+-            <attribute-definition attribute-id="middlename">
+
+                <display-name xml:lang="x-default">middlename</display-name>
+
+                <type>string</type>
+
+                <localizable-flag>false</localizable-flag>
+
+                <mandatory-flag>false</mandatory-flag>
+
+                <externally-managed-flag>false</externally-managed-flag>
+
+                <min-length>0</min-length>
+
+            </attribute-definition>
+
+        </attribute-definitions>
+
+
+-        <group-definitions>
+
+
+-            <attribute-group group-id="Group2">
+
+                <display-name xml:lang="x-default">NickName</display-name>
+
+                <attribute attribute-id="Lastname"/>
+
+                <attribute attribute-id="middlename"/>
+
+                <attribute attribute-id="fizulname"/>
+
+            </attribute-group>
+
+        </group-definitions>
+
+    </custom-type>
+
+
+-    <custom-type type-id="customMenu">
+
+        <display-name xml:lang="x-default">CustomMenu</display-name>
+
+        <description xml:lang="x-default">hghgghfg</description>
+
+        <staging-mode>no-staging</staging-mode>
+
+organization
+
+
+string
+
+0
+
+
+
+Drop1
+
+hgfg
+
+enum-of-string
+
+false
+
+false
+
+false
+
+    </custom-type>
+
+
+Custom Object Site
+
+Site specific object
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+firstname
+
+This is first name
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+date of birth
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+grouping
+
+
+
+
+customObjectUmesh
+
+customObjectUmesh description
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+country
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+email
+
+please
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+name
+
+name displayed
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+groups1
+
+
+
+
+
+
+Custom Registration Form
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+city
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Country
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Date Of Birth
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+First Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Mobile
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Zip Code
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Custom Registration
+
+
+
+
+
+
+
+
+
+
+
+Custom Subject
+
+set subject and email id for custom contact form
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Subject Email
+
+email
+
+false
+
+false
+
+false
+
+
+Subject Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Custom Subject
+
+
+
+
+
+table
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+description news
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+sandeep custom drop
+
+enum-of-string
+
+false
+
+false
+
+false
+
+
+
+India
+
+india
+
+
+Chaina
+
+chaina
+
+
+Japan
+
+japan
+
+
+Editor
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Fav Language
+
+fav_language
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+News Header
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Type of news
+
+Type of News
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+typenews
+
+typenews
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Grouping1
+
+
+
+
+
+
+
+
+
+
+AafreenProduct
+
+customproduct
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+FirstName
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Degree
+
+list
+
+enum-of-string
+
+false
+
+false
+
+false
+
+
+
+B Tech
+
+btech
+
+
+M tech
+
+mtech
+
+
+MCA
+
+mca
+
+
+B Com
+
+bcom
+
+
+Last Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Group1
+
+
+
+
+
+
+customobjectishika
+
+ajslbcdalsdbfclka
+
+no-staging
+
+organization
+
+
+int
+
+
+
+country
+
+opsmfopeldrmw
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+favourite language
+
+sagfws
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+First Name
+
+First Name
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+Last Name
+
+Last Name
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+
+Custom Group
+
+
+
+
+
+
+
+Data Form
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+First Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Your Topic
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Your Comment
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+DaTA gROUP
+
+
+
+
+
+
+
+
+Date
+
+Date
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+N Description
+
+text
+
+false
+
+false
+
+false
+
+
+demo
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+test
+
+
+
+ContactUs Subject Data
+
+Data for contact us page Select dropdown.
+
+source-to-target
+
+organization
+
+
+int
+
+
+
+Email
+
+email of customer cares
+
+email
+
+false
+
+true
+
+false
+
+
+Name
+
+Name of catagory
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+
+contactUsSelectBox
+
+Attribute group for contact us select box dropdown
+
+
+
+
+
+Final test
+
+description
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+MyFirstCustomObj
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+FirstName
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+firstName
+
+source-to-target
+
+organization
+
+
+string
+
+0
+
+
+gajendra Contactus Record
+
+contact us record
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+customerEmail
+
+customer Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+customer Message
+
+customer Message
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+customer Name
+
+customer Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+customer Subject
+
+customer Subject
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+emailSendStatus
+
+emailSendStatus
+
+int
+
+false
+
+false
+
+false
+
+
+subjectAssociatedEmail
+
+subjectAssociatedEmail
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+gajendraContactusGroup
+
+
+
+
+
+
+
+
+
+User
+
+user
+
+no-staging
+
+organization
+
+100
+
+
+string
+
+0
+
+
+
+Degree
+
+Degree
+
+enum-of-string
+
+false
+
+false
+
+false
+
+
+
+M.tech
+
+M.tech
+
+
+M.BA
+
+M.BA
+
+
+M.sc
+
+M.sc
+
+
+Email
+
+Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+First Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last Name
+
+Last name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Password
+
+Password
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+usergroup
+
+
+
+
+
+
+
+
+Demoo
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+FIrst Namee
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+group 1
+
+
+
+
+hairAttribute
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Black
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+colorValue
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+standard
+
+
+
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Emails
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Subjects
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Groupings
+
+
+
+
+
+Contact Us object
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Sub Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Mail Send TO
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Message
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+group 1
+
+
+
+
+
+
+
+Even
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+object new himanshu
+
+this is my latest obj.........................
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+hjimanshu obj
+
+hjnklmn
+
+string
+
+false
+
+true
+
+false
+
+0
+
+
+
+himanshu group 1
+
+
+
+odd
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+Indian Team
+
+source-to-target
+
+organization
+
+
+string
+
+0
+
+
+
+Rohit sSharma
+
+string
+
+true
+
+false
+
+false
+
+0
+
+11
+
+
+
+team1
+
+
+
+
+
+
+internalProjectObject
+
+Custom Object for internal project 1 by ishika and aamir
+
+no-staging
+
+site
+
+
+Customer id
+
+customer id for contact us form for internal project 1
+
+string
+
+0
+
+
+
+Email
+
+email for contact us form for internal project1
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Email Content
+
+email content written by user in contact us form for internal project 1
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+FirstName
+
+First Name for contact us form for internal project 1
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+LastName
+
+last name for contactus form for internal project 1
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Subject
+
+List of subjects for dropdown
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+internal project 1
+
+
+
+
+
+
+
+
+invoiceLogo
+
+invoiceLogo
+
+no-staging
+
+organization
+
+15
+
+
+string
+
+0
+
+
+
+invoiceLogo
+
+
+
+itsCustomObject
+
+source-to-target
+
+organization
+
+
+string
+
+0
+
+
+
+First name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+itsCustomObject
+
+
+
+
+
+itsCustomObjectNew
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+First name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+
+
+
+
+hello
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+membershipData
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+Description
+
+text
+
+true
+
+false
+
+false
+
+
+Detail
+
+text
+
+true
+
+false
+
+false
+
+
+Gold Description
+
+text
+
+true
+
+false
+
+false
+
+
+Gold Detail
+
+text
+
+true
+
+false
+
+false
+
+
+Membership Discounts
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Membership Prices
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Membership Duration
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Option
+
+text
+
+true
+
+false
+
+false
+
+
+Platinum Description
+
+text
+
+true
+
+false
+
+false
+
+
+Platinum Detail
+
+text
+
+true
+
+false
+
+false
+
+
+Shipping Process
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Silve rDescription
+
+text
+
+true
+
+false
+
+false
+
+
+Silver Detail
+
+text
+
+true
+
+false
+
+false
+
+
+
+membership Group
+
+
+
+
+
+
+
+
+
+membershipGroupPlan
+
+
+
+
+
+
+Membership DataPlan
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+Description
+
+text
+
+true
+
+false
+
+false
+
+
+Detail
+
+text
+
+true
+
+false
+
+false
+
+
+Options
+
+text
+
+true
+
+false
+
+false
+
+
+
+membershipGroup
+
+
+
+
+
+
+myContact US
+
+My Contact us page assignment by sanjeev sir
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Comments
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+First Nane
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Topic
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Form Data
+
+
+
+
+
+
+
+
+Custom Contact Us
+
+This is a custom contact us page for sending your querry...
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Subject
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+My Grouping
+
+
+
+
+
+Custom contact us data
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Customer Email
+
+here we get customer email details
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Customer Querry
+
+Here we get customer questions
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Customer Subject
+
+Here we get customer subject regarding details
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Customer Data
+
+
+
+
+
+
+object new
+
+source-to-target
+
+organization
+
+
+email
+
+email
+
+string
+
+0
+
+
+
+FIrst Name
+
+fIRST NAME
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+group 1
+
+
+
+
+mytableuser
+
+user data
+
+no-staging
+
+organization
+
+100
+
+
+string
+
+0
+
+
+
+email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+password
+
+password
+
+false
+
+false
+
+
+
+
+
+group1
+
+
+
+
+
+Contact Us Sandeep
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Email Associated
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+id
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+Subject
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+sandeep
+
+
+
+
+
+
+newContactusgajen
+
+newContactusgajen
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+emailAssociated
+
+gajendra.dubey@codesquaretech.com
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+subject
+
+For Suggessions
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+
+emailsubject
+
+
+
+
+
+Firstname
+
+this is first name
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+Firstname
+
+string
+
+false
+
+true
+
+false
+
+0
+
+
+
+NICKNAME
+
+
+
+newCustomObjectType
+
+ishika trying custom object types
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+magic
+
+new attribute
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+
+newGroup
+
+
+
+
+New custom object
+
+This is custom obj div
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+First Name
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+Gender
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+Last Name
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+Qualification
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+State
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+
+div group 1
+
+
+
+
+
+
+
+newsletter
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+N Description
+
+text
+
+false
+
+false
+
+false
+
+
+
+newsletter
+
+
+
+newtable
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+maths
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+
+english
+
+
+
+Nickname
+
+The nickname feild
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Gender
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+STATE
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+NICKNAME
+
+
+
+
+
+
+
+ontact_us_case_study
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+comment Data
+
+string
+
+false
+
+false
+
+false
+
+0
+
+240
+
+
+email Id
+
+email
+
+false
+
+false
+
+false
+
+
+topic Data
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+
+
+
+
+
+Order Feedback
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Feedback Message
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+
+
+
+Order Review
+
+review from customer on order level will store here.
+
+no-staging
+
+site
+
+10
+
+
+string
+
+0
+
+
+
+Message
+
+message
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Order Level Review
+
+
+
+
+practice_Obj
+
+this is created for the practice of Custom Obj of the form
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+practice_object
+
+first practice Object
+
+string
+
+false
+
+false
+
+false
+
+0
+
+50
+
+
+practice_choice
+
+this is for checking that the data is transfer from the vs to here or not
+
+enum-of-string
+
+false
+
+false
+
+false
+
+
+
+anmol
+
+Anmol
+
+
+Aashutosh
+
+Aashutosh
+
+
+Educated
+
+educated
+
+
+
+
+
+
+
+registeration-data
+
+no-staging
+
+organization
+
+
+registeration-data
+
+string
+
+0
+
+
+
+first_name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+gender
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+last_name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+state
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+user_email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+user_password
+
+password
+
+false
+
+false
+
+
+
+registration-data-group
+
+
+
+
+
+
+
+
+
+Review
+
+this will take the review.
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+Enter the review
+
+this is take the main review
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Review taken
+
+
+
+
+saloni custom object
+
+This is saloni custom object
+
+no-staging
+
+organization
+
+10
+
+
+string
+
+0
+
+
+
+email
+
+email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+name
+
+name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+subject
+
+subject
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+
+
+
+
+
+
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Customer Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Customer Message
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Customer Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Customer Subject
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Email Send Status
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Associated Mails
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+sandeep
+
+
+
+
+
+
+
+
+
+
+sandeepfirstname
+
+sandeepfirstname
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+sandeepfirstname
+
+
+
+saveUserResponse
+
+Save the user Response that is send through the data
+
+no-staging
+
+organization
+
+30
+
+
+string
+
+0
+
+
+
+Customer Email
+
+It contains the customer Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+MailSubject
+
+Subject Mail
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Query Text
+
+Query Text enter by the user
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Subject
+
+Mail Subject
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+ContactUs
+
+
+
+
+
+
+
+Services Emails
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+Associated Emails
+
+Associated Emails
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+Subject
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+
+Standard
+
+
+
+
+
+shubhamJson
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+firstName
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+lastName
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+shubham json group
+
+
+
+
+
+shubham json 2
+
+shubham json description
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+first name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+shubham json group
+
+
+
+
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Email
+
+email
+
+true
+
+false
+
+false
+
+
+Name of Enquired
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+Message
+
+text
+
+true
+
+false
+
+false
+
+
+Subject
+
+text
+
+true
+
+false
+
+false
+
+
+
+task1
+
+
+
+
+
+
+sub2
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+favlanguage
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+firstname
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+lastname
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+states
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+sub3
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+sub4
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+sub5
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+
+maths
+
+
+
+
+
+
+Support Email
+
+for contact us form
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Email
+
+Email
+
+email
+
+false
+
+false
+
+false
+
+
+Subject
+
+Subject
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+
+
+
+task_data
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+First name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Gender
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Phone Number
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Technologies
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Group
+
+
+
+
+
+
+
+
+Test
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+First Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Test Custom Table
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+Email
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Custom
+
+
+
+
+testObject
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+Custom
+
+
+
+umeshServiceEmails
+
+umeshServiceEmails
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+Associated Emails
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+subject
+
+subject
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+
+standard
+
+
+
+
+
+umeshSubject
+
+umeshSubject
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+umeshSubjectEmail
+
+umeshSubjectEmail
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+umeshSubjectId
+
+umeshSubjectId
+
+string
+
+true
+
+true
+
+false
+
+0
+
+
+umeshSubjectName
+
+umeshSubjectName
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+
+standard
+
+
+
+
+
+
+User Details
+
+userDetails
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Email
+
+email
+
+false
+
+false
+
+false
+
+
+Email id
+
+email
+
+false
+
+false
+
+false
+
+
+Email id
+
+email
+
+false
+
+false
+
+false
+
+
+Message
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Subject
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+
+
+
+
+
+Email Details
+
+
+
+Gruup7
+
+
+
+
+
+
+
+userDetails1
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+City Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Country Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Date of Birth
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+First Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Mobile Number
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Zip Code
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Names
+
+
+
+
+
+
+
+
+
+himanshuobject new
+
+fdghjkl;';k
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Last Name
+
+string
+
+false
+
+true
+
+false
+
+0
+
+
+
+himanshu grp
+
+
+
+Form Data
+
+no-staging
+
+organization
+
+
+Id
+
+string
+
+0
+
+
+
+city
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+country
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Date of Birth
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+First Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Last Name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+Number
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+zipcode
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+Form Info
+
+
+
+
+
+
+
+
+
+ydContactUsCustomObject
+
+ydContactUsCustomObject
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+ydEmail
+
+ydEmail
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+ydMessage
+
+ydMessage
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+ydSubject
+
+ydSubject
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+
+ydProjectGroup
+
+
+
+
+
+
+ydContactUsCustomObjectTwo
+
+ydContactUsCustomObjectTwo
+
+no-staging
+
+site
+
+
+string
+
+0
+
+
+
+ydEmail
+
+ydEmail
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+ydMessage
+
+ydMessage
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+ydSubject
+
+ydSubject
+
+string
+
+true
+
+false
+
+false
+
+0
+
+
+
+contactUsGroup
+
+
+
+
+
+
+yd Engraving Message
+
+yd Engraving Message
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+ydEngravingMessage
+
+ydEngravingMessage
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+ydCaseStudyGroup
+
+
+
+
+ForthCustomObject
+
+Its ForthCustomObject
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+city name
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+group102
+
+
+
+
+
+
+Yd Frist Custom Object
+
+Its Yadvendra Frist Custom Object
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Name Custom Attribute
+
+It is Yadvendra Name Custom Attribute
+
+string
+
+false
+
+true
+
+false
+
+0
+
+50
+
+
+
+group 1
+
+
+
+
+Yd Frist Custom Object Two
+
+Its My Yd Frist Custom Object Two
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+Input Email
+
+inputEmail name of isml input tag
+
+string
+
+false
+
+false
+
+false
+
+0
+
+50
+
+
+Input Password
+
+inputPassword name of isml input tag
+
+string
+
+false
+
+false
+
+false
+
+0
+
+50
+
+
+Input Select
+
+inputSelect name of isml input tag
+
+string
+
+false
+
+false
+
+false
+
+0
+
+50
+
+
+
+gr2
+
+
+
+
+
+
+ydIsSubscription
+
+ydIsSubscription
+
+no-staging
+
+organization
+
+
+string
+
+0
+
+
+
+ydIsSubscriptionGold
+
+ydIsSubscriptionGold
+
+boolean
+
+false
+
+false
+
+
+ydIsSubscriptionPlatinum
+
+ydIsSubscriptionPlatinum
+
+boolean
+
+false
+
+false
+
+
+ydIsSubscriptionSilver
+
+ydIsSubscriptionSilver
+
+boolean
+
+false
+
+false
+
+
+
+ydTaskSubscription
+
+
+
+
+
+ydTestCustomObj
+
+ydTestCustomObj
+
+no-staging
+
+organization
+
+100
+
+
+string
+
+0
+
+
+
+ydTestCustomObjAttribute
+
+ydTestCustomObjAttribute
+
+string
+
+false
+
+false
+
+false
+
+0
+
+
+
+group103
+
+
+
+
+
+
+ydThirdcCustomObject
+
+ydThirdcCustomObject
+
+no-staging
+
+organization
+
+
+int
+
+
+
+myAge
+
+myAge
+
+int
+
+false
+
+false
+
+false
+
+
+
+group101
+
+
+
+
+
+</metadata>
