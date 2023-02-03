@@ -10,7 +10,9 @@ var URLUtils = require("dw/web/URLUtils");
 var ProductList = require('dw/customer/ProductList');
 var ProductListMgr = require('dw/customer/ProductListMgr');
 
-server.append('Begin',function(req,res,next){
+server.append('Begin', function ( req, res, next ) {
+    var dataObj = res.getViewData();
+
     var id = req.querystring.id;
     var productlist = [];
     var productListData = null;
@@ -30,12 +32,16 @@ server.append('Begin',function(req,res,next){
         productlist.push(productList);
 
       });
+      dataObj.id = id;
+      dataObj.productList = productlist;
+      dataObj.productListData = productListData;
+      res.setViewData(dataObj);
 
-    res.render('checkout/checkout',{
-        id:id,
-        productList : productlist,
-        productListData: productListData
-    });
+    // res.render('checkout/checkout',{
+    //     id:id,
+    //     productList : productlist,
+    //     productListData: productListData
+    // });
 
     next();
 })
