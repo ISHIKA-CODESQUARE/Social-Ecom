@@ -518,6 +518,7 @@ function getOptions($productContainer) {
             // update the option value if the product is gift and the gift option amount availabel there - CUSTOM
              if ($productContainer.find('.gift-amount-div').length > 0) {
                 selectedValueId = $('button.gift-amount[disabled]').attr('gift-option');
+                alert('giftcard')
                 return {
                     optionId: $(this).data("option-id"),
                     selectedValueId: selectedValueId,
@@ -526,6 +527,7 @@ function getOptions($productContainer) {
             else if(document.getElementById('senderID').value) {
                  selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
                     .data('value-id');
+                    alert('friend')
                     return {
                         optionId: $(this).data("option-id"),
                         selectedValueId: selectedValueId,
@@ -533,6 +535,7 @@ function getOptions($productContainer) {
                     };
             }
             else{
+                alert('base')
             return {
                 optionId: $(this).data('option-id'),
                 selectedValueId: selectedValueId
@@ -750,7 +753,13 @@ module.exports = {
                     childProducts: getChildProducts(),
                     quantity: getQuantitySelected($(this))
                 };
+                
             }
+            if (document.getElementById('senderID').value) {
+
+                form.senderId = document.getElementById('senderID').value;
+                console.log(form);
+                }
             if (!$('.bundle-item').length) {
                 form.options = getOptions($productContainer);
             }
