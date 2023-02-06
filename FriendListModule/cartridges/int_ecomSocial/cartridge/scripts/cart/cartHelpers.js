@@ -164,8 +164,7 @@ function addLineItem(
     childProducts,
     optionModel,
     defaultShipment,
-    options,
-    senderId
+    options
 ) {
     var productLineItem = currentBasket.createProductLineItem(
         product,
@@ -177,7 +176,9 @@ function addLineItem(
         updateBundleProducts(productLineItem, childProducts);
     }
 
-    productLineItem.custom.senderID = senderId;
+    var sdhu = options
+
+    productLineItem.custom.senderID = options[0].sendersID;
     productLineItem.setQuantityValue(quantity);
 
     return productLineItem;
@@ -334,7 +335,7 @@ function checkBundledProductCanBeAdded(childProducts, productLineItems, quantity
  * @param {SelectedOption[]} options - product options
  *  @return {Object} returns an error object
  */
-function addProductToCart(currentBasket, productId, quantity, childProducts, options, senderId) {
+function addProductToCart(currentBasket, productId, quantity, childProducts, options) {
     var availableToSell;
     var defaultShipment = currentBasket.defaultShipment;
     var perpetual;
@@ -400,8 +401,7 @@ function addProductToCart(currentBasket, productId, quantity, childProducts, opt
             childProducts,
             optionModel,
             defaultShipment,
-            options,
-            senderId
+            options
 
         );
 
