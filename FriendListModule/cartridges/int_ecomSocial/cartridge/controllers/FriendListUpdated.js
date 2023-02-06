@@ -78,7 +78,7 @@ server.post("Save", function (req, res, next) {
         requests.custom.SenderName = a.profile.firstName;
         requests.custom.ReceiverAddress = list_of_customer.customerNo;
         requests.custom.SenderEmail =current_customer.profile.email;
-        requests.custom.Status = false; 
+        requests.custom.Status = false;
       });
       }
     }
@@ -103,8 +103,10 @@ server.post("Save", function (req, res, next) {
     returnData.error = `Registration link will be sent to the person you are trying to add as they are not a user of our website currently`;
     var redirectURL = URLUtils.url("FriendListUpdated-FriendDataTable").toString();
     returnData.redirectURL = redirectURL;
-    res.json(returnData); 
-  
+    res.json(returnData);
+    // res.redirect(URLUtils.url("FriendListUpdated-FriendDataTable"));
+   // res.render("friendList/friendListShow");
+
   });
   next();
 });
@@ -131,9 +133,9 @@ server.get('AcceptedRequestFriends',function(req,res,next){
       var receiver_customer_number = req.querystring.receiver;
 
       var sender = CustomerMgr.getCustomerByCustomerNumber(senders_customer_number);
-      
+
       var receiver = CustomerMgr.getCustomerByCustomerNumber(receiver_customer_number);
-      
+
       var productList = ProductListMgr.getProductLists(sender , 100);
       if(productList.length == 0){
           var ProductList = ProductListMgr.createProductList(sender, 100)
@@ -141,7 +143,7 @@ server.get('AcceptedRequestFriends',function(req,res,next){
       }else
       {
           productList = productList[0];
-      }   
+      }
             var prroductList = productList.createProductItem(product);
             prroductList.custom.first_name =receiver.profile.firstName;
             prroductList.custom.last_name = receiver.profile.lastName,
@@ -262,6 +264,7 @@ server.get("sendMailToFriend", function (req, res, next) {
 
 server.get("DeleteList", function (req, res, next) {
   var id = req.querystring.id;
+  var senders_customer_number = req.querystring.sender;
   Transaction.wrap(function () {
     var productList = ProductListMgr.getProductLists(customer, 100);
     if (productList.length == 0) {

@@ -33,8 +33,6 @@
         </div>
     </div>
 
-
-
     <!-- Email -->
     <div class="form-group
         ${pdict.form.email.mandatory === true ? 'required' : ''}">

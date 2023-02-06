@@ -5184,8 +5184,8 @@ declare global {
 			/**
 			* Point For Customer Groups
 
-				Gold - 0 < points <= 100
-Diamond - 100 < points <= 300
+				Gold - 0 < points <= 100
+Diamond - 100 < points <= 300
 Platinum - 300 < points
 			* 
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#9576) 
@@ -6291,9 +6291,9 @@ Platinum - 300 < points
 			/**
 			* Gift Card Pin Field Activation
 
-				This variable activate the "Pin" filed on billing page. By default that field is hidden.
-Possible Values for this Attribute:
-1 - Show the "Pin" field on the Billing Page
+				This variable activate the "Pin" filed on billing page. By default that field is hidden.
+Possible Values for this Attribute:
+1 - Show the "Pin" field on the Billing Page
 2- Hide the "Pin" field on the Billing Page
 			* @group ClutchSettings - Clutch Integration Settings
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#11400) | [group](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#14809)
@@ -6303,12 +6303,12 @@ Possible Values for this Attribute:
 			/**
 			* Gift Card Pin Bypassing
 
-				If the Gift Card Pin Field is active, you can define card number patterns here that should not be requiring a PIN.
-This might be useful if you have legacy gift cards in certain card number ranges that were printed without a PIN.
-If you specify anything here, specify it as a regex. Any gift card number matching this regular expression will NOT be required be accompanied by a PIN in the balance checker or billing page.
-Example: legacy cards that were 16 characters long and start with 1111 or 2222 should be excluded:
-^(1111[0-9]{12}|2222[0-9]{12})$ 
-
+				If the Gift Card Pin Field is active, you can define card number patterns here that should not be requiring a PIN.
+This might be useful if you have legacy gift cards in certain card number ranges that were printed without a PIN.
+If you specify anything here, specify it as a regex. Any gift card number matching this regular expression will NOT be required be accompanied by a PIN in the balance checker or billing page.
+Example: legacy cards that were 16 characters long and start with 1111 or 2222 should be excluded:
+^(1111[0-9]{12}|2222[0-9]{12})$ 
+
 For assistance with the regular expression configuration, please contact Clutch customer support.
 			* @group ClutchSettings - Clutch Integration Settings
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#11412) | [group](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#14810)
@@ -6596,12 +6596,12 @@ For assistance with the regular expression configuration, please contact Clutch 
 			/**
 			* Pay Pal API Credit Banner Styles
 
-				Return style configurations for Pay Pal Credit Banner (cart, product, category )
-                    Available values:     
-                    layout: 'flex', // flex, text
-                    styleColor: 'gray', // only for flex layout: blue, black, white, white-no-border, gray
-                    ratio: '8x1', // only for flex layout: 1x1, 1x4, 8x1, 20x1
-                    
+				Return style configurations for Pay Pal Credit Banner (cart, product, category )
+                    Available values:     
+                    layout: 'flex', // flex, text
+                    styleColor: 'gray', // only for flex layout: blue, black, white, white-no-border, gray
+                    ratio: '8x1', // only for flex layout: 1x1, 1x4, 8x1, 20x1
+                    
                     {"cartCreditConfig":{"layout":"flex","styleColor":"gray","ratio":"8x1","logoType":"primary","logoPosition":"left","textColor":"black"},"productCreditConfig":{"layout":"text","styleColor":"blue","ratio":"8x1","logoType":"primary","logoPosition":"left","textColor":"black"},"categoryCreditConfig":{"layout":"flex","styleColor":"blue","ratio":"20x1","logoType":"primary","logoPosition":"left","textColor":"black"}}
 			* @group Paypal_Checkout - Paypal Configuration
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#11731) | [group](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#15007)
@@ -6629,15 +6629,15 @@ For assistance with the regular expression configuration, please contact Clutch 
 			/**
 			* Pay Pal API Smart Button Styles
 
-				Return style configurations for Pay Pal smart button (cart, billing pages)
-                    * Available values:
-                    *  height: (number) from 25 to 55,
-                    *  color: (string) gold, blue, silver, black, white,
-                    *  shape: (string) pill, rect,
-                    *  layout: (string) horizontal, vertical,
-                    *  tagline: (boolean) true, false
-                    
-                    Default value:
+				Return style configurations for Pay Pal smart button (cart, billing pages)
+                    * Available values:
+                    *  height: (number) from 25 to 55,
+                    *  color: (string) gold, blue, silver, black, white,
+                    *  shape: (string) pill, rect,
+                    *  layout: (string) horizontal, vertical,
+                    *  tagline: (boolean) true, false
+                    
+                    Default value:
                     {
                         "cart":{"height":35,"color":"gold","shape":"rect","layout":"vertical","label":"checkout","tagline":false},
                         "checkout":{"height":35,"color":"gold","shape":"rect","layout":"vertical","label":"checkout","tagline":false},
@@ -6698,8 +6698,8 @@ For assistance with the regular expression configuration, please contact Clutch 
 			/**
 			* Connect with pay button url
 
-				This URL is used for Connect with PayPal feature.
-Sandbox URL: https://www.sandbox.paypal.com/connect?
+				This URL is used for Connect with PayPal feature.
+Sandbox URL: https://www.sandbox.paypal.com/connect?
 Production URL: https://www.paypal.com/connect?
 			* @group Paypal_Checkout - Paypal Configuration
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#11831) | [group](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#15002)
@@ -7494,7 +7494,7 @@ Production URL: https://www.paypal.com/connect?
 			/**
 			* custom_saccchu_preferences
 
-				hello sacchu here!
+				hello sacchu here!
                      contact me at csqt
                 
 			* @group custom_magic_config - custom_magic_config
@@ -9726,9 +9726,9 @@ declare global {
 			/**
 			* Gift Card Pin Field Activation
 
-				This variable activate the "Pin" filed on billing page. By default that field is hidden.
-Possible Values for this Attribute:
-1 - Show the "Pin" field on the Billing Page
+				This variable activate the "Pin" filed on billing page. By default that field is hidden.
+Possible Values for this Attribute:
+1 - Show the "Pin" field on the Billing Page
 2- Hide the "Pin" field on the Billing Page
 			* @group ClutchSettings - Clutch Integration Settings
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#11400) | [group](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#14809)
@@ -9738,12 +9738,12 @@ Possible Values for this Attribute:
 			/**
 			* Gift Card Pin Bypassing
 
-				If the Gift Card Pin Field is active, you can define card number patterns here that should not be requiring a PIN.
-This might be useful if you have legacy gift cards in certain card number ranges that were printed without a PIN.
-If you specify anything here, specify it as a regex. Any gift card number matching this regular expression will NOT be required be accompanied by a PIN in the balance checker or billing page.
-Example: legacy cards that were 16 characters long and start with 1111 or 2222 should be excluded:
-^(1111[0-9]{12}|2222[0-9]{12})$ 
-
+				If the Gift Card Pin Field is active, you can define card number patterns here that should not be requiring a PIN.
+This might be useful if you have legacy gift cards in certain card number ranges that were printed without a PIN.
+If you specify anything here, specify it as a regex. Any gift card number matching this regular expression will NOT be required be accompanied by a PIN in the balance checker or billing page.
+Example: legacy cards that were 16 characters long and start with 1111 or 2222 should be excluded:
+^(1111[0-9]{12}|2222[0-9]{12})$ 
+
 For assistance with the regular expression configuration, please contact Clutch customer support.
 			* @group ClutchSettings - Clutch Integration Settings
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#11412) | [group](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#14810)
@@ -10031,12 +10031,12 @@ For assistance with the regular expression configuration, please contact Clutch 
 			/**
 			* Pay Pal API Credit Banner Styles
 
-				Return style configurations for Pay Pal Credit Banner (cart, product, category )
-                    Available values:     
-                    layout: 'flex', // flex, text
-                    styleColor: 'gray', // only for flex layout: blue, black, white, white-no-border, gray
-                    ratio: '8x1', // only for flex layout: 1x1, 1x4, 8x1, 20x1
-                    
+				Return style configurations for Pay Pal Credit Banner (cart, product, category )
+                    Available values:     
+                    layout: 'flex', // flex, text
+                    styleColor: 'gray', // only for flex layout: blue, black, white, white-no-border, gray
+                    ratio: '8x1', // only for flex layout: 1x1, 1x4, 8x1, 20x1
+                    
                     {"cartCreditConfig":{"layout":"flex","styleColor":"gray","ratio":"8x1","logoType":"primary","logoPosition":"left","textColor":"black"},"productCreditConfig":{"layout":"text","styleColor":"blue","ratio":"8x1","logoType":"primary","logoPosition":"left","textColor":"black"},"categoryCreditConfig":{"layout":"flex","styleColor":"blue","ratio":"20x1","logoType":"primary","logoPosition":"left","textColor":"black"}}
 			* @group Paypal_Checkout - Paypal Configuration
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#11731) | [group](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#15007)
@@ -10064,15 +10064,15 @@ For assistance with the regular expression configuration, please contact Clutch 
 			/**
 			* Pay Pal API Smart Button Styles
 
-				Return style configurations for Pay Pal smart button (cart, billing pages)
-                    * Available values:
-                    *  height: (number) from 25 to 55,
-                    *  color: (string) gold, blue, silver, black, white,
-                    *  shape: (string) pill, rect,
-                    *  layout: (string) horizontal, vertical,
-                    *  tagline: (boolean) true, false
-                    
-                    Default value:
+				Return style configurations for Pay Pal smart button (cart, billing pages)
+                    * Available values:
+                    *  height: (number) from 25 to 55,
+                    *  color: (string) gold, blue, silver, black, white,
+                    *  shape: (string) pill, rect,
+                    *  layout: (string) horizontal, vertical,
+                    *  tagline: (boolean) true, false
+                    
+                    Default value:
                     {
                         "cart":{"height":35,"color":"gold","shape":"rect","layout":"vertical","label":"checkout","tagline":false},
                         "checkout":{"height":35,"color":"gold","shape":"rect","layout":"vertical","label":"checkout","tagline":false},
@@ -10133,8 +10133,8 @@ For assistance with the regular expression configuration, please contact Clutch 
 			/**
 			* Connect with pay button url
 
-				This URL is used for Connect with PayPal feature.
-Sandbox URL: https://www.sandbox.paypal.com/connect?
+				This URL is used for Connect with PayPal feature.
+Sandbox URL: https://www.sandbox.paypal.com/connect?
 Production URL: https://www.paypal.com/connect?
 			* @group Paypal_Checkout - Paypal Configuration
 			* @source [attribute](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#11831) | [group](file:d:\ecomSocialMedia\Social-Ecom\FriendListModule\metadata\meta\system-objecttype-extensions.xml#15002)
@@ -10929,7 +10929,7 @@ Production URL: https://www.paypal.com/connect?
 			/**
 			* custom_saccchu_preferences
 
-				hello sacchu here!
+				hello sacchu here!
                      contact me at csqt
                 
 			* @group custom_magic_config - custom_magic_config
