@@ -199,6 +199,34 @@ server.get("FriendDataTable", function (req, res, next) {
   next();
 });
 
+server.get('PendingRequest',function(req,res,next){
+  var CustomObjectMgr = require('dw/object/CustomObjectMgr');
+  var CustomerMgr = require('dw/customer/CustomerMgr');
+  
+  var address = false
+  if(customer.addressBook.addresses.length > 0){
+      address = true;
+  }
+
+  var current_customer = customer;
+  var pendingData = [];
+  
+  Transaction.wrap(function(){
+    var pending_request = CustomObjectMgr.getAllCustomObjects('Requests');
+    while(pending_request.hasNext()){
+      var pending = pending_request.next();
+      if(pending.custom.SenderEmail == current_customer.profile.email){
+        var profile = CustomerMgr.getProfile(pending.custom.ReceiverAddress);
+        pendingData.push({profile:profile,
+                          pending:pending,
+                          status:pending.custom.Status})
+      }
+    }
+  })
+  res.render('friendList/pendingRequests',{pendingData:pendingData,address:address});
+  next();
+})
+
 server.get("FriendModel", function (req, res, next) {
   var id = req.querystring.id;
   var productListData = null;

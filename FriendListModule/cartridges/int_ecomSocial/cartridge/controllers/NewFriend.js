@@ -52,6 +52,7 @@ server.get('AcceptRequest',function(req,res,next){
     next()
 })
 
+// this works at the receivers side when he decline the request sent by the sender
 server.get('DeclineRequest',function(req,res,next){
     var CustomerMgr = require('dw/customer/CustomerMgr');
     var id = req.querystring.id;
@@ -60,6 +61,18 @@ server.get('DeclineRequest',function(req,res,next){
         CustomObjectMgr.remove(friend_request);
     })
     res.redirect(URLUtils.url('NewFriend-getRequest'));
+    next();
+})
+
+// this works when the request remains pending and now wants to remove the request
+server.get('DeleteRequest',function(req,res,next){
+    var CustomerMgr = require('dw/customer/CustomerMgr');
+    var id = req.querystring.id;
+    var friend_request = CustomObjectMgr.getCustomObject(`Requests`,id);
+    Transaction.wrap(()=>{
+        CustomObjectMgr.remove(friend_request);
+    })
+    res.render('friendList/pendingRequests');
     next();
 })
 
