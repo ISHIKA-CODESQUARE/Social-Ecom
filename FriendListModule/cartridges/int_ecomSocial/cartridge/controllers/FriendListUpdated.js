@@ -135,7 +135,7 @@ server.get('AcceptedRequestFriends',function(req,res,next){
       var sender = CustomerMgr.getCustomerByCustomerNumber(senders_customer_number);
 
       var receiver = CustomerMgr.getCustomerByCustomerNumber(receiver_customer_number);
-
+      
       var productList = ProductListMgr.getProductLists(sender , 100);
       if(productList.length == 0){
           var ProductList = ProductListMgr.createProductList(sender, 100)
