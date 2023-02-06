@@ -26,7 +26,7 @@ var BONUS_PRODUCTS_PAGE_SIZE = 6;
  * @param {dw.order.Shipment} defaultShipment - the cart's default shipment method
  * @return {dw.order.ProductLineItem} - The added product line item
  */
-function addLineItem(currentBasket, product, quantity, childProducts, optionModel, defaultShipment, options) {
+function addLineItem(currentBasket, product, quantity, childProducts, optionModel, defaultShipment, options, senderId) {
     var productLineItem = currentBasket.createProductLineItem(
         product,
         optionModel,
@@ -36,7 +36,7 @@ function addLineItem(currentBasket, product, quantity, childProducts, optionMode
     if (product.bundle && childProducts.length) {
         base.updateBundleProducts(productLineItem, childProducts);
     }
-
+    productLineItem.custom.senderID = senderId;
     productLineItem.setQuantityValue(quantity);
     // try {
     //     if (options[1].engravingMessage != '') {
@@ -59,7 +59,7 @@ function addLineItem(currentBasket, product, quantity, childProducts, optionMode
  * @param {SelectedOption[]} options - product options
  *  @return {Object} returns an error object
  */
-function addProductToCart(currentBasket, productId, quantity, childProducts, options) {
+function addProductToCart(currentBasket, productId, quantity, childProducts, options, senderId) {
     var availableToSell;
     var defaultShipment = currentBasket.defaultShipment;
     var perpetual;
@@ -123,7 +123,8 @@ function addProductToCart(currentBasket, productId, quantity, childProducts, opt
             childProducts,
             optionModel,
             defaultShipment,
-            options
+            options,
+            senderId
         );
 
         result.uuid = productLineItem.UUID;
