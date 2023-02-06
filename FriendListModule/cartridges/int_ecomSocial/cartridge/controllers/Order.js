@@ -2,11 +2,11 @@
 var server = require('server');
 var page = require("app_storefront_base/cartridge/controllers/Order");
 server.extend(page);
+
 server.append(
     'Confirm',
     function (req, res, next) {
         var Transaction = require('dw/system/Transaction');
-        var CustomerMgr = require('dw/customer/CustomerMgr');
         var response = res.getViewData();
         Transaction.wrap( function () {
             for (var i = 0; i < response.order.items.items.length; i++) {
