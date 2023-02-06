@@ -513,7 +513,7 @@ function getOptions($productContainer) {
         .map(function () {
             var $elOption = $(this).find('.options-select');
             var urlValue = $elOption.val();
-            var isPersonalizable = $('#engraving-or-not').attr('value');
+            var selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
 
             // update the option value if the product is gift and the gift option amount availabel there - CUSTOM
              if ($productContainer.find('.gift-amount-div').length > 0) {
@@ -523,15 +523,21 @@ function getOptions($productContainer) {
                     selectedValueId: selectedValueId,
                 };
             }
-            else {
-                var selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
+            else if(document.getElementById('senderID').value) {
+                 selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
                     .data('value-id');
+                    return {
+                        optionId: $(this).data("option-id"),
+                        selectedValueId: selectedValueId,
+                        sendersID: document.getElementById('senderID').value
+                    };
             }
-
+            else{
             return {
                 optionId: $(this).data('option-id'),
                 selectedValueId: selectedValueId
             };
+        }
         }).toArray();
     if ($('body').find('#engraving-div').length > 0 && $('button.engrave-toggle-button[disabled]').attr('engraving-option-id') == 'engravingCost') {
         options.push({ engravingMessage: $('#engraving-message').val() ? ($('#engraving-message').val()).trim() : "" }) // adding engraving message in Options
