@@ -5,4 +5,8 @@
             <a href="${URLUtils.url('NewFriend-getRequest')}" class="pull-right" aria-label="${Resource.msg('label.friendList.request','account',null)}">${Resource.msg('label.friendList.request','account',null)}</a>
     
     </div>
+    
+ <div class="card-footer card-footer-border text-center">
+        <a href="${URLUtils.url('FriendListUpdated-PendingRequest')}" class="card-link" aria-label="${Resource.msg('label.friendList.pendingRequest','account',null)}">${Resource.msg('link.pending.friend','account',null)}</a>
+    </div>
 </div>

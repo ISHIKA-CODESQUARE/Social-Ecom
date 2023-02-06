@@ -67,12 +67,20 @@ server.get('DeclineRequest',function(req,res,next){
 // this works when the request remains pending and now wants to remove the request
 server.get('DeleteRequest',function(req,res,next){
     var CustomerMgr = require('dw/customer/CustomerMgr');
+
+     
+    var address = false
+    if(customer.addressBook.addresses.length > 0){
+        address = true;
+    }
+
     var id = req.querystring.id;
     var friend_request = CustomObjectMgr.getCustomObject(`Requests`,id);
     Transaction.wrap(()=>{
         CustomObjectMgr.remove(friend_request);
     })
-    res.render('friendList/pendingRequests');
+    res.render('friendList/pendingRequests',{address:address
+    });
     next();
 })
 
