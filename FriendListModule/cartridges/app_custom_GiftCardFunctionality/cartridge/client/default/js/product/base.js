@@ -508,6 +508,7 @@ function getChildProducts() {
  * @return {string} - Product options and their selected values
  */
 function getOptions($productContainer) {
+    alert('above options')
     var options = $productContainer
         .find('.product-option')
         .map(function () {
@@ -516,6 +517,8 @@ function getOptions($productContainer) {
             var selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
 
             // update the option value if the product is gift and the gift option amount availabel there - CUSTOM
+            alert(1);
+            alert('below options')
              if ($productContainer.find('.gift-amount-div').length > 0) {
                 selectedValueId = $('button.gift-amount[disabled]').attr('gift-option');
                 alert('giftcard')
@@ -542,6 +545,7 @@ function getOptions($productContainer) {
             };
         }
         }).toArray();
+        alert('after map')
     if ($('body').find('#engraving-div').length > 0 && $('button.engrave-toggle-button[disabled]').attr('engraving-option-id') == 'engravingCost') {
         options.push({ engravingMessage: $('#engraving-message').val() ? ($('#engraving-message').val()).trim() : "" }) // adding engraving message in Options
     }
