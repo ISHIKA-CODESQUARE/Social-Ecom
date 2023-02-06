@@ -1,6 +1,6 @@
 'use strict'
 
-var base = module.superModule;
+// var base = module.superModule;
 
 'use strict';
 
