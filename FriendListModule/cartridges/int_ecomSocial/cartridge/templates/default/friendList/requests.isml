@@ -9,7 +9,7 @@
                     <th scope="col">${Resource.msg('label.address1', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.email', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.SenderName', 'friends', null)}</th> 
-                    <th scope="col">Requests status</th>
+                    <th scope="col">${Resource.msg('label.status', 'friends', null)}</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,12 +22,10 @@
                             <td>${request.object.custom.SenderName}</td>
                             <td>
                                 <isif condition="${request.object.custom.Status == true}">
-                                    <button type="button" class="btn btn-primary" disabled>Accepted</button>
-                                    <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}">UnFriends</a></button>
-
+                                    <button type="button" class="btn btn-success" disabled>Accepted</button>
                                 <iselse/>
-                                    <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-AcceptRequest','id',request.object.custom.FriendRequest)}">Accept</a></button>
-                                    <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}">Decline</a></button>
+                                    <button type="button" class="btn btn-success"><a href="${URLUtils.url('NewFriend-AcceptRequest','id',request.object.custom.FriendRequest)}">Accept</a></button>
+                                    <button type="button" class="btn btn-danger"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}">Decline</a></button>
 
                                 </isif>
                             </td>
