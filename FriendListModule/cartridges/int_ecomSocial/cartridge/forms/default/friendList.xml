@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <form xmlns="http://www.demandware.com/xml/form/2008-04-19">
 
-       <field formid="Id" label="label.input.id" type="string" mandatory="true" max-length="20" missing-error="error.message.required" range-error="error.message.20orless" regexp="^[A-Za-z]+$" parse-error=""/>
+       <field formid="Id" label="label.input.id" type="string" mandatory="true" max-length="20" missing-error="error.message.required" range-error="error.message.20orless" regexp="^[A-Za-z]+$"/>
        <field formid="firstName" label="label.input.firstname" type="string" mandatory="true" binding="firstName" max-length="50" missing-error="friends.firstname.missing" range-error="error.message.50orless"/>
        <field formid="lastName" label="label.input.lastname" type="string" mandatory="true" binding="lastName" max-length="50" missing-error="friends.lastname.missing" range-error="error.message.50orless"/>
        <field formid="address1" label="label.input.address1" type="string" mandatory="true" binding="address1" min-length="2" max-length="50" missing-error="friends.address1.missing" range-error="error.message.between2and50"/>
