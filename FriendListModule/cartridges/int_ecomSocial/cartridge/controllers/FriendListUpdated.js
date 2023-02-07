@@ -110,13 +110,15 @@ server.post("Save", function (req, res, next) {
       }
     }
     // sending a mail to customer if not a user of the website
+    var site = req.path;
+    var refSite =site.split('/')[3];
     if(returnData.success == undefined){
       var mail: Mail = new dw.net.Mail();
       mail.addTo(new_Form.email);
       mail.setFrom(a.profile.email);
       mail.setSubject("Request to Join Website");
       mail.setContent(`Join the Website and Get exclusive discount on fashion products
-      link to join : https://bjxc-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-FriendConnect-Site/default/Login-Show?customerNumber=${customer.profile.customerNo}
+      link to join : https://${req.host}/on/demandware.store/${refSite}/default/Login-Show?customerNumber=${customer.profile.customerNo}
 
       <b>Mandatory</b>:
       Note : Points to be Notice after you register yourself in the website:
