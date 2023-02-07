@@ -32,7 +32,7 @@ server.replace('AddProduct', function (req, res, next) {
     var Transaction = require('dw/system/Transaction');
     var CartModel = require('*/cartridge/models/cart');
     var ProductLineItemsModel = require('*/cartridge/models/productLineItems');
-    var cartHelper = require('*/cartridge/scripts/cart/GiftCardcartHelpers');
+    var cartHelper = require('*/cartridge/scripts/cart/cartHelpers');
     var basketCalculationHelpers = require('*/cartridge/scripts/helpers/basketCalculationHelpers');
 
     var currentBasket = BasketMgr.getCurrentOrNewBasket();
