@@ -78,16 +78,16 @@ server.post("Save", function (req, res, next) {
               var requestList = request_sents.next();
               if(requestList.custom.ReceiverAddress == list_of_customer.customerNo && current_customer.profile.email == requestList.custom.SenderEmail && requestList.custom.Status == false){
                 returnData.requestSents = true;
-                }  
+                }
               }
           })
         }
       }
-    
+
     // sending a request to the friend if he/she not a friend or request hasn't been sent yet
     if(returnData.alreadyFriend == true){
     }
-    else if(returnData.requestSents == true){ 
+    else if(returnData.requestSents == true){
     }
     else{
     var a = customer;
@@ -104,6 +104,7 @@ server.post("Save", function (req, res, next) {
         requests.custom.SenderName = a.profile.firstName;
         requests.custom.ReceiverAddress = list_of_customer.customerNo;
         requests.custom.SenderEmail =current_customer.profile.email;
+        requests.custom.senderDate = a.profile.DateofBirth;
         requests.custom.Status = false;
       });
       }
