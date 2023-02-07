@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+
+    <type-extension type-id="CustomerActiveData">
+        <system-attribute-definitions>
+            <attribute-definition attribute-id="giftOrders"/>
+            <attribute-definition attribute-id="giftUnits"/>
+        </system-attribute-definitions>
+
+        <group-definitions>
+            <attribute-group group-id="Gifts">
+                <display-name xml:lang="x-default">Gifts</display-name>
+                <attribute attribute-id="giftOrders" system="true"/>
+                <attribute attribute-id="giftUnits" system="true"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+
+    <type-extension type-id="GiftCertificate">
+        <system-attribute-definitions>
+            <attribute-definition attribute-id="UUID">
+                <min-length>0</min-length>
+                <field-length>28</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="creationDate"/>
+            <attribute-definition attribute-id="description">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="enabled"/>
+            <attribute-definition attribute-id="giftCertificateCode">
+                <display-name xml:lang="en">Gift Certificate Code</display-name>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lastModified"/>
+            <attribute-definition attribute-id="merchantID">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="message">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="orderNo">
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="recipientEmail">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="recipientName">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="senderName">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="status">
+                <field-length>0</field-length>
+            </attribute-definition>
+        </system-attribute-definitions>
+    </type-extension>
+
+    <type-extension type-id="GiftCertificateLineItem">
+        <system-attribute-definitions>
+            <attribute-definition attribute-id="UUID">
+                <min-length>0</min-length>
+                <field-length>28</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="creationDate"/>
+            <attribute-definition attribute-id="giftCertificateID">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lastModified"/>
+            <attribute-definition attribute-id="message">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="recipientEmail">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="recipientName">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="senderName">
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+        </system-attribute-definitions>
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="amount">
+                <display-name xml:lang="x-default">amount</display-name>
+                <description xml:lang="x-default">amount</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="fnameFrom">
+                <display-name xml:lang="x-default">First Name of Purchaser</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="fnameTo">
+                <display-name xml:lang="x-default">First Name of Recipient</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="giftCertificatePin">
+                <display-name xml:lang="x-default">Gift Card Certificate Pin</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+                <unit xml:lang="x-default">0</unit>
+            </attribute-definition>
+            <attribute-definition attribute-id="imgUrl">
+                <display-name xml:lang="x-default">imgUrl</display-name>
+                <description xml:lang="x-default">imgUrl</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lnameFrom">
+                <display-name xml:lang="x-default">Last Name of Purchaser</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="lnameTo">
+                <display-name xml:lang="x-default">Last Name of Recipient</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="note">
+                <display-name xml:lang="x-default">note</display-name>
+                <description xml:lang="x-default">note</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="productLineItemUUID">
+                <display-name xml:lang="x-default">productLineItemUUID</display-name>
+                <description xml:lang="x-default">productLineItemUUID</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="transactionId">
+                <display-name xml:lang="x-default">Transaction ID for an activated gift card</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="GiftCard">
+                <display-name xml:lang="x-default">GiftCard</display-name>
+                <attribute attribute-id="senderName" system="true"/>
+                <attribute attribute-id="amount"/>
+                <attribute attribute-id="recipientName" system="true"/>
+                <attribute attribute-id="recipientEmail" system="true"/>
+                <attribute attribute-id="message" system="true"/>
+                <attribute attribute-id="note"/>
+                <attribute attribute-id="productLineItemUUID"/>
+                <attribute attribute-id="imgUrl"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+
+    <type-extension type-id="OrderPaymentInstrument">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="giftCardId">
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="giftCardPin">
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="transactionId">
+                <display-name xml:lang="x-default">Transaction ID for Gift Card</display-name>
+                <display-name xml:lang="en">Transaction ID for Gift Card</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <field-length>0</field-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
+    <type-extension type-id="Product">
+
+        <attribute-definition attribute-id="gift">
+            <display-name xml:lang="x-default">gift</display-name>
+            <description xml:lang="x-default">gift</description>
+            <type>string</type>
+            <localizable-flag>false</localizable-flag>
+            <site-specific-flag>false</site-specific-flag>
+            <mandatory-flag>false</mandatory-flag>
+            <visible-flag>false</visible-flag>
+            <externally-managed-flag>false</externally-managed-flag>
+            <order-required-flag>false</order-required-flag>
+            <externally-defined-flag>false</externally-defined-flag>
+            <min-length>0</min-length>
+        </attribute-definition>
+
+        <attribute-definition attribute-id="isGiftCard">
+            <display-name xml:lang="x-default">isGiftCard</display-name>
+            <description xml:lang="x-default">attribute to check whether a product is gift card or not</description>
+            <type>boolean</type>
+            <site-specific-flag>false</site-specific-flag>
+            <mandatory-flag>false</mandatory-flag>
+            <visible-flag>false</visible-flag>
+            <externally-managed-flag>false</externally-managed-flag>
+            <order-required-flag>false</order-required-flag>
+            <externally-defined-flag>false</externally-defined-flag>
+        </attribute-definition>
+        <attribute-group group-id="giftGroup">
+            <display-name xml:lang="x-default">giftGroup</display-name>
+            <attribute attribute-id="isGiftCard"/>
+        </attribute-group>
+    </type-extension>
+
+    <type-extension type-id="ProductLineItem">
+        <system-attribute-definitions>
+            <attribute-definition attribute-id="gift"/>
+            <attribute-definition attribute-id="giftMessage">
+                <system-attribute-definitions>
+                </type-extension>
+
+                <type-extension type-id="ProductList">
+                    <group-definitions>
+                        <attribute-group group-id="gift_card">
+                            <display-name xml:lang="x-default">gift_card</display-name>
+                            <attribute attribute-id="Notes"/>
+                            <attribute attribute-id="Message"/>
+                            <attribute attribute-id="SenderName"/>
+                            <attribute attribute-id="RecipientEmail"/>
+                            <attribute attribute-id="RecipientName"/>
+                        </attribute-group>
+                    </group-definitions>
+                </type-extension>
+
+                <type-extension type-id="ProductListItem">
+                    <group-definitions>
+                        <attribute-group group-id="GiftCard">
+                            <display-name xml:lang="x-default">GiftCard</display-name>
+                            <attribute attribute-id="RecipientName"/>
+                            <attribute attribute-id="RecipientEmail"/>
+                            <attribute attribute-id="Message"/>
+                            <attribute attribute-id="SenderName"/>
+                            <attribute attribute-id="Notes"/>
+                        </attribute-group>
+                    </group-definitions>
+
+                </type-extension>
+
+
+                <type-extension type-id="Shipment">
+                    <system-attribute-definitions>
+
+                        <attribute-definition attribute-id="gift"/>
+                        <attribute-definition attribute-id="giftMessage">
+                            <min-length>0</min-length>
+                        </attribute-definition>
+                    </system-attribute-definitions>
+                </type-extension>
+
+
+
+                <type-extension type-id="SitePreferences">
+
+                    <attribute-definition attribute-id="GCCardSetId">
+                        <display-name xml:lang="x-default">Gift Card Set Id</display-name>
+                        <description xml:lang="x-default">Card Set that will be used to allocate gift cards, this value will be provided by Clutch.</description>
+                        <type>string</type>
+                        <mandatory-flag>false</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <min-length>0</min-length>
+                        <field-length>0</field-length>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="GCEmailSenderEmail">
+                        <display-name xml:lang="x-default">Gift Card email sender email</display-name>
+                        <description xml:lang="x-default">Email address to use in the "From" field of the email sent to the gift certificate recipient</description>
+                        <type>string</type>
+                        <mandatory-flag>false</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <min-length>0</min-length>
+                        <default-value>noreply@salesforce.com</default-value>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="GCEmailSenderName">
+                        <display-name xml:lang="x-default">Gift Card email sender name</display-name>
+                        <description xml:lang="x-default">Name that is included in the email sent to the gift certificate recipient</description>
+                        <type>string</type>
+                        <mandatory-flag>false</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <min-length>0</min-length>
+                        <default-value>Customer Support</default-value>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="GCLimit">
+                        <display-name xml:lang="x-default">Gift Card Limit</display-name>
+                        <description xml:lang="x-default">This attribute limits the number of cards that could be used in shopping cart. 0 - will turn off the limitation.</description>
+                        <type>int</type>
+                        <mandatory-flag>true</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <field-length>0</field-length>
+                        <default-value>3</default-value>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="GCLimitMax">
+                        <display-name xml:lang="x-default">Gift Card Maximum Limit</display-name>
+                        <description xml:lang="x-default">This attribute limits the number of cards that could be used in shopping cart. 0 - will turn off the limitation.</description>
+                        <type>int</type>
+                        <mandatory-flag>false</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <field-length>0</field-length>
+                        <default-value>5000</default-value>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="GCLimitMin">
+                        <display-name xml:lang="x-default">Gift Card Amount Minimum Limit</display-name>
+                        <description xml:lang="x-default">This attribute sets minimum purchase amount for a gift card.</description>
+                        <type>int</type>
+                        <mandatory-flag>false</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <field-length>0</field-length>
+                        <default-value>5</default-value>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="GCPinActivateField">
+                        <display-name xml:lang="x-default">Gift Card Pin Field Activation</display-name>
+                        <description xml:lang="x-default">This variable activate the "Pin" filed on billing page. By default that field is hidden.&#13;
+Possible Values for this Attribute:&#13;
+1 - Show the "Pin" field on the Billing Page&#13;
+2- Hide the "Pin" field on the Billing Page</description>
+                        <type>int</type>
+                        <mandatory-flag>true</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <field-length>1</field-length>
+                        <default-value>1</default-value>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="GCPinBypassRegex">
+                        <display-name xml:lang="x-default">Gift Card Pin Bypassing</display-name>
+                        <description xml:lang="x-default">If the Gift Card Pin Field is active, you can define card number patterns here that should not be requiring a PIN.&#13;
+This might be useful if you have legacy gift cards in certain card number ranges that were printed without a PIN.&#13;
+If you specify anything here, specify it as a regex. Any gift card number matching this regular expression will NOT be required be accompanied by a PIN in the balance checker or billing page.&#13;
+Example: legacy cards that were 16 characters long and start with 1111 or 2222 should be excluded:&#13;
+^(1111[0-9]{12}|2222[0-9]{12})$ &#13;
+&#13;
+For assistance with the regular expression configuration, please contact Clutch customer support.</description>
+                        <type>string</type>
+                        <mandatory-flag>false</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <min-length>0</min-length>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="GCValueCode">
+                        <display-name xml:lang="x-default">Gift Card Value Code</display-name>
+                        <description xml:lang="x-default">Clutch Gift Card Value Code</description>
+                        <type>string</type>
+                        <mandatory-flag>true</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <min-length>0</min-length>
+                        <field-length>0</field-length>
+                        <default-value>USD</default-value>
+                    </attribute-definition>
+
+                    <attribute-definition attribute-id="giftCertificateEmailTemplate">
+                        <display-name xml:lang="x-default">GiftCertificateEmailTemplate</display-name>
+                        <description xml:lang="x-default">Template For GiftCertificateEmail Which is Received by recipient</description>
+                        <type>html</type>
+                        <mandatory-flag>false</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                    </attribute-definition>
+                    <attribute-definition attribute-id="sfraEnableOverlayGiftRegistry">
+                        <display-name xml:lang="x-default">SFRA - Enable Gift Registry</display-name>
+                        <description xml:lang="x-default">Enables the Gift Registry plugin in the SFRA Unified Feature Cartridge. Note: The cartridge plugin_giftregistry must be added to the cartridge path and uploaded to your instance.</description>
+                        <type>boolean</type>
+                        <mandatory-flag>false</mandatory-flag>
+                        <externally-managed-flag>false</externally-managed-flag>
+                        <default-value>true</default-value>
+                    </attribute-definition>
+
+
+                    <group-definitions>
+                        <attribute-group group-id="SFRA Unified Feature Cartridge">
+                            <display-name xml:lang="x-default">SFRA Unified Feature Cartridge</display-name>
+                            <attribute attribute-id="sfraEnableOverlayGiftRegistry"/>
+
+                        </attribute-group>
+                    </group-definitions>
+
+                    <attribute-group group-id="ClutchSettings">
+                        <display-name xml:lang="x-default">Clutch Integration Settings</display-name>
+                        <description xml:lang="x-default">Settings used by the Clutch Gift &amp; Loyalty card integration, formerly known as ProfitPoint.</description>
+                        <attribute attribute-id="Clutch_isEnabled"/>
+                        <attribute attribute-id="Clutch_isProduction"/>
+                        <attribute attribute-id="Clutch_apiTimeout"/>
+                        <attribute attribute-id="Clutch_apiKey"/>
+                        <attribute attribute-id="Clutch_apiSecret"/>
+                        <attribute attribute-id="Clutch_brandId"/>
+                        <attribute attribute-id="Clutch_locationId"/>
+                        <attribute attribute-id="Clutch_terminalId"/>
+                        <attribute attribute-id="Clutch_terminalIdBalanceChecker"/>
+                        <attribute attribute-id="Clutch_employeeId"/>
+                        <attribute attribute-id="Clutch_employeePassword"/>
+                        <attribute attribute-id="GCLimitMax"/>
+                        <attribute attribute-id="GCLimit"/>
+                        <attribute attribute-id="GCValueCode"/>
+                        <attribute attribute-id="GCLimitMin"/>
+                        <attribute attribute-id="GCCardSetId"/>
+                        <attribute attribute-id="GCPinActivateField"/>
+                        <attribute attribute-id="GCPinBypassRegex"/>
+                        <attribute attribute-id="Clutch_isLoyaltyEnabled"/>
+                        <attribute attribute-id="LCCardSetId"/>
+                        <attribute attribute-id="LCPinActivateField"/>
+                        <attribute attribute-id="LCValueCode"/>
+                        <attribute attribute-id="Clutch_checkoutLock"/>
+                        <attribute attribute-id="Clutch_loyaltyRedemption"/>
+                        <attribute attribute-id="Clutch_recaptchaSiteKey"/>
+                        <attribute attribute-id="Clutch_recaptchaSecret"/>
+                        <attribute attribute-id="GCEmailSenderName"/>
+                        <attribute attribute-id="GCEmailSenderEmail"/>
+                    </attribute-group>
+
+                    <attribute-group group-id="GiftCardSettings">
+                        <display-name xml:lang="x-default">GiftCardSettings</display-name>
+                        <attribute attribute-id="giftCertificateEmailTemplate"/>
+                    </attribute-group>
+
+
+
+                </type-extension>
+
+            </metadata>

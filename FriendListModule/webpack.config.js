@@ -1,6 +1,9 @@
 var path = require('path');
     var ExtractTextPlugin = require('sgmf-scripts')['extract-text-webpack-plugin'];
     var sgmfScripts = require('sgmf-scripts');
+var path = require('path');
+    var ExtractTextPlugin = require('sgmf-scripts')['extract-text-webpack-plugin'];
+    var sgmfScripts = require('sgmf-scripts');
 
     module.exports = [{
         mode: 'production',
@@ -27,28 +30,7 @@ var path = require('path');
                         options: {
                             url: false
                         }
-                    }, {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                require('autoprefixer')()
-                            ]
-                        }
-                    }, {
-                        loader: "sass-loader",
-                        options: {
-                          includePaths: [
-                            path.resolve(
-                              process.cwd(),
-                              "../storefront-reference-architecture/node_modules/"
-                            ),
-                            path.resolve(
-                              process.cwd(),
-                              "../storefront-reference-architecture/node_modules/flag-icon-css/sass"
-                            ),
-                          ],
-                        },
-                      },]
+                    },]
                 })
             }]
         },

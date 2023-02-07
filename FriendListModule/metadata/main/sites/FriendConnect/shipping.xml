@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shipping xmlns="http://www.demandware.com/xml/impex/shipping/2007-03-31">
+    <shipping-method method-id="giftShipping" default="false">
+        <display-name xml:lang="x-default">Delivery By Email</display-name>
+        <description xml:lang="x-default">Free Delivery By Email for Gift Cards</description>
+        <online-flag>true</online-flag>
+        <tax-class-id>standard</tax-class-id>
+        <price-table>
+            <amount order-value="0">0</amount>
+        </price-table>
+        <excluded-products>
+            <included-products>
+                <condition-group>
+                    <category-condition catalog-id="storefront-catalog-m-en-allCS" operator="is equal">
+                        <category-id>gift-certificates</category-id>
+                        <category-id>giftCard</category-id>
+                    </category-condition>
+                </condition-group>
+            </included-products>
+            <excluded-products>
+                <condition-group>
+                    <category-condition catalog-id="storefront-catalog-m-en-allCS" operator="is equal">
+                        <category-id>newarrivals</category-id>
+                        <category-id>womens</category-id>
+                        <category-id>mens</category-id>
+                        <category-id>electronics</category-id>
+                        <category-id>top-seller</category-id>
+                        <category-id>Beauty Products</category-id>
+                        <category-id>adultProducts</category-id>
+                        <category-id>hidden</category-id>
+                        <category-id>stockClearance</category-id>
+                    </category-condition>
+                </condition-group>
+            </excluded-products>
+        </excluded-products>
+        <custom-attributes>
+            <custom-attribute attribute-id="estimatedArrivalTime" xml:lang="x-default">Within 2 hours</custom-attribute>
+            <custom-attribute attribute-id="storePickupEnabled">false</custom-attribute>
+        </custom-attributes>
+    </shipping-method>
+
+</shipping>

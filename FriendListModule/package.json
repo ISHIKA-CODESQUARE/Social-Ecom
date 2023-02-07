@@ -35,5 +35,9 @@
   "browserslist": [
     "last 2 versions",
     "ie >= 10"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.3"
+  }
 }
