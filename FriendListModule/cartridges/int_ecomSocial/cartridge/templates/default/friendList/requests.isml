@@ -23,7 +23,7 @@
                             <td>
                                 <isif condition="${request.object.custom.Status == true}">
                                     <button type="button" class="btn btn-primary" disabled>Accepted</button>
-                                    <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}">UnFriend</a></button>
+                                    <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}">UnFriends</a></button>
 
                                 <iselse/>
                                     <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-AcceptRequest','id',request.object.custom.FriendRequest)}">Accept</a></button>

@@ -34,7 +34,9 @@
                             <td>${product.custom.friend_birthday}</td>
                             <td>${product.custom.friend_phone}</td>
                             <td><a href="https://bjxc-001.dx.commercecloud.salesforce.com/s/FriendConnect/giftCard">GiftCard</a></td>
-                            <td><a href="${URLUtils.url('FriendListUpdated-DeleteList','id',product.ID)}">Delete</a>
+                            <iscomment> <td><a href="${URLUtils.url('FriendListUpdated-DeleteList','id',product.ID)}">Delete</a> </iscomment>
+                            <td><a href="${URLUtils.url('NewFriend-DeclineRequest','id',product.ID)}">Decline Request</a>
+
                                     </td>
                                     <td><a href="${URLUtils.url('Checkout-Begin','id',product.ID)}">Select</a></td>
                                     

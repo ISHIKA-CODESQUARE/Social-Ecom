@@ -89,7 +89,7 @@ server.post("Save", function (req, res, next) {
       mail.setSubject("Request to Join Website");
       mail.setContent(`Join the Website and Get exclusive discount on fashion products
       link to join : https://bjxc-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-FriendConnect-Site/default/Login-Show?customerNumber=${customer.profile.customerNo}
-      
+
       <b>Mandatory</b>:
       Note : Points to be Notice after you register yourself in the website:
         1. You should have to add the address first in the My Account Section then only you can send the request to the friend and Accept the request of the friend.
@@ -135,7 +135,7 @@ server.get('AcceptedRequestFriends',function(req,res,next){
       var sender = CustomerMgr.getCustomerByCustomerNumber(senders_customer_number);
 
       var receiver = CustomerMgr.getCustomerByCustomerNumber(receiver_customer_number);
-      
+
       var productList = ProductListMgr.getProductLists(sender , 100);
       if(productList.length == 0){
           var ProductList = ProductListMgr.createProductList(sender, 100)
