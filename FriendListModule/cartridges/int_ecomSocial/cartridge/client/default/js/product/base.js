@@ -1,5 +1,5 @@
 'use strict';
-var focusHelper = require('base/components/focus');
+var focusHelper = require('../components/focus');
 
 /**
  * Retrieves the relevant pid value
@@ -508,6 +508,7 @@ function getChildProducts() {
  * @return {string} - Product options and their selected values
  */
 function getOptions($productContainer) {
+    alert('above options')
     var options = $productContainer
         .find('.product-option')
         .map(function () {
@@ -531,18 +532,23 @@ function getOptions($productContainer) {
                     .data('value-id');
                     alert('friend')
                     return {
-                        optionId: $(this).data('option-id'),
+                        optionId: $(this).data("option-id"),
                         selectedValueId: selectedValueId,
                         sendersID: document.getElementById('senderID').value
                     };
             }
             else{
+                alert('base')
             return {
                 optionId: $(this).data('option-id'),
                 selectedValueId: selectedValueId
             };
         }
         }).toArray();
+        alert('after map')
+    if ($('body').find('#engraving-div').length > 0 && $('button.engrave-toggle-button[disabled]').attr('engraving-option-id') == 'engravingCost') {
+        options.push({ engravingMessage: $('#engraving-message').val() ? ($('#engraving-message').val()).trim() : "" }) // adding engraving message in Options
+    }
 
     return JSON.stringify(options);
 }
@@ -700,8 +706,58 @@ module.exports = {
                 }
                 var rEmail1 = $("#recipientName").val();
 
-            form.senderId = document.getElementById('senderID').value;
-            console.log("empty remail");
+                if (rEmail1 == '') {
+                    console.log("empty remail");
+                    $('#invalid-feedback-email1').html('<p class="text-danger">please fill out this field<p>');
+                    return false;
+                }
+                var rEmail2 = $("#senderName").val();
+                if (rEmail2 == '') {
+                    console.log("empty remail");
+                    $('.invalid-feedback-email2').html('<p class="text-danger">please fill out this field<p>');
+                    return false;
+                } else {
+                    $('.invalid-feedback-email2').html('');
+                }
+                var rEmail3 = $("#message").val();
+                if (rEmail3 == '') {
+                    console.log("empty remail");
+                    $('.invalid-feedback-email3').html('<p class="text-danger">please fill out this field<p>');
+                    return false;
+                }
+                else {
+                    $('.invalid-feedback-email3').html('');
+                }
+                var x = $("#emailVerify").val();
+                var giftData = []
+                giftData.push({
+                    recipientEmail: $("#emailVerify").val(),
+                    recipientName: $("#recipientName").val(),
+                    senderName: $("#senderName").val(),
+                    message: $("#message").val(),
+                })
+                console.log(x);
+                var form = {
+                    pid: pid,
+                    pidsObj: pidsObj,
+                    childProducts: getChildProducts(),
+                    quantity: getQuantitySelected($(this)),
+                    giftdetail: JSON.stringify(giftData)
+                };
+                $('#exampleModalLong').modal('hide');
+                $("#emailVerify").val('');
+                $("#recipientName").val('');
+                $("#senderName").val('');
+                $("#message").val('');
+            }
+            else {
+                var form = {
+                    pid: pid,
+                    pidsObj: pidsObj,
+                    childProducts: getChildProducts(),
+                    quantity: getQuantitySelected($(this))
+                };
+                
             }
             if (document.getElementById('senderID').value) {
 

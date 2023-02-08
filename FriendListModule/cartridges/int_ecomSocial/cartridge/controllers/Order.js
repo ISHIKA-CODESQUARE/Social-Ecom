@@ -32,6 +32,15 @@ server.append(
 
         var response = res.getViewData();
         var order = OrderMgr.getOrder(req.form.orderID, req.form.orderToken);
+        Transaction.wrap( function () {
+            for (var i = 0; i < response.order.items.items.length; i++) {
+                var senderID = response.order.items.items[i].SenderID;
+                if (senderID != null) {
+                var sender = CustomerMgr.getCustomerByCustomerNumber(senderID);
+                sender.profile.custom.userWallet += 5;
+            }};
+        });
+
         if (order.allGiftCertificateLineItems.length > 0) {
             var GiftCertificateMgr = require('dw/order/GiftCertificateMgr');
             var GiftCertificateLineItem = require('dw/order/GiftCertificateLineItem');
@@ -77,14 +86,7 @@ server.append(
             })
         }
 
-        Transaction.wrap( function () {
-            for (var i = 0; i < response.order.items.items.length; i++) {
-                var senderID = response.order.items.items[i].SenderID;
-                if (senderID != 'null') {
-                var sender = CustomerMgr.getCustomerByCustomerNumber(senderID);
-                sender.profile.custom.userWallet += 5;
-            }};
-        });
+        
         res.setViewData(response);
 
         next();

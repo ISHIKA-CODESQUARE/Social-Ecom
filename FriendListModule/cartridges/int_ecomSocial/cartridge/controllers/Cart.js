@@ -32,7 +32,7 @@ server.replace('AddProduct', function (req, res, next) {
     var Transaction = require('dw/system/Transaction');
     var CartModel = require('*/cartridge/models/cart');
     var ProductLineItemsModel = require('*/cartridge/models/productLineItems');
-    var cartHelper = require('*/cartridge/scripts/cart/GiftCardcartHelpers');
+    var cartHelper = require('*/cartridge/scripts/cart/cartHelpers');
     var basketCalculationHelpers = require('*/cartridge/scripts/helpers/basketCalculationHelpers');
 
     var currentBasket = BasketMgr.getCurrentOrNewBasket();
@@ -49,6 +49,7 @@ server.replace('AddProduct', function (req, res, next) {
         ? JSON.parse(req.form.childProducts)
         : [];
     var options = req.form.options ? JSON.parse(req.form.options) : [];
+    var senderId = req.form.senderId ? req.form.senderId : "";
     var quantity;
     var result;
     var pidsObj;
@@ -62,7 +63,8 @@ server.replace('AddProduct', function (req, res, next) {
                     productId,
                     quantity,
                     childProducts,
-                    options
+                    options,
+                    senderId
                 );
             } else {
                 // product set
