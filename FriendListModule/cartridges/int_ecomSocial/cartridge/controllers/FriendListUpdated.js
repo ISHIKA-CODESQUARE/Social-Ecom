@@ -14,6 +14,7 @@ var ProductList = require("dw/customer/ProductList");
 var ProductListMgr = require("dw/customer/ProductListMgr");
 var UUIDUtils = require("dw/util/UUIDUtils");
 
+// Form field where we enter the data of friend which we want to add as a friend.
 server.get(
   "MahChild",
   server.middleware.https,
@@ -31,6 +32,8 @@ server.get(
   }
 );
 
+
+// Sending Request and checking some condition while sending the requests
 server.post("Save", function (req, res, next) {
   var form = server.forms.getForm("friendList");
   var Transaction = require("dw/system/Transaction");
@@ -53,6 +56,8 @@ server.post("Save", function (req, res, next) {
     {
         productList = productList[0];
     }
+
+    // already a friend checking
     var returnData = {}
     collections.forEach(productList.items, function (items){
       var a  = 10;
@@ -61,7 +66,28 @@ server.post("Save", function (req, res, next) {
       }
     })
 
+    // check whether the request is already sents or not
+    var customers = CustomerMgr.queryProfiles('firstName != null',null,'asc');
+    while(customers.hasNext()){
+      var current_customer = customer;
+      var list_of_customer = customers.next();
+      if(list_of_customer.email ==  new_Form.email){
+        Transaction.wrap(function(){
+          var request_sents = CustomObjectMgr.getAllCustomObjects('Requests');
+            while(request_sents.hasNext()){
+              var requestList = request_sents.next();
+              if(requestList.custom.ReceiverAddress == list_of_customer.customerNo && current_customer.profile.email == requestList.custom.SenderEmail && requestList.custom.Status == false){
+                returnData.requestSents = true;
+                }
+              }
+          })
+        }
+      }
+
+    // sending a request to the friend if he/she not a friend or request hasn't been sent yet
     if(returnData.alreadyFriend == true){
+    }
+    else if(returnData.requestSents == true){
     }
     else{
     var a = customer;
@@ -78,18 +104,22 @@ server.post("Save", function (req, res, next) {
         requests.custom.SenderName = a.profile.firstName;
         requests.custom.ReceiverAddress = list_of_customer.customerNo;
         requests.custom.SenderEmail =current_customer.profile.email;
-        requests.custom.Status = false; 
+        requests.custom.senderDate = a.profile.DateofBirth;
+        requests.custom.Status = false;
       });
       }
     }
+    // sending a mail to customer if not a user of the website
+    var site = req.path;
+    var refSite =site.split('/')[3];
     if(returnData.success == undefined){
       var mail: Mail = new dw.net.Mail();
       mail.addTo(new_Form.email);
       mail.setFrom(a.profile.email);
       mail.setSubject("Request to Join Website");
       mail.setContent(`Join the Website and Get exclusive discount on fashion products
-      link to join : https://bjxc-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-FriendConnect-Site/default/Login-Show?customerNumber=${customer.profile.customerNo}
-      
+      link to join : https://${req.host}/on/demandware.store/${refSite}/default/Login-Show?customerNumber=${customer.profile.customerNo}
+
       <b>Mandatory</b>:
       Note : Points to be Notice after you register yourself in the website:
         1. You should have to add the address first in the My Account Section then only you can send the request to the friend and Accept the request of the friend.
@@ -98,18 +128,22 @@ server.post("Save", function (req, res, next) {
       mail.send();
     }
   }
+    returnData.requestAlreadySents =  ` You already sents the request to the person, Cannot sent it again till the person Decline your request`
     returnData.alreadyMessage = `You both are already friends in this website`
-    returnData.message = `Request Send Successfully`;
+    returnData.message = `Request Sents Successfully`;
     returnData.error = `Registration link will be sent to the person you are trying to add as they are not a user of our website currently`;
     var redirectURL = URLUtils.url("FriendListUpdated-FriendDataTable").toString();
     returnData.redirectURL = redirectURL;
-    res.json(returnData); 
-  
+    res.json(returnData);
+    // res.redirect(URLUtils.url("FriendListUpdated-FriendDataTable"));
+   // res.render("friendList/friendListShow");
+
   });
   next();
 });
 
 
+// Process after the request is accepted by the receiver ie. add friend in both the friendlist(in Receiver and Sender)
 server.get('AcceptedRequestFriends',function(req,res,next){
   // var form = server.forms.getForm("friendList");
   var Transaction = require("dw/system/Transaction");
@@ -131,8 +165,9 @@ server.get('AcceptedRequestFriends',function(req,res,next){
       var receiver_customer_number = req.querystring.receiver;
 
       var sender = CustomerMgr.getCustomerByCustomerNumber(senders_customer_number);
-      
+
       var receiver = CustomerMgr.getCustomerByCustomerNumber(receiver_customer_number);
+
       var productList = ProductListMgr.getProductLists(sender , 100);
       if(productList.length == 0){
           var ProductList = ProductListMgr.createProductList(sender, 100)
@@ -140,7 +175,7 @@ server.get('AcceptedRequestFriends',function(req,res,next){
       }else
       {
           productList = productList[0];
-      }   
+      }
             var prroductList = productList.createProductItem(product);
             prroductList.custom.first_name =receiver.profile.firstName;
             prroductList.custom.last_name = receiver.profile.lastName,
@@ -183,6 +218,8 @@ server.get('AcceptedRequestFriends',function(req,res,next){
   next();
 });
 
+
+// show the table of line Items created in productList
 server.get("FriendDataTable", function (req, res, next) {
   var productListData = null;
   Transaction.wrap(function () {
@@ -199,6 +236,8 @@ server.get("FriendDataTable", function (req, res, next) {
   next();
 });
 
+
+// shows the list of pending request in which their is no response done by the receiver.
 server.get('PendingRequest',function(req,res,next){
   var CustomObjectMgr = require('dw/object/CustomObjectMgr');
   var CustomerMgr = require('dw/customer/CustomerMgr');
@@ -227,6 +266,8 @@ server.get('PendingRequest',function(req,res,next){
   next();
 })
 
+
+// Pop-up the model when click on Share with Friend (PDP) || Checkout page.
 server.get("FriendModel", function (req, res, next) {
   var id = req.querystring.id;
   var productListData = null;
@@ -248,6 +289,8 @@ server.get("FriendModel", function (req, res, next) {
   next();
 });
 
+
+// Sharing product with friend via EMAIL.
 server.get("sendMailToFriend", function (req, res, next) {
   var id = req.querystring.productID;
   var friend_id = req.querystring.friendid;
@@ -287,8 +330,11 @@ server.get("sendMailToFriend", function (req, res, next) {
   next();
 });
 
+
+// DELETE a friend from current_customer friendList.
 server.get("DeleteList", function (req, res, next) {
   var id = req.querystring.id;
+  var senders_customer_number = req.querystring.sender;
   Transaction.wrap(function () {
     var productList = ProductListMgr.getProductLists(customer, 100);
     if (productList.length == 0) {

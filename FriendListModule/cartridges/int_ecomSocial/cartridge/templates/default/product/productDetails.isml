@@ -117,7 +117,7 @@
                     </div>
 
                     <div class="prices-add-to-cart-actions">
-                        <div class="row">
+                        <div class="row" style="justify-content:center">
                             <div class="col-12">
                                 <!-- Prices -->
                                 <div class="prices">
@@ -125,15 +125,12 @@
                                     <isinclude template="product/components/pricing/main" />
                                 </div>
                             </div>
-                             <isif condition="${customer.isAuthenticated()}">
-                                 <button style=""><a href="${URLUtils.url('FriendListUpdated-FriendModel','id',product.id)}"
-                                        aria-label="${Resource.msg('label.friendList.addFriend', 'account', null)}"
-                                        style="">Share With Friend</a>
-                                </button>
-                            </isif>
+                          
 
                         <!-- Cart and [Optionally] Apple Pay -->
                         <isinclude template="product/components/addToCartProduct" />
+                        <br>
+                      
                     </div>
 
                     <!-- Social Sharing Icons -->

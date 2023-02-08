@@ -15,6 +15,9 @@ $(document).ready(function () {
                 else if(response.alreadyFriend == true){
                     alert(response.alreadyMessage);
                 }
+                else if(response.requestSents == true){
+                    alert(response.requestAlreadySents);
+                }
                 else{
                     alert(response.error);
                 }

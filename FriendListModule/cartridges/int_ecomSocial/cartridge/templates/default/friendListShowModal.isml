@@ -1,4 +1,4 @@
-
+<isdecorate template="common/layout/page">
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addCss('/css/account/profile.css');
@@ -12,8 +12,8 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Select</th>
-                    <th scope="col">Share with Friend</th>
+                    <th scope="col">${Resource.msg('label.SelectFriend', 'friends', null)}</th>
+                    <th scope="col">${Resource.msg('button.shareWithFriend', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.name', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.date', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.phone', 'friends', null)}</th>
@@ -49,3 +49,4 @@
             </tbody>
         </table>
     </div>
+    </isdecorate>
