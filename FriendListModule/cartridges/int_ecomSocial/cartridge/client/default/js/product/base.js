@@ -508,6 +508,13 @@ function getChildProducts() {
  * @return {string} - Product options and their selected values
  */
 function getOptions($productContainer) {
+    var a = window.location.href;
+    console.log(a);
+    var b =window.location.search;
+    console.log(b);
+    const params = new URLSearchParams(window.location.search);
+    console.log(params.get('customerID'));
+
     alert('above options')
     var options = $productContainer
         .find('.product-option')
@@ -515,7 +522,8 @@ function getOptions($productContainer) {
             var $elOption = $(this).find('.options-select');
             var urlValue = $elOption.val();
             var selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
-
+            const params = new URLSearchParams(window.location.search);
+            console.log(params.get('customerID'));
             // update the option value if the product is gift and the gift option amount availabel there - CUSTOM
             alert(1);
             alert('below options')
@@ -527,14 +535,14 @@ function getOptions($productContainer) {
                     selectedValueId: selectedValueId,
                 };
             }
-            else if(document.getElementById('senderID').value) {
+            else if(params.get('customerID')) {
                  selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
                     .data('value-id');
                     alert('friend')
                     return {
                         optionId: $(this).data("option-id"),
                         selectedValueId: selectedValueId,
-                        sendersID: document.getElementById('senderID').value
+                        sendersID: params.get('customerID')
                     };
             }
             else{
@@ -759,9 +767,11 @@ module.exports = {
                 };
                 
             }
-            if (document.getElementById('senderID').value) {
+            const params = new URLSearchParams(window.location.search);
+            alert(params.get('customerID'));
+            if (params.get('customerID')) {
 
-                form.senderId = document.getElementById('senderID').value;
+                form.senderId = params.get('customerID');
                 console.log(form);
                 }
             if (!$('.bundle-item').length) {
