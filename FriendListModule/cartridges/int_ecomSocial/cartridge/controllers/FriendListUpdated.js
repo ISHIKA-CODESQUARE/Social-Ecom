@@ -78,16 +78,16 @@ server.post("Save", function (req, res, next) {
               var requestList = request_sents.next();
               if(requestList.custom.ReceiverAddress == list_of_customer.customerNo && current_customer.profile.email == requestList.custom.SenderEmail && requestList.custom.Status == false){
                 returnData.requestSents = true;
-                }  
+                }
               }
           })
         }
       }
-    
+
     // sending a request to the friend if he/she not a friend or request hasn't been sent yet
     if(returnData.alreadyFriend == true){
     }
-    else if(returnData.requestSents == true){ 
+    else if(returnData.requestSents == true){
     }
     else{
     var a = customer;
@@ -104,19 +104,22 @@ server.post("Save", function (req, res, next) {
         requests.custom.SenderName = a.profile.firstName;
         requests.custom.ReceiverAddress = list_of_customer.customerNo;
         requests.custom.SenderEmail =current_customer.profile.email;
-        requests.custom.Status = false; 
+        requests.custom.senderDate = a.profile.DateofBirth;
+        requests.custom.Status = false;
       });
       }
     }
     // sending a mail to customer if not a user of the website
+    var site = req.path;
+    var refSite =site.split('/')[3];
     if(returnData.success == undefined){
       var mail: Mail = new dw.net.Mail();
       mail.addTo(new_Form.email);
       mail.setFrom(a.profile.email);
       mail.setSubject("Request to Join Website");
       mail.setContent(`Join the Website and Get exclusive discount on fashion products
-      link to join : https://bjxc-001.dx.commercecloud.salesforce.com/on/demandware.store/Sites-FriendConnect-Site/default/Login-Show?customerNumber=${customer.profile.customerNo}
-      
+      link to join : https://${req.host}/on/demandware.store/${refSite}/default/Login-Show?customerNumber=${customer.profile.customerNo}
+
       <b>Mandatory</b>:
       Note : Points to be Notice after you register yourself in the website:
         1. You should have to add the address first in the My Account Section then only you can send the request to the friend and Accept the request of the friend.
@@ -131,8 +134,10 @@ server.post("Save", function (req, res, next) {
     returnData.error = `Registration link will be sent to the person you are trying to add as they are not a user of our website currently`;
     var redirectURL = URLUtils.url("FriendListUpdated-FriendDataTable").toString();
     returnData.redirectURL = redirectURL;
-    res.json(returnData); 
-  
+    res.json(returnData);
+    // res.redirect(URLUtils.url("FriendListUpdated-FriendDataTable"));
+   // res.render("friendList/friendListShow");
+
   });
   next();
 });
@@ -178,7 +183,9 @@ server.get('AcceptedRequestFriends',function(req,res,next){
       var senders_customer_number = req.querystring.sender;
       var receiver_customer_number = req.querystring.receiver;
       var sender = CustomerMgr.getCustomerByCustomerNumber(senders_customer_number);
+
       var receiver = CustomerMgr.getCustomerByCustomerNumber(receiver_customer_number);
+
       var productList = ProductListMgr.getProductLists(sender , 100);
       if(productList.length == 0){
           var ProductList = ProductListMgr.createProductList(sender, 100)
@@ -354,6 +361,7 @@ server.get("sendMailToFriend", function (req, res, next) {
 // DELETE a friend from current_customer friendList as well as fellow friend's friendlist
 server.get("DeleteList", function (req, res, next) {
   var id = req.querystring.id;
+  var senders_customer_number = req.querystring.sender;
   Transaction.wrap(function () {
     var productList = ProductListMgr.getProductLists(customer, 100);
     if (productList.length == 0) {

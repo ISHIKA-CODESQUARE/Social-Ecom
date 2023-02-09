@@ -31,13 +31,12 @@
                             <td>${product.custom.address1} </td>
                              <td>${product.custom.emailFriendList}</td>
 
-                            <td>${product.custom.friend_birthday}</td>
+                            <td>${product.custom.birthDate}</td>
                             <td>${product.custom.friend_phone}</td>
                             <td><a href="https://bjxc-001.dx.commercecloud.salesforce.com/s/FriendConnect/giftCard">GiftCard</a></td>
                             <td><a href="${URLUtils.url('FriendListUpdated-DeleteList','id',product.ID,'receiverID',product.custom.receiverID,'senderID',product.custom.senderID)}">Delete</a>
                                     </td>
                                     <td><a href="${URLUtils.url('Checkout-Begin','id',product.ID)}">Select</a></td>
-                                    
 
                         </tr>
                     <iselse/>
