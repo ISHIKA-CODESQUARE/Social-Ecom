@@ -104,7 +104,7 @@ server.post("Save", function (req, res, next) {
         requests.custom.SenderName = a.profile.firstName;
         requests.custom.ReceiverAddress = list_of_customer.customerNo;
         requests.custom.SenderEmail =current_customer.profile.email;
-        requests.custom.senderDate = a.profile.DateofBirth;
+        requests.custom.senderDate = a.profile.birthday;
         requests.custom.Status = false;
       });
       }
