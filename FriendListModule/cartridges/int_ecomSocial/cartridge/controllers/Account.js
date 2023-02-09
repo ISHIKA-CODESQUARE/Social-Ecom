@@ -113,7 +113,7 @@ server.replace(
                         Transaction.wrap(function () {
                             var error = {};
                             var newCustomer = CustomerMgr.createCustomer(login, password);
-                          
+
                             var authenticateCustomerResult = CustomerMgr.authenticateCustomer(login, password);
                             if (authenticateCustomerResult.status !== 'AUTH_OK') {
                                 error = { authError: true, status: authenticateCustomerResult.status };
