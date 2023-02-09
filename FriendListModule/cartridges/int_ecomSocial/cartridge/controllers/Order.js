@@ -35,7 +35,7 @@ server.append(
         Transaction.wrap( function () {
             for (var i = 0; i < response.order.items.items.length; i++) {
                 var senderID = response.order.items.items[i].SenderID;
-                if (senderID != 'null') {
+                if (senderID != null) {
                 var sender = CustomerMgr.getCustomerByCustomerNumber(senderID);
                 sender.profile.custom.userWallet += 5;
             }};

@@ -177,7 +177,7 @@ server.post(
     server.middleware.https,
     csrfProtection.validateAjaxRequest,
     function (req, res, next) {
-        var customer_number = req.querystring.customer;
+        var customer_number = req.querystring.customerNumber;
         var CustomerMgr = require('dw/customer/CustomerMgr');
         var Resource = require('dw/web/Resource');
 
