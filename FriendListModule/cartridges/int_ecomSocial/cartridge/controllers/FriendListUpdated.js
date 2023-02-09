@@ -138,6 +138,24 @@ server.post("Save", function (req, res, next) {
 });
 
 
+// server.get('ViewFriendList',function(req,res,next){
+//   var productListData = null;
+//   Transaction.wrap(function () {
+//     var productList = ProductListMgr.getProductLists(customer, 100);
+//     if (productList.length == 0) {
+//       var ProductList = ProductListMgr.createProductList(customer, 100);
+//       productList = ProductList;
+//     } else {
+//       productList = productList[0];
+//     }
+//     productListData = productList.getItems();
+//     // productList.push({senderID:senderID,receiverID:receiverID})
+//   });
+//   res.render("friendList/friendListShow", { productList: productListData});
+//   next();
+// })
+
+
 // Process after the request is accepted by the receiver ie. add friend in both the friendlist(in Receiver and Sender)
 server.get('AcceptedRequestFriends',function(req,res,next){
   // var form = server.forms.getForm("friendList");
@@ -150,17 +168,16 @@ server.get('AcceptedRequestFriends',function(req,res,next){
   var product = ProductMgr.getProduct('shampo');
   var CustomerMgr = require('dw/customer/CustomerMgr');
   var CustomObjectMgr = require('dw/object/CustomObjectMgr');
-
   Transaction.wrap(function () {
     var myrequests = CustomObjectMgr.getAllCustomObjects('Requests');
     while(myrequests.hasNext()){
       var request = myrequests.next();
-      if(request.custom.friend_added != true){
+      if(request.custom.friend_added != true)
+      {  
+        var a = 10;           
       var senders_customer_number = req.querystring.sender;
       var receiver_customer_number = req.querystring.receiver;
-
       var sender = CustomerMgr.getCustomerByCustomerNumber(senders_customer_number);
-      
       var receiver = CustomerMgr.getCustomerByCustomerNumber(receiver_customer_number);
       var productList = ProductListMgr.getProductLists(sender , 100);
       if(productList.length == 0){
@@ -170,18 +187,19 @@ server.get('AcceptedRequestFriends',function(req,res,next){
       {
           productList = productList[0];
       }   
-            var prroductList = productList.createProductItem(product);
-            prroductList.custom.first_name =receiver.profile.firstName;
-            prroductList.custom.last_name = receiver.profile.lastName,
-            prroductList.custom.friend_birthday = receiver.profile.birthday,
-            prroductList.custom.friend_phone = receiver.profile.phoneHome,
-            prroductList.custom.emailFriendList = receiver.profile.email
-            prroductList.custom.address1 = receiver.profile.addressBook.addresses[0].address1 ? receiver.profile.addressBook.addresses[0].address1: "No address save yet" ,
-            prroductList.custom.address2 = receiver.profile.addressBook.addresses[0].address2 ? receiver.profile.addressBook.addresses[0].address2 : "No address save yet",
-            prroductList.custom.country = receiver.profile.addressBook.addresses[0].countryCode.displayValue ? receiver.profile.addressBook.addresses[0].countryCode.displayValue: "No country defined yet" ,
-            prroductList.custom.city = receiver.profile.addressBook.addresses[0].city ? receiver.profile.addressBook.addresses[0].city: "No city defined yet",
-            prroductList.custom.states = receiver.profile.addressBook.addresses[0].stateCode ? receiver.profile.addressBook.addresses[0].stateCode:"No state code defined yet" ,
-            prroductList.custom.zip = receiver.profile.addressBook.addresses[0].postalCode ? receiver.profile.addressBook.addresses[0].postalCode: "No postal code added yet" ;           
+            var prroductList1 = productList.createProductItem(product);
+            prroductList1.custom.first_name =receiver.profile.firstName;
+            prroductList1.custom.last_name = receiver.profile.lastName,
+            prroductList1.custom.friend_birthday = receiver.profile.birthday,
+            prroductList1.custom.friend_phone = receiver.profile.phoneHome,
+            prroductList1.custom.emailFriendList = receiver.profile.email
+            prroductList1.custom.address1 = receiver.profile.addressBook.addresses[0].address1 ? receiver.profile.addressBook.addresses[0].address1: "No address save yet" ,
+            prroductList1.custom.address2 = receiver.profile.addressBook.addresses[0].address2 ? receiver.profile.addressBook.addresses[0].address2 : "No address save yet",
+            prroductList1.custom.country = receiver.profile.addressBook.addresses[0].countryCode.displayValue ? receiver.profile.addressBook.addresses[0].countryCode.displayValue: "No country defined yet" ,
+            prroductList1.custom.city = receiver.profile.addressBook.addresses[0].city ? receiver.profile.addressBook.addresses[0].city: "No city defined yet",
+            prroductList1.custom.states = receiver.profile.addressBook.addresses[0].stateCode ? receiver.profile.addressBook.addresses[0].stateCode:"No state code defined yet" ,
+            prroductList1.custom.zip = receiver.profile.addressBook.addresses[0].postalCode ? receiver.profile.addressBook.addresses[0].postalCode: "No postal code added yet" ;           
+            
 
     var productList = ProductListMgr.getProductLists(receiver , 100);
     if(productList.length == 0){
@@ -191,24 +209,31 @@ server.get('AcceptedRequestFriends',function(req,res,next){
     {
         productList = productList[0];
     }
-        var prroductList = productList.createProductItem(product);
-            prroductList.custom.first_name =sender.profile.firstName;
-            prroductList.custom.last_name = sender.profile.lastName,
-            prroductList.custom.friend_birthday = sender.profile.birthday,
-            prroductList.custom.friend_phone = sender.profile.phoneHome,
-            prroductList.custom.emailFriendList = sender.profile.email
-            prroductList.custom.address1 = sender.profile.addressBook.addresses[0].address1 ? sender.profile.addressBook.addresses[0].address1:null,
-            prroductList.custom.address2 = sender.profile.addressBook.addresses[0].address2 ? sender.profile.addressBook.addresses[0].address2:null,
-            prroductList.custom.country = sender.profile.addressBook.addresses[0].countryCode.displayValue ? sender.profile.addressBook.addresses[0].countryCode.displayValue:null,
-            prroductList.custom.city = sender.profile.addressBook.addresses[0].city ? sender.profile.addressBook.addresses[0].city:null,
-            prroductList.custom.states = sender.profile.addressBook.addresses[0].stateCode ? sender.profile.addressBook.addresses[0].stateCode:null,
-            prroductList.custom.emailFriendList = sender.profile.email ? sender.profile.email:null,
-            prroductList.custom.zip = sender.profile.addressBook.addresses[0].postalCode ? sender.profile.addressBook.addresses[0].postalCode:null;
-  }
+        var prroductList2 = productList.createProductItem(product);
+            prroductList2.custom.first_name =sender.profile.firstName;
+            prroductList2.custom.last_name = sender.profile.lastName,
+            prroductList2.custom.friend_birthday = sender.profile.birthday,
+            prroductList2.custom.friend_phone = sender.profile.phoneHome,
+            prroductList2.custom.emailFriendList = sender.profile.email
+            prroductList2.custom.address1 = sender.profile.addressBook.addresses[0].address1 ? sender.profile.addressBook.addresses[0].address1:null,
+            prroductList2.custom.address2 = sender.profile.addressBook.addresses[0].address2 ? sender.profile.addressBook.addresses[0].address2:null,
+            prroductList2.custom.country = sender.profile.addressBook.addresses[0].countryCode.displayValue ? sender.profile.addressBook.addresses[0].countryCode.displayValue:null,
+            prroductList2.custom.city = sender.profile.addressBook.addresses[0].city ? sender.profile.addressBook.addresses[0].city:null,
+            prroductList2.custom.states = sender.profile.addressBook.addresses[0].stateCode ? sender.profile.addressBook.addresses[0].stateCode:null,
+            prroductList2.custom.emailFriendList = sender.profile.email ? sender.profile.email:null,
+            prroductList2.custom.zip = sender.profile.addressBook.addresses[0].postalCode ? sender.profile.addressBook.addresses[0].postalCode:null;
+
+            prroductList1.custom.senderID = prroductList1.ID;
+            prroductList1.custom.receiverID = prroductList2.ID;
+            prroductList2.custom.senderID = prroductList2.ID;
+            prroductList2.custom.receiverID = prroductList1.ID;
+          }
   request.custom.friend_added = true;
 }
     res.redirect(URLUtils.url("FriendListUpdated-FriendDataTable"));
   });
+  var pop = [];
+  pop.push(a);
   next();
 });
 
@@ -225,8 +250,9 @@ server.get("FriendDataTable", function (req, res, next) {
       productList = productList[0];
     }
     productListData = productList.getItems();
+    // productList.push({senderID:senderID,receiverID:receiverID})
   });
-  res.render("friendList/friendListShow", { productList: productListData });
+  res.render("friendList/friendListShow", {productList: productListData});
   next();
 });
 
@@ -325,7 +351,7 @@ server.get("sendMailToFriend", function (req, res, next) {
 });
 
 
-// DELETE a friend from current_customer friendList.
+// DELETE a friend from current_customer friendList as well as fellow friend's friendlist
 server.get("DeleteList", function (req, res, next) {
   var id = req.querystring.id;
   Transaction.wrap(function () {
@@ -374,3 +400,9 @@ server.get("EditList", function (req, res, next) {
 });
 
 module.exports = server.exports();
+
+
+
+// in PENDING REQUEST funtion i just need to create a custom object attribute as
+// boolean and then use that if the request is deleted than make it true and then apply condition in isml for one is false and another is true
+// 

@@ -5,6 +5,7 @@ var CustomObjectMgr = require('dw/object/CustomObjectMgr');
 var Transaction = require('dw/system/Transaction');
 var URLUtils = require('dw/web/URLUtils');
 
+// List of request sent by the sender
 server.get('getRequest',function(req,res,next){
     var requests = []
     var address = false
@@ -26,6 +27,7 @@ server.get('getRequest',function(req,res,next){
     next();
 })
 
+// Accept the request then it redirect to the Accepted request sending data to the next controller and changing the status.
 server.get('AcceptRequest',function(req,res,next){
     var CustomerMgr = require('dw/customer/CustomerMgr');
 
@@ -64,10 +66,11 @@ server.get('DeclineRequest',function(req,res,next){
     next();
 })
 
-// this works when the request remains pending and now wants to remove the request
+// this works when the request remains pending and now wants to remove the request 
+//  Redirected from pendingRequest function of friendlistupadted controller.
 server.get('DeleteRequest',function(req,res,next){
     var CustomerMgr = require('dw/customer/CustomerMgr');
-
+    var CustomObjectMgr = require('dw/object/CustomObjectMgr');
      
     var address = false
     if(customer.addressBook.addresses.length > 0){
