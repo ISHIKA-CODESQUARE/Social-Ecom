@@ -9,7 +9,8 @@
                     <th scope="col">${Resource.msg('label.address1', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.email', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.SenderName', 'friends', null)}</th> 
-                    <th scope="col">Requests status</th>
+                    <th scope="col">${Resource.msg('label.accept', 'friends', null)}</th>
+                    <th scope="col">${Resource.msg('label.Decline', 'friends', null)}</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,14 +23,17 @@
                             <td>${request.object.custom.SenderName}</td>
                             <td>
                                 <isif condition="${request.object.custom.Status == true}">
-                                    <button type="button" class="btn btn-primary" disabled>Accepted</button>
-                                    <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}">UnFriend</a></button>
+                                    <button type="button" class="btn btn-link " disabled><i class="fa fa-check-circle" aria-hidden="true"></i></button>
 
                                 <iselse/>
-                                    <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-AcceptRequest','id',request.object.custom.FriendRequest)}">Accept</a></button>
-                                    <button type="button" class="btn btn-primary"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}">Decline</a></button>
-
+                                    <button type="button" class="btn btn-link "><a href="${URLUtils.url('NewFriend-AcceptRequest','id',request.object.custom.FriendRequest)}"><i class="fa fa-check-circle-o" aria-hidden="true"></i></a></button>
                                 </isif>
+                            </td>
+                            <td><isif condition="${request.object.custom.Status == true}">
+                                    <button type="button" class="btn btn-link"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}"><i class="fa fa-trash" aria-hidden="true"></i></a></button>
+                                    <iselse/>
+                                     <button type="button" class="btn btn-link"><a href="${URLUtils.url('NewFriend-DeclineRequest','id',request.object.custom.FriendRequest)}"><i class="fa fa-trash-o" aria-hidden="true"></i></a></button>
+                                    </isif>
                             </td>
 
                         </tr>
