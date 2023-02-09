@@ -19,7 +19,7 @@
                                 <td>${pending.profile.firstName} ${pending.profile.lastName}</td>
                                 <td>${pending.profile.email}</td>
                                 <td>
-                                    <isif condition="${pdict.pendingData[0].status == false}">
+                                    <isif condition="${pending.status == false}">
                                         <button type="button" class="btn btn-primary">Pending</button>
                                     <iselse/>
                                     </isif>

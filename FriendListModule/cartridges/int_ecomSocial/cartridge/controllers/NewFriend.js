@@ -50,7 +50,7 @@ server.get('AcceptRequest',function(req,res,next){
         })
     }
 }
-    res.redirect(URLUtils.url('FriendListUpdated-AcceptedRequestFriends','sender',sender_customerNo,'receiver',receiver_customerNo));
+    res.redirect(URLUtils.url('FriendListUpdated-AcceptedRequestFriends','sender',sender_customerNo,'receiver',receiver_customerNo,'id',id));
     next()
 })
 
