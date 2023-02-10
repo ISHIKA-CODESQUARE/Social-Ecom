@@ -155,8 +155,8 @@
                 context-object="${pdict.product.raw}" />
         </div>
     </div>
-    <div>
+    <iscomment> <div>
         <input type="hidden" value="${pdict.SenderID}" name="senderID" id="senderID">
-    </div>
+    </div> </iscomment>
     </isobject>
 </isdecorate>
