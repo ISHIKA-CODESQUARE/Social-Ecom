@@ -78,9 +78,7 @@
             <span class="shipping-cost">${shippingMethod.shippingCost}</span>
         </div>
         </isif>
-        <div class="col-3 text-right shipping-method-pricing end-lines">
-            <span class="shipping-cost">${shippingMethod.shippingCost}</span>
-        </div>
+       
     </isloop>
     </isif>
     </isif>
