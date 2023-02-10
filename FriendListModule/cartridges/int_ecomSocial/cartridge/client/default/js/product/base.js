@@ -515,48 +515,52 @@ function getOptions($productContainer) {
     const params = new URLSearchParams(window.location.search);
     console.log(params.get('customerID'));
 
-    alert('above options')
-    var options = $productContainer
-        .find('.product-option')
-        .map(function () {
-            var $elOption = $(this).find('.options-select');
-            var urlValue = $elOption.val();
-            var selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
-            const params = new URLSearchParams(window.location.search);
-            console.log(params.get('customerID'));
-            // update the option value if the product is gift and the gift option amount availabel there - CUSTOM
-            alert(1);
-            alert('below options')
-             if ($productContainer.find('.gift-amount-div').length > 0) {
-                selectedValueId = $('button.gift-amount[disabled]').attr('gift-option');
-                alert('giftcard')
-                return {
-                    optionId: $(this).data("option-id"),
-                    selectedValueId: selectedValueId,
-                };
-            }
-            else if(params.get('customerID')) {
-                 selectedValueId = $elOption.find('option[value="' + urlValue + '"]')
-                    .data('value-id');
-                    alert('friend')
-                    return {
-                        optionId: $(this).data("option-id"),
-                        selectedValueId: selectedValueId,
-                        sendersID: params.get('customerID')
-                    };
-            }
-            else{
-                alert('base')
-            return {
-                optionId: $(this).data('option-id'),
-                selectedValueId: selectedValueId
-            };
-        }
-        }).toArray();
-        alert('after map')
-    if ($('body').find('#engraving-div').length > 0 && $('button.engrave-toggle-button[disabled]').attr('engraving-option-id') == 'engravingCost') {
-        options.push({ engravingMessage: $('#engraving-message').val() ? ($('#engraving-message').val()).trim() : "" }) // adding engraving message in Options
-    }
+  alert("Form Submitted");
+  var options = $productContainer
+    .find(".product-option")
+    .map(function () {
+      var $elOption = $(this).find(".options-select");
+      var urlValue = $elOption.val();
+      var selectedValueId = $elOption.find('option[value="' + urlValue + '"]');
+      const params = new URLSearchParams(window.location.search);
+      console.log(params.get("customerID"));
+      // update the option value if the product is gift and the gift option amount availabel there - CUSTOM
+      if ($productContainer.find(".gift-amount-div").length > 0) {
+        selectedValueId = $("button.gift-amount[disabled]").attr("gift-option");
+        return {
+          optionId: $(this).data("option-id"),
+          selectedValueId: selectedValueId,
+        };
+      } else if (params.get("customerID")) {
+        selectedValueId = $elOption
+          .find('option[value="' + urlValue + '"]')
+          .data("value-id");
+        alert("friend");
+        return {
+          optionId: $(this).data("option-id"),
+          selectedValueId: selectedValueId,
+          sendersID: params.get("customerID"),
+        };
+      } else {
+        return {
+          optionId: $(this).data("option-id"),
+          selectedValueId: selectedValueId,
+        };
+      }
+    })
+    .toArray();
+
+  if (
+    $("body").find("#engraving-div").length > 0 &&
+    $("button.engrave-toggle-button[disabled]").attr("engraving-option-id") ==
+      "engravingCost"
+  ) {
+    options.push({
+      engravingMessage: $("#engraving-message").val()
+        ? $("#engraving-message").val().trim()
+        : "",
+    }); // adding engraving message in Options
+  }
 
     return JSON.stringify(options);
 }
@@ -592,10 +596,319 @@ module.exports = {
         }
     },
 
-    focusChooseBonusProductModal: function () {
-        $('body').on('shown.bs.modal', '#chooseBonusProductModal', function () {
-            $('#chooseBonusProductModal').siblings().attr('aria-hidden', 'true');
-            $('#chooseBonusProductModal .close').focus();
+  focusChooseBonusProductModal: function () {
+    $("body").on("shown.bs.modal", "#chooseBonusProductModal", function () {
+      $("#chooseBonusProductModal").siblings().attr("aria-hidden", "true");
+      $("#chooseBonusProductModal .close").focus();
+    });
+  },
+
+  onClosingChooseBonusProductModal: function () {
+    $("body").on("hidden.bs.modal", "#chooseBonusProductModal", function () {
+      $("#chooseBonusProductModal").siblings().attr("aria-hidden", "false");
+    });
+  },
+
+  trapChooseBonusProductModalFocus: function () {
+    $("body").on("keydown", "#chooseBonusProductModal", function (e) {
+      var focusParams = {
+        event: e,
+        containerSelector: "#chooseBonusProductModal",
+        firstElementSelector: ".close",
+        lastElementSelector: ".add-bonus-products",
+      };
+      focusHelper.setTabNextFocus(focusParams);
+    });
+  },
+
+  colorAttribute: function () {
+    $(document).on("click", '[data-attr="color"] button', function (e) {
+      e.preventDefault();
+
+      if ($(this).attr("disabled")) {
+        return;
+      }
+      var $productContainer = $(this).closest(".set-item");
+      if (!$productContainer.length) {
+        $productContainer = $(this).closest(".product-detail");
+      }
+
+      attributeSelect($(this).attr("data-url"), $productContainer);
+    });
+  },
+
+  selectAttribute: function () {
+    $(document).on(
+      "change",
+      'select[class*="select-"], .options-select',
+      function (e) {
+        e.preventDefault();
+
+        var $productContainer = $(this).closest(".set-item");
+        if (!$productContainer.length) {
+          $productContainer = $(this).closest(".product-detail");
+        }
+        attributeSelect(e.currentTarget.value, $productContainer);
+      }
+    );
+  },
+
+  availability: function () {
+    $(document).on("change", ".quantity-select", function (e) {
+      e.preventDefault();
+
+      var $productContainer = $(this).closest(".product-detail");
+      if (!$productContainer.length) {
+        $productContainer = $(this)
+          .closest(".modal-content")
+          .find(".product-quickview");
+      }
+
+      if ($(".bundle-items", $productContainer).length === 0) {
+        attributeSelect(
+          $(e.currentTarget).find("option:selected").data("url"),
+          $productContainer
+        );
+      }
+    });
+  },
+
+  addToCart: function () {
+    $(document).on(
+      "click",
+      "button.add-to-cart, button.add-to-cart-global",
+      function () {
+        var addToCartUrl;
+        var pid;
+        var pidsObj;
+        var setPids;
+
+        $("body").trigger("product:beforeAddToCart", this);
+
+        if ($(".set-items").length && $(this).hasClass("add-to-cart-global")) {
+          setPids = [];
+
+          $(".product-detail").each(function () {
+            if (!$(this).hasClass("product-set-detail")) {
+              setPids.push({
+                pid: $(this).find(".product-id").text(),
+                qty: $(this).find(".quantity-select").val(),
+                options: getOptions($(this)),
+              });
+            }
+          });
+          pidsObj = JSON.stringify(setPids);
+        }
+
+        pid = getPidValue($(this));
+
+        var $productContainer = $(this).closest(".product-detail");
+        if (!$productContainer.length) {
+          $productContainer = $(this)
+            .closest(".quick-view-dialog")
+            .find(".product-detail");
+        }
+
+        addToCartUrl = getAddToCartUrl();
+
+        // Validation for giftcard Form - CUSTOM
+        console.log("isGiftCard", $("#isGiftCard").val());
+        if ($("#isGiftCard").val() == "true") {
+          document.getElementById("emailError").innerHTML = "";
+          document.getElementById("invalid-feedback-email1").innerHTML = "";
+          document.getElementById("senderName").innerHTML = "";
+          document.getElementById("message").innerHTML = "";
+
+        
+          var rEmail = $("#emailVerify").val();
+          var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          var nameformat = /^[A-Za-z0-9 ]+$/;
+
+          if (rEmail == "") {
+            $("#emailError").html(
+              '<p class="text-danger">please fill out this field<p>'
+            );
+            return false;
+          }
+          if (!rEmail.match(mailformat)) {
+            console.log("not correct");
+            $("#emailError").html(
+              '<p class="text-danger">Email is incorrect<p>'
+            );
+            return false;
+          }
+          var RecipientName = $("#recipientName").val();
+
+          if (RecipientName == "") {
+            console.log("empty remail");
+            $("#invalid-feedback-email1").html(
+              '<p class="text-danger">please fill out this field<p>'
+            );
+            return false;
+          }
+          if (!RecipientName.match(nameformat)) {
+            console.log("Name regex is not valid");
+            $("#invalid-feedback-email1").html(
+              '<p class="text-danger">Name Format is incorrect<p>'
+            );
+            return false;
+          }
+
+
+          var SenderName = $("#senderName").val();
+
+          if (SenderName == "") {
+            console.log("empty remail");
+            $(".invalid-feedback-email2").html(
+              '<p class="text-danger">please fill out this field<p>'
+            );
+            return false;
+          }
+          if (!SenderName.match(nameformat)) {
+            console.log("Name regex is not valid");
+            $(".invalid-feedback-email2").html(
+                '<p class="text-danger">Please Correct the Name Format<p>'
+              );
+            return false;
+          }
+
+          var Message = $("#message").val();
+          if (Message == "") {
+            console.log("empty remail");
+            $(".invalid-feedback-email3").html(
+              '<p class="text-danger">please fill out this field<p>'
+            );
+            return false;
+          } else {
+            $(".invalid-feedback-email3").html("");
+          }
+          var x = $("#emailVerify").val();
+          var giftData = [];
+          giftData.push({
+            recipientEmail: $("#emailVerify").val(),
+            recipientName: $("#recipientName").val(),
+            senderName: $("#senderName").val(),
+            message: $("#message").val(),
+          });
+          console.log(x);
+          var form = {
+            pid: pid,
+            pidsObj: pidsObj,
+            childProducts: getChildProducts(),
+            quantity: getQuantitySelected($(this)),
+            giftdetail: JSON.stringify(giftData),
+          };
+          $("#exampleModalLong").modal("hide");
+          $("#emailVerify").val("");
+          $("#recipientName").val("");
+          $("#senderName").val("");
+          $("#message").val("");
+        } else {
+          var form = {
+            pid: pid,
+            pidsObj: pidsObj,
+            childProducts: getChildProducts(),
+            quantity: getQuantitySelected($(this)),
+          };
+        }
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get("customerID")) {
+          form.senderId = params.get("customerID");
+          console.log(form);
+        }
+        if (!$(".bundle-item").length) {
+          form.options = getOptions($productContainer);
+        }
+
+        $(this).trigger("updateAddToCartFormData", form);
+        if (addToCartUrl) {
+          $.spinner().start();
+          $.ajax({
+            url: addToCartUrl,
+            method: "POST",
+            data: form,
+            success: function (data) {
+              handlePostCartAdd(data);
+              $("body").trigger("product:afterAddToCart", data);
+              $.spinner().stop();
+              miniCartReportingUrl(data.reportingURL);
+            },
+            error: function () {
+              $.spinner().stop();
+            },
+          });
+        }
+      }
+    );
+  },
+  selectBonusProduct: function () {
+    $(document).on("click", ".select-bonus-product", function () {
+      var $choiceOfBonusProduct = $(this).parents(".choice-of-bonus-product");
+      var pid = $(this).data("pid");
+      var maxPids = $(".choose-bonus-product-dialog").data("total-qty");
+      var submittedQty = parseInt(
+        $choiceOfBonusProduct.find(".bonus-quantity-select").val(),
+        10
+      );
+      var totalQty = 0;
+      $.each(
+        $("#chooseBonusProductModal .selected-bonus-products .selected-pid"),
+        function () {
+          totalQty += $(this).data("qty");
+        }
+      );
+      totalQty += submittedQty;
+      var optionID = $choiceOfBonusProduct
+        .find(".product-option")
+        .data("option-id");
+      var valueId = $choiceOfBonusProduct
+        .find(".options-select option:selected")
+        .data("valueId");
+      if (totalQty <= maxPids) {
+        var selectedBonusProductHtml =
+          "" +
+          '<div class="selected-pid row" ' +
+          'data-pid="' +
+          pid +
+          '"' +
+          'data-qty="' +
+          submittedQty +
+          '"' +
+          'data-optionID="' +
+          (optionID || "") +
+          '"' +
+          'data-option-selected-value="' +
+          (valueId || "") +
+          '"' +
+          ">" +
+          '<div class="col-sm-11 col-9 bonus-product-name" >' +
+          $choiceOfBonusProduct.find(".product-name").html() +
+          "</div>" +
+          '<div class="col-1"><i class="fa fa-times" aria-hidden="true"></i></div>' +
+          "</div>";
+        $("#chooseBonusProductModal .selected-bonus-products").append(
+          selectedBonusProductHtml
+        );
+        $(".pre-cart-products").html(totalQty);
+        $(".selected-bonus-products .bonus-summary").removeClass(
+          "alert-danger"
+        );
+      } else {
+        $(".selected-bonus-products .bonus-summary").addClass("alert-danger");
+      }
+    });
+  },
+  removeBonusProduct: function () {
+    $(document).on("click", ".selected-pid", function () {
+      $(this).remove();
+      var $selected = $(
+        "#chooseBonusProductModal .selected-bonus-products .selected-pid"
+      );
+      var count = 0;
+      if ($selected.length) {
+        $selected.each(function () {
+          count += parseInt($(this).data("qty"), 10);
         });
     },
 
