@@ -625,7 +625,7 @@ function getOptions($productContainer) {
   const params = new URLSearchParams(window.location.search);
   console.log(params.get("customerID"));
 
-  alert("above options");
+  alert("Form Submitted");
   var options = $productContainer
     .find(".product-option")
     .map(function () {
@@ -635,11 +635,8 @@ function getOptions($productContainer) {
       const params = new URLSearchParams(window.location.search);
       console.log(params.get("customerID"));
       // update the option value if the product is gift and the gift option amount availabel there - CUSTOM
-      alert(1);
-      alert("below options");
       if ($productContainer.find(".gift-amount-div").length > 0) {
         selectedValueId = $("button.gift-amount[disabled]").attr("gift-option");
-        alert("giftcard");
         return {
           optionId: $(this).data("option-id"),
           selectedValueId: selectedValueId,
@@ -655,7 +652,6 @@ function getOptions($productContainer) {
           sendersID: params.get("customerID"),
         };
       } else {
-        alert("base");
         return {
           optionId: $(this).data("option-id"),
           selectedValueId: selectedValueId,
@@ -663,7 +659,7 @@ function getOptions($productContainer) {
       }
     })
     .toArray();
-  alert("after map");
+
   if (
     $("body").find("#engraving-div").length > 0 &&
     $("button.engrave-toggle-button[disabled]").attr("engraving-option-id") ==
@@ -836,7 +832,7 @@ module.exports = {
         
           var rEmail = $("#emailVerify").val();
           var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-          var nameformat = /^[a-zA-Z ]{2,30}$/;
+          var nameformat = /^[A-Za-z0-9 ]+$/;
 
           if (rEmail == "") {
             $("#emailError").html(
@@ -860,7 +856,6 @@ module.exports = {
             );
             return false;
           }
-
           if (!RecipientName.match(nameformat)) {
             console.log("Name regex is not valid");
             $("#invalid-feedback-email1").html(
@@ -869,15 +864,8 @@ module.exports = {
             return false;
           }
 
-          var SenderName = $("#senderName").val();
 
-          if (!SenderName.match(nameformat)) {
-            console.log("Name regex is not valid");
-            $("#invalid-feedback-email1").html(
-              '<p class="text-danger">Name Format is incorrect<p>'
-            );
-            return false;
-          }
+          var SenderName = $("#senderName").val();
 
           if (SenderName == "") {
             console.log("empty remail");
@@ -885,9 +873,15 @@ module.exports = {
               '<p class="text-danger">please fill out this field<p>'
             );
             return false;
-          } else {
-            $(".invalid-feedback-email2").html("");
           }
+          if (!SenderName.match(nameformat)) {
+            console.log("Name regex is not valid");
+            $(".invalid-feedback-email2").html(
+                '<p class="text-danger">Please Correct the Name Format<p>'
+              );
+            return false;
+          }
+
           var Message = $("#message").val();
           if (Message == "") {
             console.log("empty remail");
@@ -928,7 +922,7 @@ module.exports = {
           };
         }
         const params = new URLSearchParams(window.location.search);
-        alert(params.get("customerID"));
+
         if (params.get("customerID")) {
           form.senderId = params.get("customerID");
           console.log(form);
