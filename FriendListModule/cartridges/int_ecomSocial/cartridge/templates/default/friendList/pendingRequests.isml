@@ -1,6 +1,5 @@
 <isdecorate template="common/layout/page">
-<isif condition="${pdict.address == true}">
-    <isif condition="${pdict.pendingData.status == false}">
+    <isif condition="${pdict.address == true}">
         <h4 class="text-center mt-4 text-uppercase font-weight-bold">Pending Requests</h4>
         <div class="container mt-2">
             <table class="table table-striped border rounded">
@@ -11,30 +10,37 @@
                         <th scope="col">Requests status</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <isloop items="${pdict.pendingData}" var="pending" status="loopstatus">
+                <isloop items="${pdict.pendingData}" var="pending" status="loopstatus">
+                    <isif condition="${pending.status == false}">
 
+
+                        <tbody>
                             <tr>
                                 <td>${pending.profile.firstName} ${pending.profile.lastName}</td>
                                 <td>${pending.profile.email}</td>
                                 <td>
-                                    <isif condition="${pdict.pendingData[0].status == false}">
+                                    <isif condition="${pending.status == false}">
                                         <button type="button" class="btn btn-primary">Pending</button>
                                     <iselse/>
                                     </isif>
-                                    <button type="button" class="btn btn-danger"> <a href="${URLUtils.url('NewFriend-DeleteRequest','id',pending.pending.custom.FriendRequest)}"> Delete Request </a></button>
+                                    <button type="button" class="btn btn-danger"> <a
+                                            href="${URLUtils.url('NewFriend-DeleteRequest', 'id', pending.pending.custom.FriendRequest)}">
+                                            Delete Request </a></button>
                                 </td>
                             </tr>
-                    </isloop>
-                </tbody>
+
+                        </tbody>
+
+                    <iselse/>
+                        <iscomment>
+                            <isinclude template="friendList/noPendingRequest" sf-toolkit="on" />
+                        </iscomment>
+                    </isif>
+                </isloop>
             </table>
         </div>
-    <iselse/> 
-    <isinclude template="friendList/noPendingRequest" sf-toolkit="on" />
-      
+    <iselse/>
+        <isinclude template="friendList/error/addressNotFound" sf-toolkit="on" />
     </isif>
-<iselse/>
-    <isinclude template="friendList/error/addressNotFound" sf-toolkit="on" />
-</isif>
 
 </isdecorate>

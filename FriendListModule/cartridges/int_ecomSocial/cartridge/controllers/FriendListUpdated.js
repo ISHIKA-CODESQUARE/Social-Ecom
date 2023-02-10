@@ -104,7 +104,7 @@ server.post("Save", function (req, res, next) {
         requests.custom.SenderName = a.profile.firstName;
         requests.custom.ReceiverAddress = list_of_customer.customerNo;
         requests.custom.SenderEmail =current_customer.profile.email;
-        requests.custom.senderDate = a.profile.DateofBirth;
+        requests.custom.senderDate = a.profile.birthday;
         requests.custom.Status = false;
       });
       }
@@ -155,12 +155,13 @@ server.get('AcceptedRequestFriends',function(req,res,next){
   var product = ProductMgr.getProduct('shampo');
   var CustomerMgr = require('dw/customer/CustomerMgr');
   var CustomObjectMgr = require('dw/object/CustomObjectMgr');
+  var id = req.querystring.id;
 
   Transaction.wrap(function () {
     var myrequests = CustomObjectMgr.getAllCustomObjects('Requests');
     while(myrequests.hasNext()){
       var request = myrequests.next();
-      if(request.custom.friend_added != true){
+      if(request.custom.friend_added != true && request.custom.FriendRequest == id){
       var senders_customer_number = req.querystring.sender;
       var receiver_customer_number = req.querystring.receiver;
 
@@ -210,8 +211,10 @@ server.get('AcceptedRequestFriends',function(req,res,next){
             prroductList.custom.states = sender.profile.addressBook.addresses[0].stateCode ? sender.profile.addressBook.addresses[0].stateCode:null,
             prroductList.custom.emailFriendList = sender.profile.email ? sender.profile.email:null,
             prroductList.custom.zip = sender.profile.addressBook.addresses[0].postalCode ? sender.profile.addressBook.addresses[0].postalCode:null;
-  }
-  request.custom.friend_added = true;
+  
+            request.custom.friend_added = true;
+          }
+  
 }
     res.redirect(URLUtils.url("FriendListUpdated-FriendDataTable"));
   });
