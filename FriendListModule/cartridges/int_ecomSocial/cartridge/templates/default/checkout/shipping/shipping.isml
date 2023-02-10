@@ -27,11 +27,16 @@
                                 </label> </iscomment>
 
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                           <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#exampleModal">
                                 Select Friend Address
                                 
                             </button>
+                            <button type="button" class="btn btn-success">
+                            <a href="${URLUtils.url('Checkout-Begin')}" style="text-decoration:none;color:white">My Addresses</a>  
+                                
+                            </button>
+
                         </div>
                     </div>
                 </div>
