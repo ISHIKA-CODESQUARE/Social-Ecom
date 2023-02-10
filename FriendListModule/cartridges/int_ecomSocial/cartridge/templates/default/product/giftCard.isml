@@ -28,7 +28,7 @@
                 <!-- Product Name -->
                 <div class="row">
                     <div class="d-md-none col-sm-12">
-                    
+
                         <h1 class="product-name">${product.productName}</h1>
                     </div>
                 </div>

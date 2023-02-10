@@ -9,7 +9,6 @@
     <iscomment> <isif condition="${pdict.SenderID}">
         <isset name="senderID" value="${pdict.senderID}" scope="page" />
     <iselse/>
-        
     </isif> </iscomment>
 
     <isset name="product" value="${pdict.product}" scope="page" />
