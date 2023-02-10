@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" id="addGiftCard" data-target="#exampleModalLong">${Resource.msg('label.gift.card' , 'giftCard' , null)}</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">${Resource.msg('label.gift.card' , 'giftCard' , null)}</button>
 <iscomment> ${pdict.drx.email.value} </iscomment>
 <div class="row" id="exampleModalLongGiftForm">
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
@@ -16,13 +16,13 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="emailVerify">${Resource.msg('labal.recipient.email' , 'giftCard' , null)}</label>
-                        <input type="email" id="emailVerify" value="" class="form-control" name="email5">
+                        <input type="email" id="emailVerify" value="${email}" class="form-control" name="email5">
                         <div id="emailError">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="recipientName">${Resource.msg('labal.recipient.name' , 'giftCard' , null)}</label>
-                        <input type="text" class="form-control" value="" name="email1" id="recipientName"
+                        <input type="text" class="form-control" value="${name}" name="email1" id="recipientName"
                             data-missing-error="${Resource.msg('label.valid.email', 'forms', null)}" <isprint
                             value="${pdict.drx.email1.attributes}" encoding="off" />>
                         <div id="invalid-feedback-email1">
