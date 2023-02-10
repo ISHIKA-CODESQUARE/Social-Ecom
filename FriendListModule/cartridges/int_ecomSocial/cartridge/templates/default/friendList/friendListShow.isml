@@ -5,11 +5,11 @@
         assets.addJs('/js/addressBook.js');
     </isscript>
 
-        <h1 class="text-center mt-4 text-uppercase font-weight-bold"> FRIENDS LIST</h1>
+    <h1 class="text-center mt-4 text-uppercase font-weight-bold"> FRIENDS LIST</h1>
     <div class="container mt-2">
 
-            <br> 
-    
+        <br>
+
         <table class="table table-striped border rounded">
             <thead>
                 <tr>
@@ -18,7 +18,7 @@
                     <th scope="col">${Resource.msg('label.friendemail', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.friend_birthday', 'friends', null)}</th>
                     <th scope="col">${Resource.msg('label.friend_phone', 'friends', null)}</th>
-                    <th scope="col">Share</th>  
+                    <th scope="col">Share</th>
                     <th scope="col">Delete</th>
                     <th scope="col">Send Gift</th>
                 </tr>
@@ -29,16 +29,18 @@
                         <tr>
                             <td>${product.custom.first_name} ${product.custom.last_name}</td>
                             <td>${product.custom.address1} </td>
-                             <td>${product.custom.emailFriendList}</td>
+                            <td>${product.custom.emailFriendList}</td>
 
                             <td>${product.custom.friend_birthday}</td>
                             <td>${product.custom.friend_phone}</td>
-                            <td><a href="https://bjxc-001.dx.commercecloud.salesforce.com/s/FriendConnect/giftCard">GiftCard</a></td>
-                            <td><a href="${URLUtils.url('FriendListUpdated-DeleteList','id',product.ID)}">Delete</a>
-                                    </td>
-                                    <td><a href="${URLUtils.url('Checkout-Begin','id',product.ID)}">Select</a></td>
-                                    
-
+                            <td><a
+                                    href="https://bjxc-001.dx.commercecloud.salesforce.com/s/FriendConnect/Gift_Card-4.html?name=${product.custom.first_name} ${product.custom.last_name}&email=${product.custom.emailFriendList}">GiftCard</a>
+                            </td>
+                            <iscomment>
+                                <td><a href="${URLUtils.url('https://bjxc-001.dx.commercecloud.salesforce.com/s/FriendConnect/giftCard','id ',product.ID)}">GiftCard</a></td>
+                            </iscomment>
+                            <td><a href="${URLUtils.url('FriendListUpdated-DeleteList', 'id', product.ID)}">Delete</a></td>
+                            <td><a href="${URLUtils.url('Checkout-Begin', 'id', product.ID)}">Select</a></td>
                         </tr>
                     <iselse/>
                     </isif>
@@ -46,8 +48,10 @@
             </tbody>
         </table>
 
-         <button style="background-color:blue;color:white;border:none;"><a href="${URLUtils.url('FriendListUpdated-MahChild')}"
-                    aria-label="${Resource.msg('label.friendList.addFriend','account',null)}" style="background-color:blue;color:white;border:none; border-radius:50%">${Resource.msg('link.addnew.friend','account',null)}</a>
-            </button>
+        <button style="background-color:blue;color:white;border:none;"><a
+                href="${URLUtils.url('FriendListUpdated-MahChild')}"
+                aria-label="${Resource.msg('label.friendList.addFriend', 'account', null)}"
+                style="background-color:blue;color:white;border:none; border-radius:50%">${Resource.msg('link.addnew.friend', 'account', null)}</a>
+        </button>
     </div>
 </isdecorate>
