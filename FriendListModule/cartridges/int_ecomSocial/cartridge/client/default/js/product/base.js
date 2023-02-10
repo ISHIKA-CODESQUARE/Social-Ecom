@@ -662,6 +662,8 @@ module.exports = {
     },
 
     addToCart: function () {
+        var currentURL = document.URL;
+        console.log(currentURL);
         $(document).on('click', 'button.add-to-cart, button.add-to-cart-global', function () {
             var addToCartUrl;
             var pid;
@@ -729,6 +731,7 @@ module.exports = {
                 }
 
                 var SenderName = $("#senderName").val();
+
                 if (!SenderName.match(nameformat)) {
                     console.log("Name regex is not valid");
                     $('#invalid-feedback-email1').html('<p class="text-danger">Name Format is incorrect<p>');
