@@ -703,7 +703,7 @@ module.exports = {
                 document.getElementById("message").innerHTML = "";
                 var rEmail = $("#emailVerify").val();
                 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                var nameformat = /[a-zA-Z]+\\.?/;
+                var nameformat = /^[a-zA-Z ]{2,30}$/;
 
                 if (rEmail == "") {
                     $('#emailError').html('<p class="text-danger">please fill out this field<p>');
