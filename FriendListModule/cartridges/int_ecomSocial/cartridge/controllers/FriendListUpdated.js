@@ -273,6 +273,8 @@ server.get('PendingRequest',function(req,res,next){
 // Pop-up the model when click on Share with Friend (PDP) || Checkout page.
 server.get("FriendModel", function (req, res, next) {
   var id = req.querystring.id;
+  var ProductMgr = require('dw/catalog/ProductMgr');
+  var product = ProductMgr.getProduct(id);
   var productListData = null;
   Transaction.wrap(function () {
     var productList = ProductListMgr.getProductLists(customer, 100);
@@ -283,11 +285,10 @@ server.get("FriendModel", function (req, res, next) {
       productList = productList[0];
     }
     productListData = productList.getItems();
-    var a = 10;
   });
   res.render("friendListShowModal", {
     productListData: productListData,
-    id: id,
+    product:product,
   });
   next();
 });
