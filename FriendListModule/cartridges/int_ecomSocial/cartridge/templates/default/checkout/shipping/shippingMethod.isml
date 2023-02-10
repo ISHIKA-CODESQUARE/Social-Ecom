@@ -37,9 +37,9 @@
             <span class="shipping-cost">${shippingMethod.shippingCost}</span>
         </div>
         </isif>
-         <div class="col-3 text-right shipping-method-pricing end-lines">
+        <div class="col-3 text-right shipping-method-pricing end-lines">
             <span class="shipping-cost">${shippingMethod.shippingCost}</span>
-        </div> 
+        </div>
     </isloop>
     </isif>
     <iselse/>
@@ -78,9 +78,7 @@
             <span class="shipping-cost">${shippingMethod.shippingCost}</span>
         </div>
         </isif>
-        <iscomment> <div class="col-3 text-right shipping-method-pricing end-lines">
-            <span class="shipping-cost">${shippingMethod.shippingCost}</span>
-        </div>  </iscomment>
+       
     </isloop>
     </isif>
     </isif>
