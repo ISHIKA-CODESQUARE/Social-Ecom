@@ -6,12 +6,13 @@
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addJs('/js/checkout.js');
-        assets.addCss('/css/checkout/checkout.css')
+        assets.addCss('/css/checkout/checkout.css');
+        assets.addCss('/css/custom.css')
     </isscript>
 
-     <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
         <isinclude template="reporting/reportingUrls" />
-    </isif> 
+    </isif>
 
     <h1 class="page-title">
         ${Resource.msg('title.checkout','checkout',null)}
@@ -72,7 +73,7 @@
                     </div>
                     <div class="card-body">
                         <isinclude template="checkout/shipping/shippingSummary" />
-                    </div> 
+                    </div>
                 </div>
 
                 <!-- Step 3: Payment and Billing-->
