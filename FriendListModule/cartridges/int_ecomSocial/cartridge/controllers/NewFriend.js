@@ -20,8 +20,8 @@ server.get('getRequest',function(req,res,next){
                 object:object,
                 customer:customer
             });
-        }    
-    } 
+        }
+    }
 
     res.render('friendList/requests',{requests:requests,address:address});
     next();
@@ -71,7 +71,7 @@ server.get('DeclineRequest',function(req,res,next){
 server.get('DeleteRequest',function(req,res,next){
     var CustomerMgr = require('dw/customer/CustomerMgr');
     var CustomObjectMgr = require('dw/object/CustomObjectMgr');
-     
+
     var address = false
     if(customer.addressBook.addresses.length > 0){
         address = true;

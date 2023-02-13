@@ -324,7 +324,7 @@ server.get("sendMailToFriend", function (req, res, next) {
 
     status = mail.send();
     if (status.getMessage() !== "OK") {
-      return false;
+       return false;
     } else {
       return true;
     }

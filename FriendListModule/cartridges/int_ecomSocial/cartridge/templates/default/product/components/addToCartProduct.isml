@@ -8,15 +8,15 @@
             <i class="fa fa-shopping-bag"></i>
             ${Resource.msg('button.addtocart', 'common', null)}
         </button>
+
         
-        <isif condition="${customer.isAuthenticated()}">
-            <a href="${URLUtils.url('FriendListUpdated-FriendModel','id',product.id)}"
-                    ><button class="btn btn-primary"
-                data-toggle="modal"
-                ${!product.readyToOrder || !product.available ? "disabled" : ""} >${Resource.msg('button.shareWithFriend', 'friends', null)}
-            </button>
-            </a>
-        </isif>
+                    <isif condition="${customer.isAuthenticated()}">
+                        <a href="${URLUtils.url('FriendListUpdated-FriendModel', 'id', product.id)}"><button
+                                class="btn btn-primary" data-toggle="modal" ${!product.readyToOrder || !product.available ? "disabled" : ""}>${Resource.msg('button.shareWithFriend', 'friends', null)}
+                            </button>
+                        </a>
+                    </isif>
+
 
         <isinclude template="product/components/addToCartButtonExtension"/>
     </div>

@@ -20,7 +20,7 @@
                     <th scope="col">${Resource.msg('label.friend_phone', 'friends', null)}</th>
                     <th scope="col">Share</th>
                     <th scope="col">Delete</th>
-                    <th scope="col">Send Gift</th>
+                    <th scope="col">Select</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,9 +36,7 @@
                             <td><a
                                     href="https://bjxc-001.dx.commercecloud.salesforce.com/s/FriendConnect/Gift_Card-4.html?name=${product.custom.first_name} ${product.custom.last_name}&email=${product.custom.emailFriendList}">GiftCard</a>
                             </td>
-                            <iscomment>
-                                <td><a href="${URLUtils.url('https://bjxc-001.dx.commercecloud.salesforce.com/s/FriendConnect/giftCard','id ',product.ID)}">GiftCard</a></td>
-                            </iscomment>
+
                             <td><a href="${URLUtils.url('FriendListUpdated-DeleteList', 'id', product.ID)}">Delete</a></td>
                             <td><a href="${URLUtils.url('Checkout-Begin', 'id', product.ID)}">Select</a></td>
                         </tr>
