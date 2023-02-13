@@ -12,6 +12,7 @@ server.get('getRequest',function(req,res,next){
     if(customer.addressBook.addresses.length > 0){
         address = true;
     }
+    Transaction.wrap(function(){
     var a = CustomObjectMgr.getAllCustomObjects('Requests');
     while(a.hasNext()){
         var object = a.next();
@@ -20,8 +21,18 @@ server.get('getRequest',function(req,res,next){
                 object:object,
                 customer:customer
             });
+        }    
+        else if(customer.profile.email == object.custom.ReceiversEmail){
+            object.custom.ReceiverAddress = customer.profile.customerNo;
+            requests.push({
+                    customer:customer,
+                    object:object 
+                });
         }
-    }
+        else{
+        }
+    } 
+})
 
     res.render('friendList/requests',{requests:requests,address:address});
     next();
