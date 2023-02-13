@@ -26,6 +26,18 @@ $(document).ready(function () {
     });
   })
 
+  $(document).on('click' , '#addGiftCard' , function(){
+    var a = window.location.href;
+    var b = window.location.search;
+
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("emailVerify").value = params.get("email");
+    document.getElementById("recipientName").value = params.get("name");
+
+    console.log(params.get("customerID"));
+})
+
 });
+
 
 
