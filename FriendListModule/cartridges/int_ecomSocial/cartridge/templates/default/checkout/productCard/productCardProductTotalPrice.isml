@@ -1,8 +1,0 @@
-<isif condition="${lineItem.isGiftCard != true}"><!-- to hide availibility information if product is gift card -->
-<div class="strike-through
-<isif condition=${!lineItem.priceTotal.nonAdjustedPrice}>non-adjusted-price</isif>"
->
-    ${lineItem.priceTotal.nonAdjustedPrice}
-</div>
-<div class="pricing line-item-total-price-amount item-total-${lineItem.UUID}">${lineItem.priceTotal.price}</div>
-</isif>
