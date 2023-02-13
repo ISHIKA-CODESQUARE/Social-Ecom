@@ -100,7 +100,7 @@ server.post("Save", function (req, res, next) {
         returnData.success = true;
         Transaction.wrap(function () {
         var requests = CustomObjectMgr.createCustomObject('Requests',id);
-        requests.custom.SenderAddress = a.profile.customerNo;
+        requests.custom.SenderAddress = a.profile.customerNo; 
         requests.custom.SenderName = a.profile.firstName;
         requests.custom.ReceiverAddress = list_of_customer.customerNo;
         requests.custom.SenderEmail =current_customer.profile.email;
@@ -113,6 +113,16 @@ server.post("Save", function (req, res, next) {
     var site = req.path;
     var refSite =site.split('/')[3];
     if(returnData.success == undefined){
+      Transaction.wrap(function(){
+        var requests = CustomObjectMgr.createCustomObject('Requests',id);
+        requests.custom.SenderAddress = a.profile.customerNo; 
+        requests.custom.SenderName = a.profile.firstName;
+        requests.custom.SenderEmail =current_customer.profile.email;
+        requests.custom.senderDate = a.profile.birthday;
+        requests.custom.ReceiversEmail = new_Form.email;
+        requests.custom.Status = false;
+       
+      })
       var mail: Mail = new dw.net.Mail();
       mail.addTo(new_Form.email);
       mail.setFrom(a.profile.email);
