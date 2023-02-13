@@ -1,3 +1,5 @@
+<!-- Check for Gift Card  -->
+<isif condition="${lineItem.isGiftCard != true}">
 <isif condition="${price.type === 'tiered'}">
     <div class="price">
         <isinclude template="/product/components/pricing/tiered" />
@@ -11,4 +13,5 @@
         <isset name="isLowPrice" value="${}" scope="page" />
         <isinclude template="/product/components/pricing/default" />
     </div>
+</isif>
 </isif>
